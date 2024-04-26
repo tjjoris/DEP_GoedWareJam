@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4o3d6g8vi3xw"]
+
+[ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
+[ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
+
+[node name="_LEVEL_BLUEPRINT" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="BackgroundSprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(597, 331)
+scale = Vector2(2, 2)
+texture = ExtResource("1_x0q85")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = ExtResource("2_3ug4t")
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589841, 196608, 0, 589825, 65536, 0, 589826, 65536, 0, 589827, 65536, 0, 589828, 65536, 0, 589829, 65536, 0, 589830, 65536, 0, 589831, 65536, 0, 589832, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 589835, 65536, 0, 589836, 65536, 0, 589837, 65536, 0, 589838, 65536, 0, 589839, 65536, 0, 589840, 65536, 0, 655360, 0, 1, 655377, 196608, 1, 655361, 65536, 1, 655362, 65536, 1, 655363, 65536, 1, 655364, 65536, 1, 655365, 65536, 1, 655366, 65536, 1, 655367, 65536, 1, 655368, 65536, 1, 655369, 65536, 1, 655370, 65536, 1, 655371, 65536, 1, 655372, 65536, 1, 655373, 65536, 1, 655374, 65536, 1, 655375, 65536, 1, 655376, 65536, 1)

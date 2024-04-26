@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://7y432yd2yrvt"]
+
+[ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_lrwey"]
+
+[node name="Level_Ikhide" instance=ExtResource("1_lrwey")]
