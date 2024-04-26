@@ -3,4 +3,3 @@ res://levels/tilemap/_level_blueprint.tres
 res://levels/level_jacob.tscn
 res://entity/player/player_basic.tscn
 res://entity/_entity_blueprint.tscn
-res://levels/level_luke.tscn
