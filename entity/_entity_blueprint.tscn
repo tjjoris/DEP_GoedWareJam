@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c37kmcxle0w78"]
+
+[ext_resource type="Texture2D" uid="uid://c0sivqivflhre" path="res://entity/player/player_draft_1.png" id="1_epjjq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyi3m"]
+size = Vector2(26, 40)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_epjjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xyi3m")
