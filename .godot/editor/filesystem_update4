@@ -1,7 +1,6 @@
 res://levels/_level_blueprint.tscn
 res://levels/tilemap/_level_blueprint.tres
 res://levels/level_jacob.tscn
-res://entity/_entity_blueprint.tscn
-res://entity/PlayerController.gd
 res://entity/player/player_basic.tscn
+res://entity/_entity_blueprint.tscn
 res://levels/level_luke.tscn
