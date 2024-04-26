@@ -3,3 +3,8 @@ res://levels/tilemap/_level_blueprint.tres
 res://levels/level_jacob.tscn
 res://entity/player/player_basic.tscn
 res://entity/_entity_blueprint.tscn
+res://entity/PlayerController.gd
+res://levels/test.gd
+res://systems/hurt_box.tscn
+res://systems/hit_box.tscn
+res://entity/enemy/enemy_testcultist.tscn

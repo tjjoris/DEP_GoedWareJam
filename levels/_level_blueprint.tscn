@@ -25,5 +25,6 @@ layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589841, 196608, 0, 589825, 65
 
 [node name="Player" parent="." instance=ExtResource("3_0sdug")]
 position = Vector2(143, 451)
+scale = Vector2(1, 1)
 
 [node name="Level_Loader" parent="." instance=ExtResource("4_y3658")]

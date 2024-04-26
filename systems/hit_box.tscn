@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cvebck150tfga"]
+
+[node name="HitBox" type="Area2D"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
