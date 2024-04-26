@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=5 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
+[ext_resource type="PackedScene" uid="uid://cugt4hhfygt3v" path="res://levels/level_loader.tscn" id="4_y3658"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 
@@ -24,3 +25,5 @@ layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589841, 196608, 0, 589825, 65
 
 [node name="Player" parent="." instance=ExtResource("3_0sdug")]
 position = Vector2(143, 451)
+
+[node name="Level_Loader" parent="." instance=ExtResource("4_y3658")]
