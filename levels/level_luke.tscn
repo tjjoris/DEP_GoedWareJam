@@ -8,3 +8,12 @@
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 position = Vector2(452, 209)
 texture = ExtResource("2_f66il")
+
+[node name="Load_Level2_button" type="Button" parent="." index="5"]
+offset_left = 384.0
+offset_top = 50.0
+offset_right = 565.0
+offset_bottom = 95.0
+text = "Load Level 2"
+
+[connection signal="pressed" from="Load_Level2_button" to="Level_Loader" method="_on_load_level_2_button_pressed"]
