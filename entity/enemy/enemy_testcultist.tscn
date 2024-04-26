@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c08q2a405b2jd"]
+
+[ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_dl5ht"]
+
+[node name="TestCultist" instance=ExtResource("1_dl5ht")]
+
+[editable path="HitBox"]
+[editable path="HurtBox"]
