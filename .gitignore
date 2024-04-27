@@ -1,4 +1,5 @@
 # Godot-specific ignores
+*.cfg
 .godot/
 .import/
 export.cfg
@@ -12,3 +13,5 @@ export_presets.cfg
 data_*/
 .godot/editor/editor_layout.cfg
 *.cfg
+.godot/editor/filesystem_cache8
+.godot/editor/filesystem_update4
