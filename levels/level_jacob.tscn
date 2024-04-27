@@ -12,9 +12,11 @@ script = ExtResource("2_rq102")
 
 [node name="TestCultist" parent="." index="5" instance=ExtResource("3_t82sb")]
 position = Vector2(1046, 115)
+script = null
 
 [node name="TestCultist2" parent="." index="6" instance=ExtResource("3_t82sb")]
 position = Vector2(44, 179)
+script = null
 
 [node name="Babi" parent="." index="7" instance=ExtResource("4_21on3")]
 position = Vector2(760, 182)

@@ -29,23 +29,27 @@ func phase_shift() -> void:
 
 
 func shift_to_shadow() -> void:
+	is_shifted = true
+	
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, true)
 	tile_map.set_layer_enabled(1, false)
 	parallax_background.shift_to_shadow()
-	is_shifted = true
 	
-	#swap background image
-	pass
+	shift_groups()
+
 
 
 func shift_to_overworld() -> void:
+	is_shifted = false
+	
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, false)
 	tile_map.set_layer_enabled(1, true)
 	parallax_background.shift_to_overworld()
-	is_shifted = false
 	
-	#swap background image
-	pass
+	shift_groups()
 
+
+func shift_groups():
+	get_tree().call_group("CanPhase", "do_phase_change", is_shifted)
