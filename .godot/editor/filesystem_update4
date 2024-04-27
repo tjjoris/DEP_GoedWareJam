@@ -16,3 +16,5 @@ res://levels/level_naomi.tscn
 res://levels/level_neff.tscn
 res://levels/level_yan.tscn
 res://entity/enemy/babi.tscn
+res://levels/PhaseShifter.gd
+res://levels/BackgroundShift.gd

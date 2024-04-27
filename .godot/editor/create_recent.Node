@@ -1,3 +1,6 @@
+Node2D
+DirectionalLight2D
+CanvasModulate
 CollisionShape2D
 Area2D
 Node
@@ -5,5 +8,4 @@ Sprite2D
 CharacterBody2D
 ParallaxLayer
 ParallaxBackground
-Node2D
 TileMap
