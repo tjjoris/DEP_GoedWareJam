@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handles jump.
 	if Input.is_action_just_pressed("jump"):# and is_on_floor():
-		handle_jump(delta)
+		handle_jump()
 	if Input.is_action_pressed("jump"):
 		velocity.y -= HELD_JUMP_HEIGHT
 
@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 
 
 # Handles double jump
-func handle_jump(delta: float) -> void:
+func handle_jump() -> void:
 	# Allows you to jump after falling from ledge
 	if is_on_floor() == false and has_jumped == false:
 		jumps_remaining -= 1
