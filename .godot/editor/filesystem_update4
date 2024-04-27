@@ -1,4 +1,0 @@
-res://levels/level_yan.tscn
-res://levels/tilemap/_level_blueprint.tres
-res://entity/player/player_basic.tscn
-res://entity/PlayerController.gd
