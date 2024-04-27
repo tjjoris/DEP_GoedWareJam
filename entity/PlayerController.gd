@@ -1,14 +1,23 @@
 extends CharacterBody2D
 
 # Exported movement variables
+## The player's speed.
 @export var SPEED: float = 220.0
+## The player's movement acceleration.
 @export var ACCELERATION: float = 1700.0
+## The player's movement friction/deceleration.
 @export var FRICTION: float = 1400.0
 
 # Exporrted jump related variables
+## Height of the player's jump.
 @export var JUMP_VELOCITY: float = -520.0
+## Amount of jumps the player can make.
 @export var MAX_JUMPS: int = 2
-@export var GRAVITY: float = 1500.0
+## The player's gravity.
+@export var GRAVITY: float = 1700.0
+## Height of jump when jump button is held. 
+## Amount of negative gravity added while holding jump.
+@export var HELD_JUMP_HEIGHT = 8
 
 # Internal jump related variables
 var jumps_remaining: int = MAX_JUMPS
@@ -34,6 +43,8 @@ func _physics_process(delta: float) -> void:
 	# Handles jump.
 	if Input.is_action_just_pressed("jump"):# and is_on_floor():
 		handle_jump(delta)
+	if Input.is_action_pressed("jump"):
+		velocity.y -= HELD_JUMP_HEIGHT
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction: float = Input.get_axis("left", "right")	
