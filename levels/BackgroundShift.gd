@@ -7,7 +7,6 @@ extends ParallaxBackground
 
 func shift_to_shadow():
 	if bg_shadow != null && background_sprite:
-		print(bg_shadow)
 		background_sprite.texture = bg_shadow
 		pass
 
