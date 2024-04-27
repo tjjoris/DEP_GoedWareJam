@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="3_jqi70"]
 [ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="4_ixfs3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyi3m"]
-size = Vector2(26, 40)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cv4hw"]
+radius = 12.0
+height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxh82"]
 size = Vector2(26, 41)
@@ -24,9 +25,10 @@ texture_filter = 1
 texture = ExtResource("2_3g61k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_xyi3m")
+shape = SubResource("CapsuleShape2D_cv4hw")
 
 [node name="HitBox" parent="." instance=ExtResource("3_jqi70")]
+visible = false
 collision_layer = 2
 collision_mask = 5
 
@@ -34,6 +36,7 @@ collision_mask = 5
 shape = SubResource("RectangleShape2D_hxh82")
 
 [node name="HurtBox" parent="." instance=ExtResource("4_ixfs3")]
+visible = false
 collision_layer = 2
 collision_mask = 5
 
