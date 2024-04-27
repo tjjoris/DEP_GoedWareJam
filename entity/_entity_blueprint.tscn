@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c37kmcxle0w78"]
+[gd_scene load_steps=9 format=3 uid="uid://c37kmcxle0w78"]
 
-[ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemy/cultist_draft_1.2.png" id="1_b731l"]
 [ext_resource type="Script" path="res://entity/EntityManager.gd" id="1_smrf7"]
 [ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="2_ppdpk"]
+[ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemy/baby.png" id="2_xehxt"]
 [ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="3_0bdmv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyi3m"]
-size = Vector2(26, 25)
+[ext_resource type="Texture2D" uid="uid://befj6ra6mrq2w" path="res://entity/enemy/baby_shadow.png" id="3_88oh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aiqtu"]
 size = Vector2(26, 25)
@@ -14,19 +12,31 @@ size = Vector2(26, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omvgd"]
 size = Vector2(26, 25)
 
-[node name="_ENTITY_BLUEPRINT" type="CharacterBody2D" groups=["CanPhase"]]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t6n3p"]
+height = 22.0
+
+[node name="_ENTITY_BLUEPRINT" type="CharacterBody2D" node_paths=PackedStringArray("overworld_state", "shadow_realm_state") groups=["CanPhase"]]
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_smrf7")
+overworld_state = NodePath("OverworldState")
+shadow_realm_state = NodePath("ShadowRealmState")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="OverworldState" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="OverworldState"]
 texture_filter = 1
-texture = ExtResource("1_b731l")
+texture = ExtResource("2_xehxt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_xyi3m")
+[node name="ShadowRealmState" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ShadowRealmState"]
+texture_filter = 1
+texture = ExtResource("3_88oh3")
 
 [node name="HitBox" parent="." instance=ExtResource("2_ppdpk")]
+visible = false
 collision_layer = 4
 collision_mask = 3
 
@@ -34,11 +44,16 @@ collision_mask = 3
 shape = SubResource("RectangleShape2D_aiqtu")
 
 [node name="HurtBox" parent="." instance=ExtResource("3_0bdmv")]
+visible = false
 collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 shape = SubResource("RectangleShape2D_omvgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_t6n3p")
 
 [editable path="HitBox"]
 [editable path="HurtBox"]

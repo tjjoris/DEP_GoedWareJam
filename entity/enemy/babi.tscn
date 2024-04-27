@@ -1,12 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5mkvrjb3e5c5"]
+[gd_scene load_steps=2 format=3 uid="uid://b5mkvrjb3e5c5"]
 
-[ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemy/baby.png" id="1_pgw2w"]
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
 
 [node name="SmolCow" instance=ExtResource("1_swj3t")]
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("1_pgw2w")
+[node name="CollisionShape2D" parent="." index="4"]
+position = Vector2(0, 2)
 
 [editable path="HitBox"]
 [editable path="HurtBox"]
