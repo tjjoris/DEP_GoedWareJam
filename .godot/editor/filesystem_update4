@@ -8,3 +8,11 @@ res://levels/test.gd
 res://systems/hurt_box.tscn
 res://systems/hit_box.tscn
 res://entity/enemy/enemy_testcultist.tscn
+res://levels/level_andrew.tscn
+res://levels/level_ikhide.tscn
+res://levels/level_kay.tscn
+res://levels/level_luke.tscn
+res://levels/level_naomi.tscn
+res://levels/level_neff.tscn
+res://levels/level_yan.tscn
+res://entity/enemy/babi.tscn
