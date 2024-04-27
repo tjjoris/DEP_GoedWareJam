@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
-[ext_resource type="PackedScene" uid="uid://cugt4hhfygt3v" path="res://levels/level_loader.tscn" id="4_y3658"]
+[ext_resource type="PackedScene" path="res://levels/level_loader.tscn" id="4_y3658"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 texture_filter = 1
