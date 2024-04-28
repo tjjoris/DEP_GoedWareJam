@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://c37kmcxle0w78"]
+[gd_scene load_steps=11 format=3 uid="uid://c37kmcxle0w78"]
 
 [ext_resource type="Script" path="res://entity/EntityManager.gd" id="1_smrf7"]
 [ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="2_ppdpk"]
 [ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemy/baby.png" id="2_xehxt"]
 [ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="3_0bdmv"]
 [ext_resource type="Texture2D" uid="uid://befj6ra6mrq2w" path="res://entity/enemy/baby_shadow.png" id="3_88oh3"]
+[ext_resource type="PackedScene" uid="uid://bply2ywhnkcyl" path="res://entity/jump_handler.tscn" id="6_5pmh8"]
+[ext_resource type="PackedScene" uid="uid://dtc8p5c8rhi0n" path="res://entity/movement_handler.tscn" id="7_icp3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aiqtu"]
 size = Vector2(26, 25)
@@ -54,6 +56,10 @@ shape = SubResource("RectangleShape2D_omvgd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_t6n3p")
+
+[node name="Jump_Handler" parent="." instance=ExtResource("6_5pmh8")]
+
+[node name="Movement_Handler" parent="." instance=ExtResource("7_icp3r")]
 
 [editable path="HitBox"]
 [editable path="HurtBox"]
