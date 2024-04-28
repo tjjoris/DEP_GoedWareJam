@@ -53,3 +53,7 @@ func enter_overworld():
 	#print(name + " entered the overworld.")
 	pass	
 
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if _in_shadow_realm:
+		get_tree().reload_current_scene()

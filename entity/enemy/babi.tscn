@@ -4,8 +4,13 @@
 
 [node name="SmolCow" instance=ExtResource("1_swj3t")]
 
+[node name="HitBox" parent="." index="2"]
+input_pickable = false
+
 [node name="CollisionShape2D" parent="." index="4"]
 position = Vector2(0, 2)
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 
 [editable path="HitBox"]
 [editable path="HurtBox"]
