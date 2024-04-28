@@ -15,6 +15,10 @@ run/main_scene="res://levels/_level_blueprint.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelLoader2="*res://levels/level_loader2.tscn"
+
 [input]
 
 left={
