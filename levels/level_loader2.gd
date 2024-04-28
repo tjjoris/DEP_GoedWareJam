@@ -1,14 +1,6 @@
 extends Node
 
 
-#old unused level loading script which was causing problems
-#func _my_level_was_completed():
-	##print(next_scene)
-	##sets next level to load to level_luke2
-	#get_tree().change_scene_to_file("res://levels/level_luke2.tscn")
-
-
-
 
 var current_scene = null
 var scene_index:int = 0
