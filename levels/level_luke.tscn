@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b67hqk54qexay"]
+[gd_scene load_steps=4 format=3 uid="uid://b67hqk54qexay"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_aire8"]
 [ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemy/cultist_draft_1.2.png" id="2_f66il"]
+[ext_resource type="Script" path="res://levels/NextLevelButton.gd" id="3_8boql"]
 
 [node name="Level_Luke" instance=ExtResource("1_aire8")]
 
@@ -9,7 +10,11 @@
 position = Vector2(452, 209)
 texture = ExtResource("2_f66il")
 
-[node name="next_level_button" type="Button" parent="." index="10"]
-offset_right = 424.0
-offset_bottom = 92.0
-text = "next_level"
+[node name="NextLevelButton" type="Button" parent="." index="10"]
+offset_left = 180.0
+offset_top = 6.0
+offset_right = 654.0
+offset_bottom = 117.0
+script = ExtResource("3_8boql")
+
+[connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_button_pressed"]
