@@ -1,28 +1,39 @@
 extends Node
 
 
-@export var my_string:String = "hello"
-#var next_scene: PackedScene = preload("res://levels/_level_blueprint.tscn")
-
-func print_to_screen():
-	print("hello world test")
-
-func _my_level_was_completed():
-	#print(next_scene)
-	#sets next level to load to level_luke2
-	get_tree().change_scene_to_file("res://levels/level_luke2.tscn")
+#old unused level loading script which was causing problems
+#func _my_level_was_completed():
+	##print(next_scene)
+	##sets next level to load to level_luke2
+	#get_tree().change_scene_to_file("res://levels/level_luke2.tscn")
 
 
-func _on_load_level_2_button_pressed():
-	_my_level_was_completed()
-	
-	
+
 
 var current_scene = null
+var scene_index:int = 0
+signal goto_next_level
+#this array stores the scenes in order:
+var levels = ["res://levels/level_andrew.tscn",
+"res://levels/level_ikhide.tscn",
+"res://levels/level_jacob.tscn",
+"res://levels/level_kay.tscn",
+"res://levels/level_luke.tscn",
+"res://levels/level_luke2.tscn",
+"res://levels/level_naomi.tscn",
+"res://levels/level_neff.tscn",
+"res://levels/level_yan.tscn",
+]
 
 func _ready():
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
+
+
+
+func goto_next_scene():
+	scene_index += 1
+	goto_scene(levels[scene_index - 1])
 
 
 func goto_scene(path):
