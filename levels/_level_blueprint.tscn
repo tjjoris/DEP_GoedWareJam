@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="3_5nggg"]
-[ext_resource type="PackedScene" uid="uid://cugt4hhfygt3v" path="res://levels/level_loader.tscn" id="4_y3658"]
+[ext_resource type="PackedScene" uid="uid://c5y0x664gpqio" path="res://levels/level_loader.tscn" id="4_y3658"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="7_onrhr"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
