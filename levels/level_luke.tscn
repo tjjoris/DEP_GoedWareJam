@@ -9,9 +9,7 @@
 position = Vector2(452, 209)
 texture = ExtResource("2_f66il")
 
-[node name="next_level_button" type="Button" parent="." index="11"]
+[node name="next_level_button" type="Button" parent="." index="10"]
 offset_right = 424.0
 offset_bottom = 92.0
 text = "next_level"
-
-[connection signal="pressed" from="next_level_button" to="Level_Loader" method="_on_load_level_2_button_pressed"]
