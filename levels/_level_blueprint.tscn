@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=10 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="7_onrhr"]
 [ext_resource type="PackedScene" uid="uid://65ndbjymj4ni" path="res://systems/kill_floor.tscn" id="7_x3klm"]
+[ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
+[ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="8_31qou"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="9_j087p"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 texture_filter = 1
@@ -49,3 +52,11 @@ position = Vector2(112, 150)
 
 [node name="KillFloor" parent="." instance=ExtResource("7_x3klm")]
 position = Vector2(1200, 1200)
+
+[node name="DialogueCanvas" parent="." instance=ExtResource("7_x75au")]
+visible = false
+
+[node name="DialogueSession" parent="DialogueCanvas" instance=ExtResource("8_31qou")]
+
+[node name="DialogueInstance" parent="DialogueCanvas/DialogueSession" instance=ExtResource("9_j087p")]
+message = "hello, world"
