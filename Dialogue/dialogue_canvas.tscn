@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://m8ic7c6lj3pg"]
+
+[ext_resource type="Script" path="res://Dialogue/dialogue_canvas.gd" id="1_qri3m"]
+[ext_resource type="Texture2D" uid="uid://cw4xr3nt0ptfo" path="res://icon.svg" id="2_l3rui"]
+
+[node name="DialogueCanvas" type="CanvasLayer"]
+script = ExtResource("1_qri3m")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 30.0
+offset_top = 489.0
+offset_right = 1354.0
+offset_bottom = 727.0
+
+[node name="MessageLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_left = 339.0
+offset_top = 526.0
+offset_right = 1307.0
+offset_bottom = 689.0
+theme_override_font_sizes/normal_font_size = 40
+text = "this is a test"
+
+[node name="PortraitTexture" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(159, 609)
+texture = ExtResource("2_l3rui")
