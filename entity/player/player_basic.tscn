@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dk2uj6ba805pf"]
 
 [ext_resource type="Script" path="res://entity/PlayerController.gd" id="1_p721y"]
-[ext_resource type="Texture2D" uid="uid://c0sivqivflhre" path="res://entity/player/player_draft_1.png" id="2_3g61k"]
+[ext_resource type="Texture2D" uid="uid://bmirgqy73h8rp" path="res://entity/enemy/small_sprite.png" id="2_0ok12"]
 [ext_resource type="PackedScene" uid="uid://dtc8p5c8rhi0n" path="res://entity/movement_handler.tscn" id="2_spqht"]
 [ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="3_jqi70"]
 [ext_resource type="PackedScene" uid="uid://bply2ywhnkcyl" path="res://entity/jump_handler.tscn" id="3_l5ta7"]
@@ -24,7 +24,8 @@ script = ExtResource("1_p721y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_3g61k")
+texture = ExtResource("2_0ok12")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
