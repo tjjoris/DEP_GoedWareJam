@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b67hqk54qexay"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_aire8"]
-[ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemy/cultist_draft_1.2.png" id="2_f66il"]
+[ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemies/cultist_draft_1.2.png" id="2_f66il"]
 [ext_resource type="Script" path="res://levels/NextLevelButton.gd" id="3_8boql"]
 [ext_resource type="Script" path="res://levels/RestartLevel.gd" id="4_jvmhq"]
 
