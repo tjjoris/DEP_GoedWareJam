@@ -1,29 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg272lausbv01"]
+[gd_scene load_steps=5 format=3 uid="uid://dg272lausbv01"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_ahn3r"]
 [ext_resource type="Texture2D" uid="uid://cfva4awygiw7j" path="res://entity/small_sprite.png" id="2_1ldps"]
-[ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="2_k2wy3"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="3_m25sg"]
 [ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/prop_normalworld_tree2.png" id="4_b7yku"]
 
 [node name="Level_Yan" instance=ExtResource("1_ahn3r")]
-
-[node name="BackgroundSprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
-position = Vector2(-169, 0)
-scale = Vector2(1, 1)
-offset = Vector2(480, 270)
-
-[node name="BackgroundSprite2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="1"]
-texture_filter = 1
-position = Vector2(791, 0)
-texture = ExtResource("2_k2wy3")
-offset = Vector2(480, 270)
-
-[node name="BackgroundSprite3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="2"]
-texture_filter = 1
-position = Vector2(-1127, 0)
-texture = ExtResource("2_k2wy3")
-offset = Vector2(480, 270)
 
 [node name="TileMap" parent="." index="3"]
 position = Vector2(0, -105)
@@ -33,40 +15,40 @@ layer_1/tile_data = PackedInt32Array(1179659, 65536, 1, 1179658, 65536, 1, 11796
 [node name="Player" parent="." index="4"]
 position = Vector2(-133, 199)
 
-[node name="SmolCow" parent="." index="6"]
-position = Vector2(26, 307)
-
-[node name="SmolCow4" parent="." index="7" node_paths=PackedStringArray("overworld_state", "shadow_realm_state") instance=ExtResource("3_m25sg")]
+[node name="SmolCow4" parent="." index="5" node_paths=PackedStringArray("overworld_state", "shadow_realm_state") instance=ExtResource("3_m25sg")]
 position = Vector2(566, 209)
 overworld_state = NodePath("../SmolCow/OverworldState")
 shadow_realm_state = NodePath("../SmolCow/ShadowRealmState")
 
-[node name="SmolCow2" parent="." index="8"]
-position = Vector2(214, 212)
+[node name="SmolCow" parent="." index="7"]
+position = Vector2(26, 307)
 
-[node name="SmolCow3" parent="." index="9"]
-position = Vector2(128, 275)
-
-[node name="SmallSprite" type="Sprite2D" parent="." index="10"]
+[node name="SmallSprite" type="Sprite2D" parent="." index="8"]
 position = Vector2(337, 174)
 texture = ExtResource("2_1ldps")
 
-[node name="SmallSprite2" type="Sprite2D" parent="." index="11"]
+[node name="SmallSprite2" type="Sprite2D" parent="." index="9"]
 position = Vector2(860, 366)
 texture = ExtResource("2_1ldps")
 
-[node name="SmallSprite4" type="Sprite2D" parent="." index="12"]
+[node name="SmallSprite4" type="Sprite2D" parent="." index="10"]
 position = Vector2(1226, 368)
 texture = ExtResource("2_1ldps")
 
-[node name="SmallSprite3" type="Sprite2D" parent="." index="13"]
+[node name="SmallSprite3" type="Sprite2D" parent="." index="11"]
 position = Vector2(578, 306)
 texture = ExtResource("2_1ldps")
 
-[node name="PropNormalworldTree2" type="Sprite2D" parent="." index="14"]
+[node name="PropNormalworldTree2" type="Sprite2D" parent="." index="12"]
 position = Vector2(958, 287)
 texture = ExtResource("4_b7yku")
 
-[node name="PropNormalworldTree3" type="Sprite2D" parent="." index="15"]
+[node name="PropNormalworldTree3" type="Sprite2D" parent="." index="13"]
 position = Vector2(427, 314)
 texture = ExtResource("4_b7yku")
+
+[node name="SmolCow2" parent="." index="14"]
+position = Vector2(214, 212)
+
+[node name="SmolCow3" parent="." index="15"]
+position = Vector2(128, 275)

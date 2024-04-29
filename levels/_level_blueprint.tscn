@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=7 format=3 uid="uid://b4o3d6g8vi3xw"]
 
-[ext_resource type="Texture2D" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
+[ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
-[ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="3_5nggg"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="7_onrhr"]
 [ext_resource type="PackedScene" uid="uid://65ndbjymj4ni" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 
@@ -18,18 +17,7 @@ script = ExtResource("2_la6m4")
 texture_filter = 1
 color = Color(0.715373, 0.829394, 0.971375, 1)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource("3_5nggg")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(0.5, 0.5)
-
-[node name="BackgroundSprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_filter = 1
-position = Vector2(597, 331)
-scale = Vector2(2, 2)
-texture = ExtResource("1_x0q85")
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_tl852")]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
