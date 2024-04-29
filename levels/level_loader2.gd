@@ -1,11 +1,10 @@
 extends Node
 
-
-
 var current_scene = null
-var scene_index:int = 0
-signal goto_next_level
-#this array stores the scenes in order:
+#scene index is the current scene/levels index which increments
+#as new levels are loaded.
+var scene_index:int = 0  
+#the following array stores the scenes in order:
 var levels = ["res://levels/level_andrew.tscn",
 "res://levels/level_ikhide.tscn",
 "res://levels/level_jacob.tscn",
@@ -25,8 +24,11 @@ func _ready():
 
 func goto_next_scene():
 	scene_index += 1
-	goto_scene(levels[scene_index - 1])
+	goto_scene(levels[scene_index])
 
+
+func reload_current_scene():
+	goto_scene(levels[scene_index])
 
 func goto_scene(path):
 	# This function will usually be called from a signal callback,
