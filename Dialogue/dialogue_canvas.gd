@@ -1,6 +1,10 @@
 extends CanvasLayer
-@onready var rich_text_label = %RichTextLabel
-@onready var sprite_2d = %Sprite2D
+
+@onready var message_label = %MessageLabel
+@onready var portrait_texture = %PortraitTexture
+
+
+
 var current_session:DialogueSession
 
 func continue_dialogue():
@@ -11,7 +15,7 @@ func continue_dialogue():
 
 
 func set_dialogue_label(message:String):
-	rich_text_label.text = message
+	message_label.text = message
 	
 func set_dialogue_texture(texture:Texture2D):
-	sprite_2d.texture = texture
+	portrait_texture.texture = texture
