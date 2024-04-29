@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DEP_GoedWareJam"
-run/main_scene="res://levels/_level_blueprint.tscn"
+run/main_scene="res://levels/level_jacob.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -21,10 +21,10 @@ LevelLoader2="*res://levels/level_loader2.tscn"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/viewport_width=1400
+window/size/viewport_height=760
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 window/stretch/scale_mode="integer"
 
 [input]
