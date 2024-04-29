@@ -25,10 +25,19 @@ func _ready():
 func goto_next_scene():
 	scene_index += 1
 	goto_scene(levels[scene_index])
+	
+	# alternate option will be to use Godot's built in scene swapper:
+	#get_tree().change_scene_to_file(levels[scene_index])
 
 
 func reload_current_scene():
-	goto_scene(levels[scene_index])
+	# unsafe to reload scene atm, using deferred call so this gets called after all other code has finished
+	call_deferred("deferred_reload_current_scene")
+		
+func deferred_reload_current_scene():
+	print("Reloading: " + get_tree().current_scene.name)
+	# It is now safe to reload the scene
+	get_tree().reload_current_scene()
 
 func goto_scene(path):
 	# This function will usually be called from a signal callback,
@@ -45,6 +54,7 @@ func goto_scene(path):
 
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene.
+	current_scene = get_tree().current_scene
 	current_scene.free()
 
 	# Load the new scene.

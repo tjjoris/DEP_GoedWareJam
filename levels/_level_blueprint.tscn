@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=8 format=3 uid="uid://b4o3d6g8vi3xw"]
 
-[ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
+[ext_resource type="Texture2D" path="res://levels/sprites/_bg_allmage.png" id="1_x0q85"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="3_5nggg"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="7_onrhr"]
+[ext_resource type="PackedScene" uid="uid://65ndbjymj4ni" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 texture_filter = 1
@@ -57,3 +58,6 @@ position = Vector2(84, 150)
 
 [node name="SmolCow3" parent="." instance=ExtResource("7_onrhr")]
 position = Vector2(112, 150)
+
+[node name="KillFloor" parent="." instance=ExtResource("7_x3klm")]
+position = Vector2(1200, 1200)
