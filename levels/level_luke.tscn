@@ -41,14 +41,6 @@ offset_right = 369.0
 offset_bottom = 436.0
 text = "click to show dialogue"
 
-[node name="continue_dialogue" type="Button" parent="." index="15"]
-offset_left = 501.0
-offset_top = 217.0
-offset_right = 740.0
-offset_bottom = 331.0
-text = "click to continue dialogue"
-
 [connection signal="pressed" from="NextLevelButton" to="NextLevelButton" method="_on_button_pressed"]
 [connection signal="pressed" from="RestartLevel" to="RestartLevel" method="_on_button_pressed"]
 [connection signal="pressed" from="show_dialogue" to="DialogueCanvas/DialogueSession" method="start_dialogue"]
-[connection signal="pressed" from="continue_dialogue" to="DialogueCanvas/DialogueSession" method="continue_dialogue"]
