@@ -56,4 +56,9 @@ func enter_overworld():
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if _in_shadow_realm:
-		get_tree().reload_current_scene()
+		LevelLoader2.reload_current_scene()
+		#if body is_in_group("Player"):
+			##body.PlayerController.touched_shadow_monster_hitbox()
+			#LevelLoader2.reload_current_scene()
+		#
+		
