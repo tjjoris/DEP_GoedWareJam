@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 LevelLoader2="*res://levels/level_loader2.tscn"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
+
 [input]
 
 left={

@@ -100,5 +100,17 @@ unique_name_in_owner = true
 position = Vector2(1.61292, -0.00012207)
 shape = SubResource("RectangleShape2D_uqu4m")
 
+
+[node name="Area2D" type="Area2D" parent="." index="13"]
+collision_mask = 7
+script = ExtResource("8_oc70j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(556, 768)
+rotation = -3.14159
+scale = Vector2(71.2532, 4.71973)
+shape = SubResource("RectangleShape2D_3hujn")
+
+
 [connection signal="body_entered" from="SkyKey/Area2D" to="SkyKey" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="HudPortalsTimewarpChamber/Area2D" to="HudPortalsTimewarpChamber" method="_on_area_2d_body_entered"]
