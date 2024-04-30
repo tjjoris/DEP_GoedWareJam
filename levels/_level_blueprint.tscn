@@ -1,17 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4o3d6g8vi3xw"]
-
+[gd_scene load_steps=9 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
-[ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="3_5nggg"]
-
 [ext_resource type="PackedScene" uid="uid://65ndbjymj4ni" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
 [ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="8_31qou"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="9_j087p"]
-
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 texture_filter = 1
@@ -43,7 +39,6 @@ rotation = 1.01578
 color = Color(0.759625, 0.792005, 0.0139048, 1)
 energy = 0.62
 shadow_enabled = true
-
 
 [node name="KillFloor" parent="." instance=ExtResource("7_x3klm")]
 position = Vector2(1200, 1200)

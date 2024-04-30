@@ -8,7 +8,7 @@ var can_start_session = true   #determins if this dialogue session can be starte
 var instance_index:int = 0
 
 func _input(event):
-	if (event is InputEventMouseButton and event.pressed) or (event is InputEventKey and event.pressed):
+	if Input.is_action_just_pressed("phase_shift"):
 		continue_dialogue()
 	
 
@@ -52,3 +52,8 @@ func end_dialogue():
 	get_parent().visible = false
 	if repeatable:
 		can_start_session = true
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	start_dialogue()
+	pass # Replace with function body.
