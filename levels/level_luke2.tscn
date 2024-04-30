@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsur0evtlio6e"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_axafm"]
-[ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemy/cultist_draft_1.2.png" id="2_1vkvq"]
+[ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemies/cultist_draft_1.2.png" id="2_1vkvq"]
 
 [node name="Level_Luke" instance=ExtResource("1_axafm")]
 
