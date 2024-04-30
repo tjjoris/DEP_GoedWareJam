@@ -64,7 +64,7 @@ position = Vector2(108, 194)
 light_mask = 2
 visibility_layer = 2
 texture_filter = 1
-position = Vector2(230, 485)
+position = Vector2(970, 488)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_7udai")
 offset = Vector2(-780, -620)
@@ -88,7 +88,7 @@ position = Vector2(-739.999, -620)
 shape = SubResource("CircleShape2D_4yuh4")
 
 [node name="HudPortalsTimewarpChamber" type="Sprite2D" parent="Gameplay" index="8"]
-position = Vector2(1102, 588)
+position = Vector2(45.0001, 441)
 scale = Vector2(0.62, 0.62)
 texture = ExtResource("5_ck40q")
 script = ExtResource("7_r6iq2")
