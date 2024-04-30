@@ -1,6 +1,6 @@
 extends Node2D
 @export var is_shifted: bool = false;
-@onready var tile_map: TileMap = $"../TileMap"
+@onready var tile_map: TileMap = $"../../TileMap"
 @onready var parallax_background: ParallaxBackground = $"../ParallaxBackground"
 
 

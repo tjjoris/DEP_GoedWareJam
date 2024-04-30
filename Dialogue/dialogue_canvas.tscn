@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://m8ic7c6lj3pg"]
+[gd_scene load_steps=5 format=3 uid="uid://m8ic7c6lj3pg"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_canvas.gd" id="1_qri3m"]
 [ext_resource type="Texture2D" uid="uid://cw4xr3nt0ptfo" path="res://icon.svg" id="2_l3rui"]
+[ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="3_yoa75"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="4_i1try"]
 
 [node name="DialogueCanvas" type="CanvasLayer"]
 script = ExtResource("1_qri3m")
@@ -25,3 +27,9 @@ text = "this is a test"
 unique_name_in_owner = true
 position = Vector2(159, 609)
 texture = ExtResource("2_l3rui")
+
+[node name="DialogueSession" parent="." instance=ExtResource("3_yoa75")]
+
+[node name="DialogueInstance" parent="DialogueSession" instance=ExtResource("4_i1try")]
+
+[editable path="DialogueSession"]

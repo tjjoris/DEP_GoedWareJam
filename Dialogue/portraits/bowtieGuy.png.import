@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crd8nacs6tyri"
-path="res://.godot/imported/jacobFace_shades.png-5f138d7970c49881c3bf343b8e1b288a.ctex"
+uid="uid://bdj64v7nhdk14"
+path="res://.godot/imported/bowtieGuy.png-a8047f584153b3a3bd08d9bc4fb397d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/player/jacobFace_shades.png"
-dest_files=["res://.godot/imported/jacobFace_shades.png-5f138d7970c49881c3bf343b8e1b288a.ctex"]
+source_file="res://Dialogue/portraits/bowtieGuy.png"
+dest_files=["res://.godot/imported/bowtieGuy.png-a8047f584153b3a3bd08d9bc4fb397d3.ctex"]
 
 [params]
 

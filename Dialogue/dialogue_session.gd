@@ -7,22 +7,24 @@ var can_start_session = true   #determins if this dialogue session can be starte
 #var last_instance:DialogueInstance #stores the current dialogue instance not used
 var instance_index:int = 0
 
-func _input(event):
-	if Input.is_action_just_pressed("phase_shift"):
-		continue_dialogue()
-	
-
 func start_dialogue():
 	if can_start_session == false:
 		return
 	can_start_session = false
 	instance_index = 0
 	get_parent().current_session = self
-	dialogue_instances = get_children()
+	
+	for child in get_children():
+		if child is DialogueInstance:
+			dialogue_instances.append(child)
 	set_dialogue()
 
-	
-	
+
+func _input(event):
+	if Input.is_action_just_pressed("continue_dialogue"):
+		continue_dialogue()
+
+
 func continue_dialogue():
 	instance_index += 1
 	if dialogue_instances == null:
@@ -46,12 +48,15 @@ func set_dialogue():
 	get_parent().set_dialogue_label(dialogue_instances[instance_index].message)
 	if not dialogue_instances[instance_index].image == null:
 		get_parent().set_dialogue_texture(dialogue_instances[instance_index].image)
+	get_tree().paused = true
+	
 	
 	
 func end_dialogue():
 	get_parent().visible = false
 	if repeatable:
 		can_start_session = true
+	get_tree().paused = false
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
