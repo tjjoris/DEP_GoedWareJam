@@ -23,7 +23,7 @@ radius = 444.072
 [node name="Level_Jacob" instance=ExtResource("1_widja")]
 
 [node name="Dialogue Collider" parent="UI/DialogueCanvas/DialogueSession/Area2D" index="0"]
-position = Vector2(363.5, 195)
+position = Vector2(359, 201)
 
 [node name="DialogueInstance" parent="UI/DialogueCanvas/DialogueSession" index="1"]
 message = "... and here I thought this bowtie would make my family love me again."
