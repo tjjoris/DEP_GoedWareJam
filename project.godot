@@ -21,10 +21,10 @@ LevelLoader2="*res://levels/level_loader2.tscn"
 
 [display]
 
-window/size/viewport_width=1400
-window/size/viewport_height=760
-window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
+window/size/viewport_width=1440
+window/size/viewport_height=810
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 window/stretch/scale_mode="integer"
 
 [input]
