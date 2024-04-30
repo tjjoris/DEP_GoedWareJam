@@ -7,11 +7,6 @@ var can_start_session = true   #determins if this dialogue session can be starte
 #var last_instance:DialogueInstance #stores the current dialogue instance not used
 var instance_index:int = 0
 
-func _input(event):
-	if Input.is_action_just_pressed("phase_shift"):
-		continue_dialogue()
-	
-
 func start_dialogue():
 	if can_start_session == false:
 		return
