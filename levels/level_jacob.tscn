@@ -31,9 +31,12 @@ layer_1/tile_data = PackedInt32Array(1179658, 196608, 0, 1179657, 65536, 0, 1179
 [node name="Player" parent="." index="4"]
 position = Vector2(107, 170)
 
+[node name="DialogueInstance" parent="DialogueCanvas/DialogueSession" index="0"]
+message = "What's the worst that could happen?"
+image = ExtResource("9_ajqmy")
+
 [node name="SmolCow4" parent="." index="8" instance=ExtResource("4_21on3")]
 position = Vector2(656.999, 567)
-scale = Vector2(1, 1)
 
 [node name="SkyKey" type="Sprite2D" parent="." index="9"]
 light_mask = 2
@@ -100,16 +103,12 @@ unique_name_in_owner = true
 position = Vector2(1.61292, -0.00012207)
 shape = SubResource("RectangleShape2D_uqu4m")
 
-[node name="DialogueTrigger" type="Area2D" parent="." index="14"]
+[node name="DialogueTrigger" type="Area2D" parent="." index="12"]
 position = Vector2(445, 235)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger" index="0"]
 shape = SubResource("RectangleShape2D_flfp5")
-
-[node name="DialogueInstance" parent="DialogueCanvas/DialogueSession" index="0"]
-message = "What's the worst that could happen?"
-image = ExtResource("9_ajqmy")
 
 [connection signal="body_entered" from="SkyKey/Area2D" to="SkyKey" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="HudPortalsTimewarpChamber/Area2D" to="HudPortalsTimewarpChamber" method="_on_area_2d_body_entered"]
