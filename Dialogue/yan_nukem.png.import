@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crd8nacs6tyri"
-path="res://.godot/imported/jacobFace_shades.png-5f138d7970c49881c3bf343b8e1b288a.ctex"
+uid="uid://cstktr08biiys"
+path="res://.godot/imported/yan_nukem.png-9407cb48da6534a664260333f23c7241.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/player/jacobFace_shades.png"
-dest_files=["res://.godot/imported/jacobFace_shades.png-5f138d7970c49881c3bf343b8e1b288a.ctex"]
+source_file="res://Dialogue/yan_nukem.png"
+dest_files=["res://.godot/imported/yan_nukem.png-9407cb48da6534a664260333f23c7241.ctex"]
 
 [params]
 

@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmutturm673rc"]
+[gd_scene load_steps=3 format=3 uid="uid://bmutturm673rc"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_session.gd" id="1_wsh5f"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b12y"]
+size = Vector2(108, 116)
+
 [node name="DialogueSession" type="Node"]
 script = ExtResource("1_wsh5f")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="Dialogue Collider" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_5b12y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

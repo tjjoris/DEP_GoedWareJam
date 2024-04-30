@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cai47etveoj3a"]
+
+[ext_resource type="PackedScene" uid="uid://b45xw2ktcra6w" path="res://levels/level_jacob.tscn" id="1_3t2ci"]
+
+[node name="GameMasterNode" type="Node"]
+process_mode = 3
+
+[node name="Level_Jacob" parent="." instance=ExtResource("1_3t2ci")]
+process_mode = 1

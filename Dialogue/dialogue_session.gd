@@ -18,7 +18,10 @@ func start_dialogue():
 	can_start_session = false
 	instance_index = 0
 	get_parent().current_session = self
-	dialogue_instances = get_children()
+	
+	for child in get_children():
+		if child is DialogueInstance:
+			dialogue_instances.append(child)
 	set_dialogue()
 
 	
@@ -52,8 +55,11 @@ func end_dialogue():
 	get_parent().visible = false
 	if repeatable:
 		can_start_session = true
+	#set_physics_process(true)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	start_dialogue()
+	# Pause physics process until dialogue concluded?
+	#set_physics_process(false)
 	pass # Replace with function body.
