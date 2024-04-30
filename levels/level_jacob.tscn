@@ -27,19 +27,11 @@ layer_1/tile_data = PackedInt32Array(1179658, 196608, 0, 1179657, 65536, 0, 1179
 [node name="Player" parent="." index="4"]
 position = Vector2(107, 170)
 
-[node name="SmolCow" parent="." index="6"]
-position = Vector2(1073, 477)
+[node name="SmolCow4" parent="." index="8" instance=ExtResource("4_21on3")]
+position = Vector2(656.999, 567)
+scale = Vector2(1, 1)
 
-[node name="SmolCow2" parent="." index="7"]
-position = Vector2(209, 183)
-
-[node name="SmolCow3" parent="." index="8"]
-position = Vector2(766, 215)
-
-[node name="SmolCow4" parent="." index="9" instance=ExtResource("4_21on3")]
-position = Vector2(657, 567)
-
-[node name="SkyKey" type="Sprite2D" parent="." index="10"]
+[node name="SkyKey" type="Sprite2D" parent="." index="9"]
 light_mask = 2
 visibility_layer = 2
 texture_filter = 1
@@ -66,7 +58,7 @@ unique_name_in_owner = true
 position = Vector2(-739.999, -620)
 shape = SubResource("CircleShape2D_4yuh4")
 
-[node name="Control" type="Control" parent="." index="11"]
+[node name="Control" type="Control" parent="." index="10"]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -90,7 +82,7 @@ text = "YOU WIN! "
 fit_content = true
 tab_size = 5
 
-[node name="HudPortalsTimewarpChamber" type="Sprite2D" parent="." index="12"]
+[node name="HudPortalsTimewarpChamber" type="Sprite2D" parent="." index="11"]
 position = Vector2(1102, 588)
 scale = Vector2(0.62, 0.62)
 texture = ExtResource("5_ck40q")

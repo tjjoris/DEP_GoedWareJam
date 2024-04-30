@@ -1,12 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg272lausbv01"]
-
-[ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="2_k2wy3"]
-[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="3_bbc21"]
+[gd_scene load_steps=3 format=3 uid="uid://dg272lausbv01"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_ahn3r"]
-[ext_resource type="Texture2D" uid="uid://cfva4awygiw7j" path="res://entity/small_sprite.png" id="2_1ldps"]
-
-[ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/prop_normalworld_tree2.png" id="4_b7yku"]
+[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="3_bbc21"]
 
 [node name="Level_Yan" instance=ExtResource("1_ahn3r")]
 

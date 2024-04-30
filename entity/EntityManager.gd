@@ -108,8 +108,8 @@ func enter_overworld():
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if _in_shadow_realm:
-
-		get_tree().reload_current_scene()
+		if body.is_in_group("Player"):
+			body.touched_shadow_monster_hitbox()
 
 
 func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
@@ -119,7 +119,3 @@ func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
 
 func _on_detection_zone_body_exited(body: CharacterBody2D) -> void:
 	_state = States.WANDER
-
-		if body.is_in_group("Player"):
-			body.touched_shadow_monster_hitbox()
-		
