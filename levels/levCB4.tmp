@@ -17,8 +17,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj1x7"]
 size = Vector2(38, 47.8299)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_flfp5"]
-size = Vector2(200, 200)
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yuh4"]
+radius = 444.072
 
 [node name="Level_Jacob" instance=ExtResource("1_widja")]
 
@@ -41,7 +41,7 @@ scale = Vector2(0.575013, 0.982649)
 shape = SubResource("RectangleShape2D_uj1x7")
 
 [node name="DialogueInstance" parent="UI/DialogueCanvas/portal exit" index="1" instance=ExtResource("10_7o4li")]
-message = "LEVEL COMPLETE!"
+message = "... and here I thought this bowtie would make my family love me again."
 image = ExtResource("3_ll0g8")
 
 [node name="DirectionalLight2D" parent="Gameplay/Systems" index="0"]

@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="4_ixfs3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pclx"]
-radius = 12.0
-height = 32.0
+radius = 8.5
+height = 25.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxh82"]
 size = Vector2(26, 41)
@@ -27,14 +27,14 @@ script = ExtResource("1_p721y")
 zoom = Vector2(2, 2)
 process_callback = 0
 limit_top = 0
-limit_bottom = 700
+limit_bottom = 672
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.13
+drag_left_margin = 0.1
 drag_top_margin = 0.25
-drag_right_margin = 0.13
+drag_right_margin = 0.1
 drag_bottom_margin = 0.1
 editor_draw_limits = true
 editor_draw_drag_margin = true
@@ -45,7 +45,6 @@ texture = ExtResource("2_0ok12")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_3pclx")
 
 [node name="HitBox" parent="." instance=ExtResource("3_jqi70")]
