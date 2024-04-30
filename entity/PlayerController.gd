@@ -18,3 +18,11 @@ func _physics_process(delta: float) -> void:
 	movement_handler.handle_movement(self, direction, delta)
 
 	move_and_slide()
+	
+func touched_shadow_monster_hitbox() -> void:
+	death()
+	
+	
+func death() -> void:
+	LevelLoader2.reload_current_scene()
+	
