@@ -1,7 +1,5 @@
 extends Sprite2D
-@onready var area_2d: Area2D = $Area2D
 @onready var hud_portals_timewarp_chamber: Sprite2D = $"."
-@onready var control: Control = $"../../UI/Control"
 
 
 func _ready() -> void:
@@ -10,6 +8,5 @@ func _ready() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	control.visible = true
 	body.queue_free()
 	queue_free()
