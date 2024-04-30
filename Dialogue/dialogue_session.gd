@@ -19,8 +19,12 @@ func start_dialogue():
 			dialogue_instances.append(child)
 	set_dialogue()
 
-	
-	
+
+func _input(event):
+	if Input.is_action_just_pressed("continue_dialogue"):
+		continue_dialogue()
+
+
 func continue_dialogue():
 	instance_index += 1
 	if dialogue_instances == null:
@@ -44,17 +48,17 @@ func set_dialogue():
 	get_parent().set_dialogue_label(dialogue_instances[instance_index].message)
 	if not dialogue_instances[instance_index].image == null:
 		get_parent().set_dialogue_texture(dialogue_instances[instance_index].image)
+	get_tree().paused = true
+	
 	
 	
 func end_dialogue():
 	get_parent().visible = false
 	if repeatable:
 		can_start_session = true
-	#set_physics_process(true)
+	get_tree().paused = false
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	start_dialogue()
-	# Pause physics process until dialogue concluded?
-	#set_physics_process(false)
 	pass # Replace with function body.
