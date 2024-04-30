@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://befj6ra6mrq2w"
-path="res://.godot/imported/baby_shadow.png-7f4df2eae495c2087f4f5a347ee73622.ctex"
+uid="uid://35ftoqa1fkpq"
+path="res://.godot/imported/cultist_draft_1.2.png-1cd1649d5fc1f22c744e91f1e099a25b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemy/baby_shadow.png"
-dest_files=["res://.godot/imported/baby_shadow.png-7f4df2eae495c2087f4f5a347ee73622.ctex"]
+source_file="res://entity/enemies/cultist_draft_1.2.png"
+dest_files=["res://.godot/imported/cultist_draft_1.2.png-1cd1649d5fc1f22c744e91f1e099a25b.ctex"]
 
 [params]
 

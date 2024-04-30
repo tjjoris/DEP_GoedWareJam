@@ -1,10 +1,24 @@
 extends CharacterBody2D
 
-var _in_shadow_realm: bool = false
+@onready var movement_handler: MovementHandler = $Movement_Handler
+
 
 ## Overworld/ShadowRealm states
 @export var overworld_state: Node2D = null
 @export var shadow_realm_state: Node2D = null
+
+var _in_shadow_realm: bool = false
+var detection_zone: Area2D = null
+
+# possible movement states for entity
+enum States {
+	WANDER,
+	CHASE
+}
+var _state = null
+const _directions: Array = [-1, 1]
+var _direction: float = 0
+var _target: CharacterBody2D = null;
 
 func _ready() -> void:
 	if overworld_state == null:
@@ -15,6 +29,39 @@ func _ready() -> void:
 		shadow_realm_state = $ShadowRealmState
 		if shadow_realm_state == null:
 			print(name + " could not find ShadowRealm Node")
+	
+	# decides a random direction the entity will wander in
+	_direction = _directions[randi() % _directions.size()]
+	# states the default state to wander
+	_state = States.WANDER
+	# sets the detection zone to monitor in the shadow realm
+	if _in_shadow_realm:
+		detection_zone.monitoring = true
+	else:
+		detection_zone.monitoring = false
+
+func _physics_process(delta: float) -> void:
+	movement_handler.handle_gravity(self, delta)
+	
+	match _state:
+		States.WANDER:
+			wander(delta)
+		States.CHASE:
+			chase(delta, _target)
+	
+	move_and_slide()
+
+# wanders back and forth until it hits a wall (goomba ai)
+func wander(delta: float) -> void:
+	# if creatures stops, changes direction
+	if(velocity.x == 0):
+		_direction *= -1
+	movement_handler.handle_movement(self, _direction, delta)
+
+# chases the player until it catches up
+func chase(delta: float, target: CharacterBody2D) -> void:
+	var target_direction = (target.global_position - self.position).normalized().x
+	movement_handler.handle_movement(self, target_direction, delta)
 
 func _on_phase_changed(entering_shadow_realm: bool):
 	# check to see if state is different before phase change
@@ -24,13 +71,18 @@ func _on_phase_changed(entering_shadow_realm: bool):
 
 
 func do_phase_change(entering_shadow_realm: bool):
+	detection_zone = $DetectionZone
 	_in_shadow_realm = entering_shadow_realm
 	
 	toggle_active_nodes()
-		
+	
+	# turns on player monitoring when in shadow realm and turns it off when not
 	if _in_shadow_realm:
+		detection_zone.monitoring = true
 		enter_shadow_realm()
 	else:
+		_state = States.WANDER
+		detection_zone.monitoring = false
 		enter_overworld()
 
 func toggle_active_nodes():
@@ -56,7 +108,18 @@ func enter_overworld():
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if _in_shadow_realm:
+
+		get_tree().reload_current_scene()
+
+
+func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
+	_target = body
+	_state = States.CHASE
+
+
+func _on_detection_zone_body_exited(body: CharacterBody2D) -> void:
+	_state = States.WANDER
+
 		if body.is_in_group("Player"):
 			body.touched_shadow_monster_hitbox()
-		
 		

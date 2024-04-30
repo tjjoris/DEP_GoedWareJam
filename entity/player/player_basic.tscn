@@ -20,6 +20,7 @@ size = Vector2(26, 41)
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(2, 2)
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_p721y")
 
 [node name="Camera2D" type="Camera2D" parent="."]

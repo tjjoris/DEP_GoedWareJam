@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="Texture2D" uid="uid://8i1xxomassgd" path="res://levels/background/shadowworld/background_shadowworld_0.png" id="2_pcm14"]
 [ext_resource type="Texture2D" uid="uid://dxkdd8ka8ja5j" path="res://levels/sprites/skyKey.png" id="3_7udai"]
-[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemy/babi.tscn" id="4_21on3"]
+[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="4_21on3"]
 [ext_resource type="Script" path="res://levels/SkyKey.gd" id="4_jmm64"]
 [ext_resource type="Texture2D" uid="uid://du2vc2p13v70m" path="res://levels/sprites/pointLight.png" id="4_n6e2s"]
 [ext_resource type="Texture2D" uid="uid://docbedv15d0ig" path="res://levels/sprites/HUD_Portals_timewarp_chamber.png" id="5_ck40q"]
