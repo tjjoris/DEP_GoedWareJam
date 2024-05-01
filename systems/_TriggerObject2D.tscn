@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://col474ya5jbrn"]
+
+[ext_resource type="Script" path="res://systems/TriggerObject2D.gd" id="1_a5wm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0op0"]
+size = Vector2(25, 23)
+
+[node name="_TriggerObject2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+input_pickable = false
+script = ExtResource("1_a5wm4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g0op0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
