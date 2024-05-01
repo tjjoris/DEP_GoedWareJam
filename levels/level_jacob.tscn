@@ -1,12 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b45xw2ktcra6w"]
+[gd_scene load_steps=11 format=3 uid="uid://b45xw2ktcra6w"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="Texture2D" uid="uid://cstktr08biiys" path="res://Dialogue/yan_nukem.png" id="3_6wr2n"]
 [ext_resource type="Texture2D" uid="uid://dxkdd8ka8ja5j" path="res://levels/sprites/skyKey.png" id="3_7udai"]
 [ext_resource type="Script" path="res://levels/SkyKey.gd" id="4_jmm64"]
 [ext_resource type="Texture2D" uid="uid://du2vc2p13v70m" path="res://levels/sprites/pointLight.png" id="4_n6e2s"]
-[ext_resource type="Texture2D" uid="uid://docbedv15d0ig" path="res://levels/sprites/HUD_Portals_timewarp_chamber.png" id="5_ck40q"]
-[ext_resource type="Script" path="res://levels/LevelExit.gd" id="7_r6iq2"]
 [ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/prop_normalworld_tree2.png" id="10_5tcmt"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="10_7o4li"]
 [ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/prop_normalworld_tree3.png" id="11_v8r2w"]
@@ -63,17 +61,15 @@ layer_1/tile_data = PackedInt32Array(1179659, 131072, 1, 1179658, 65536, 1, 1179
 light_mask = 2
 visibility_layer = 2
 texture_filter = 1
-position = Vector2(970, 488)
+position = Vector2(814, 363)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_7udai")
-offset = Vector2(-780, -620)
 script = ExtResource("4_jmm64")
 
 [node name="PointLight2D" type="PointLight2D" parent="Gameplay/Entities/SkyKey" index="0"]
 light_mask = 0
 visibility_layer = 0
 texture_filter = 1
-position = Vector2(-740, -620)
 range_item_cull_mask = 2
 texture = ExtResource("4_n6e2s")
 texture_scale = 1.88
@@ -83,21 +79,17 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Entities/SkyKey/Area2D" index="0"]
 unique_name_in_owner = true
-position = Vector2(-739.999, -620)
 shape = SubResource("CircleShape2D_4yuh4")
 
-[node name="HudPortalsTimewarpChamber" type="Sprite2D" parent="Gameplay/Entities" index="1"]
-position = Vector2(37, 444)
-scale = Vector2(0.62, 0.62)
-texture = ExtResource("5_ck40q")
-script = ExtResource("7_r6iq2")
-
-[node name="Cockatrice" parent="Gameplay/Entities" index="2" instance=ExtResource("14_sbmo0")]
+[node name="Cockatrice" parent="Gameplay/Entities" index="1" instance=ExtResource("14_sbmo0")]
 position = Vector2(452, 458)
 collision_mask = 5
 
 [node name="TerrainCollider2D" parent="Gameplay/Entities/Cockatrice" index="0"]
 visible = false
+
+[node name="LevelExit" parent="Gameplay/Entities" index="2"]
+position = Vector2(939, 451)
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(108, 194)
@@ -119,10 +111,6 @@ offset = Vector2(151, -66)
 [node name="PropNormalworldTree12" type="Sprite2D" parent="Gameplay/ForegroundProps" index="3"]
 position = Vector2(317, 401.5)
 texture = ExtResource("11_v8r2w")
-
-[node name="UI_DialogueCanvas_DialogueSession#DialogueInstance2" parent="." index="2" instance=ExtResource("10_7o4li")]
-message = "..."
-image = ExtResource("3_6wr2n")
 
 [connection signal="body_entered" from="Gameplay/Entities/SkyKey/Area2D" to="Gameplay/Entities/SkyKey" method="_on_area_2d_body_entered"]
 
