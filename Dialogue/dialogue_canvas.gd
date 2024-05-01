@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var message_label = %MessageLabel
 @onready var portrait_texture = %PortraitTexture
-@onready var current_session: DialogueSession = $DialogueSession
+@onready var current_session: DialogueSession = $DialogueSession1
 
 
 func continue_dialogue():
