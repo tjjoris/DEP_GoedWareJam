@@ -1,34 +1,28 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var movement_handler: MovementHandler = $Movement_Handler
+@onready var jump_handler: JumpHandler = $Jump_Handler
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+	movement_handler.handle_gravity(self, delta)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	# Handles jump.
+	if Input.is_action_just_pressed("jump"):
+		jump_handler.handle_jump(self)
+	if Input.is_action_pressed("jump"):
+		velocity.y -= jump_handler.HELD_JUMP_HEIGHT
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	var direction: float = Input.get_axis("left", "right")
+	movement_handler.handle_movement(self, direction, delta)
 
 	move_and_slide()
-
-	  
-
-
-
-
+	
+func touched_shadow_monster_hitbox() -> void:
+	death()
+	
+	
+func death() -> void:
+	LevelLoader2.reload_current_scene()
+	

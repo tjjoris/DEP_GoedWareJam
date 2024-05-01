@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5mkvrjb3e5c5"]
+
+[ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
+[ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemies/babi/baby.png" id="2_aeu27"]
+[ext_resource type="Texture2D" uid="uid://befj6ra6mrq2w" path="res://entity/enemies/babi/baby_shadow.png" id="3_3fpia"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apohl"]
+radius = 64.0
+height = 192.0
+
+[node name="SmolCow" instance=ExtResource("1_swj3t")]
+
+[node name="Sprite2D" parent="OverworldState" index="0"]
+texture = ExtResource("2_aeu27")
+
+[node name="ShadowRealmState" parent="." index="1"]
+visible = false
+
+[node name="Sprite2D2" parent="ShadowRealmState" index="0"]
+texture = ExtResource("3_3fpia")
+
+[node name="HitBox" parent="." index="2"]
+collision_layer = 4
+input_pickable = false
+
+[node name="HurtBox" parent="." index="3"]
+collision_layer = 4
+
+[node name="DetectionZone" parent="." index="4"]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="DetectionZone" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_apohl")
+
+[node name="CollisionShape2D" parent="." index="5"]
+visible = false
+position = Vector2(0, 2)
+
+[node name="Movement_Handler" parent="." index="6"]
+SPEED = 60.0
+ACCELERATION = 1400.0
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+
+[editable path="HitBox"]
+[editable path="HurtBox"]
+[editable path="DetectionZone"]
