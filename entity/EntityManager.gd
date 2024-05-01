@@ -6,9 +6,11 @@ extends CharacterBody2D
 ## Overworld/ShadowRealm states
 @export var overworld_state: Node2D = null
 @export var shadow_realm_state: Node2D = null
+@onready var hit_box: Area2D = $HitBox
 
 var _in_shadow_realm: bool = false
-var detection_zone: Area2D = null
+@onready var detection_zone: Area2D = %DetectionZone
+
 
 # possible movement states for entity
 enum States {

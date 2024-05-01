@@ -20,7 +20,7 @@ func start_dialogue():
 	set_dialogue()
 
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("continue_dialogue"):
 		continue_dialogue()
 
@@ -60,5 +60,5 @@ func end_dialogue():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	start_dialogue()
-	pass # Replace with function body.
+	if body.is_in_group("Player"):
+		start_dialogue()

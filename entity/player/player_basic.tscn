@@ -20,8 +20,14 @@ size = Vector2(26, 41)
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(2, 2)
 collision_layer = 2
-collision_mask = 5
 script = ExtResource("1_p721y")
+
+[node name="Movement_Handler" parent="." instance=ExtResource("2_spqht")]
+
+[node name="Jump_Handler" parent="." instance=ExtResource("3_l5ta7")]
+
+[node name="TerrainColliderShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3pclx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
@@ -44,12 +50,11 @@ texture_filter = 1
 texture = ExtResource("2_0ok12")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_3pclx")
-
 [node name="HitBox" parent="." instance=ExtResource("3_jqi70")]
 collision_layer = 2
 collision_mask = 5
+monitoring = true
+monitorable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 visible = false
@@ -58,14 +63,12 @@ shape = SubResource("RectangleShape2D_hxh82")
 [node name="HurtBox" parent="." instance=ExtResource("4_ixfs3")]
 collision_layer = 2
 collision_mask = 5
+monitoring = false
+monitorable = true
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 visible = false
 shape = SubResource("RectangleShape2D_acl5k")
-
-[node name="Movement_Handler" parent="." instance=ExtResource("2_spqht")]
-
-[node name="Jump_Handler" parent="." instance=ExtResource("3_l5ta7")]
 
 [editable path="HitBox"]
 [editable path="HurtBox"]
