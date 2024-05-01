@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://dk2uj6ba805pf"]
 
 [ext_resource type="Script" path="res://entity/PlayerController.gd" id="1_p721y"]
-[ext_resource type="Texture2D" uid="uid://bmirgqy73h8rp" path="res://entity/enemy/small_sprite.png" id="2_0ok12"]
 [ext_resource type="PackedScene" uid="uid://dtc8p5c8rhi0n" path="res://entity/movement_handler.tscn" id="2_spqht"]
 [ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="3_jqi70"]
 [ext_resource type="PackedScene" uid="uid://bply2ywhnkcyl" path="res://entity/jump_handler.tscn" id="3_l5ta7"]
 [ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="4_ixfs3"]
+[ext_resource type="Texture2D" uid="uid://mud6rn5a8wve" path="res://entity/player/DimensionalScientist.png" id="4_tcvjb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pclx"]
 radius = 8.5
@@ -26,9 +26,6 @@ script = ExtResource("1_p721y")
 
 [node name="Jump_Handler" parent="." instance=ExtResource("3_l5ta7")]
 
-[node name="TerrainColliderShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_3pclx")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 process_callback = 0
@@ -47,27 +44,35 @@ editor_draw_drag_margin = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_0ok12")
-flip_h = true
+position = Vector2(-4.5, -26)
+texture = ExtResource("4_tcvjb")
+
+[node name="TerrainColliderShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("CapsuleShape2D_3pclx")
 
 [node name="HitBox" parent="." instance=ExtResource("3_jqi70")]
+visible = false
 collision_layer = 2
 collision_mask = 5
 monitoring = true
 monitorable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-visible = false
+position = Vector2(-0.5, -18.5)
+scale = Vector2(0.7, 0.9)
 shape = SubResource("RectangleShape2D_hxh82")
 
 [node name="HurtBox" parent="." instance=ExtResource("4_ixfs3")]
+visible = false
 collision_layer = 2
 collision_mask = 5
 monitoring = false
 monitorable = true
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-visible = false
+position = Vector2(-1, -18.5)
+scale = Vector2(0.5, 0.9)
 shape = SubResource("RectangleShape2D_acl5k")
 
 [editable path="HitBox"]
