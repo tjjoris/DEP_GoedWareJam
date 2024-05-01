@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://6k566y5fttrg"]
+
+[ext_resource type="Script" path="res://Dialogue/dialogue_session.gd" id="1_shc4y"]
+[ext_resource type="Texture2D" uid="uid://docbedv15d0ig" path="res://levels/sprites/HUD_Portals_timewarp_chamber.png" id="2_ajs1r"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_23cba"]
+[ext_resource type="Texture2D" uid="uid://crd8nacs6tyri" path="res://Dialogue/jacobFace_shades.png" id="4_1oyip"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3w4d"]
+radius = 15.0
+height = 46.0
+
+[node name="DialogueExitObject" type="Node2D"]
+script = ExtResource("1_shc4y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ajs1r")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="Dialogue Collider" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_r3w4d")
+
+[node name="DialogueInstance" parent="." instance=ExtResource("3_23cba")]
+message = "Level Complete Placeholder Text!"
+image = ExtResource("4_1oyip")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
