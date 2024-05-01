@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://be1h7270jb3k7"]
 
 [ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="1_shq5h"]
-[ext_resource type="Texture2D" uid="uid://ber5wqgmkjdef" path="res://levels/sprites/_bg_allmage.png" id="2_533pw"]
-[ext_resource type="Texture2D" uid="uid://dc3eu3q7ikei7" path="res://levels/background/shadowworld/background_shadowworld_1.png" id="2_ky4wc"]
-[ext_resource type="Texture2D" uid="uid://b4ayqts8y72a1" path="res://levels/background/shadowworld/background_shadowworld_2.png" id="3_lewsv"]
-[ext_resource type="Texture2D" uid="uid://d1bmlyd3abnh3" path="res://levels/background/shadowworld/background_shadowworld_3.png" id="4_gkqvs"]
+[ext_resource type="Texture2D" uid="uid://8v4bfpdvuqiv" path="res://levels/background/overworld/background_normalworld_0.png" id="2_vdyok"]
+[ext_resource type="Texture2D" uid="uid://cu6dxke8aes5q" path="res://levels/background/overworld/background_normalworld_1.png" id="3_af4an"]
+[ext_resource type="Texture2D" uid="uid://dhs6agunehdmx" path="res://levels/background/overworld/background_normalworld_2.png" id="4_axs70"]
+[ext_resource type="Texture2D" uid="uid://blce35p136opo" path="res://levels/background/overworld/background_normalworld_3.png" id="5_je5nq"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_shq5h")
@@ -17,7 +17,7 @@ motion_mirroring = Vector2(960, 0)
 [node name="BackgroundSprite_0" type="Sprite2D" parent="ParallaxLayer_0"]
 unique_name_in_owner = true
 texture_filter = 1
-texture = ExtResource("2_533pw")
+texture = ExtResource("2_vdyok")
 centered = false
 
 [node name="ParallaxLayer_1" type="ParallaxLayer" parent="."]
@@ -28,7 +28,7 @@ motion_mirroring = Vector2(960, 0)
 [node name="BackgroundSprite_1" type="Sprite2D" parent="ParallaxLayer_1"]
 unique_name_in_owner = true
 texture_filter = 1
-texture = ExtResource("2_ky4wc")
+texture = ExtResource("3_af4an")
 centered = false
 
 [node name="ParallaxLayer_2" type="ParallaxLayer" parent="."]
@@ -39,7 +39,7 @@ motion_mirroring = Vector2(960, 0)
 [node name="BackgroundSprite_2" type="Sprite2D" parent="ParallaxLayer_2"]
 unique_name_in_owner = true
 texture_filter = 1
-texture = ExtResource("3_lewsv")
+texture = ExtResource("4_axs70")
 centered = false
 
 [node name="ParallaxLayer_3" type="ParallaxLayer" parent="."]
@@ -50,5 +50,5 @@ motion_mirroring = Vector2(960, 0)
 [node name="BackgroundSprite_3" type="Sprite2D" parent="ParallaxLayer_3"]
 unique_name_in_owner = true
 texture_filter = 1
-texture = ExtResource("4_gkqvs")
+texture = ExtResource("5_je5nq")
 centered = false
