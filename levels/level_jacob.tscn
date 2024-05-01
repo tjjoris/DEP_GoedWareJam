@@ -113,6 +113,13 @@ scale = Vector2(0.62, 0.62)
 texture = ExtResource("5_ck40q")
 script = ExtResource("7_r6iq2")
 
+[node name="Cockatrice" parent="Gameplay/Entities" index="2" instance=ExtResource("14_sbmo0")]
+position = Vector2(452, 458)
+collision_mask = 5
+
+[node name="TerrainCollider2D" parent="Gameplay/Entities/Cockatrice" index="0"]
+visible = false
+
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(108, 194)
 
@@ -134,11 +141,14 @@ offset = Vector2(151, -66)
 position = Vector2(317, 401.5)
 texture = ExtResource("11_v8r2w")
 
-[node name="Cockatrice" parent="." index="2" instance=ExtResource("14_sbmo0")]
-position = Vector2(452, 458)
-
 [connection signal="body_entered" from="Gameplay/Entities/SkyKey/Area2D" to="Gameplay/Entities/SkyKey" method="_on_area_2d_body_entered"]
 
 [editable path="UI/DialogueCanvas"]
 [editable path="UI/DialogueCanvas/DialogueSession"]
 [editable path="UI/DialogueCanvas/portal exit"]
+[editable path="Gameplay/Entities/Cockatrice"]
+[editable path="Gameplay/Entities/Cockatrice/HitBox"]
+[editable path="Gameplay/Entities/Cockatrice/HurtBox"]
+[editable path="Gameplay/Player"]
+[editable path="Gameplay/Player/HitBox"]
+[editable path="Gameplay/Player/HurtBox"]

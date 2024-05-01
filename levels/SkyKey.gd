@@ -5,7 +5,7 @@ extends Sprite2D
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("body entered")
+	print(body.name + " entered")
 	hud_portals_timewarp_chamber.visible = true
 	hud_portals_timewarp_chamber.set_process(true)
 	

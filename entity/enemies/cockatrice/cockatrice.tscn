@@ -6,6 +6,10 @@
 
 [node name="Cockatrice" instance=ExtResource("1_oiiny")]
 
+[node name="Movement_Handler" parent="." index="1"]
+SPEED = 60.0
+ACCELERATION = 500.0
+
 [node name="Sprite2D" parent="OverworldState" index="0"]
 position = Vector2(2, -4)
 texture = ExtResource("2_a5mmg")
@@ -13,6 +17,16 @@ texture = ExtResource("2_a5mmg")
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
 position = Vector2(2, -4)
 texture = ExtResource("3_p0cow")
+
+[node name="HitBox" parent="." index="5"]
+visible = true
+
+[node name="HurtBox" parent="." index="6"]
+visible = true
+
+[node name="DetectionShape2D" parent="DetectionZone" index="1"]
+position = Vector2(-1.42109e-14, -15)
+scale = Vector2(0.944036, 0.947376)
 
 [editable path="HitBox"]
 [editable path="HurtBox"]
