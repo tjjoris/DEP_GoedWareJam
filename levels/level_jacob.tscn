@@ -27,7 +27,7 @@ radius = 444.072
 position = Vector2(535, 451)
 
 [node name="DialogueInstance" parent="UI/DialogueCanvas/DialogueSession" index="1"]
-message = "It's so beautiful out. Nothing could possibly ruin this day for me."
+message = "Hello... Friend?"
 image = ExtResource("2_po7we")
 
 [node name="DialogueInstance2" parent="UI/DialogueCanvas/DialogueSession" index="2" instance=ExtResource("10_7o4li")]
