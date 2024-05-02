@@ -1,35 +1,54 @@
-[gd_scene load_steps=5 format=3 uid="uid://m8ic7c6lj3pg"]
+[gd_scene load_steps=7 format=3 uid="uid://m8ic7c6lj3pg"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_canvas.gd" id="1_qri3m"]
 [ext_resource type="Texture2D" uid="uid://cw4xr3nt0ptfo" path="res://icon.svg" id="2_l3rui"]
 [ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="3_yoa75"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="4_i1try"]
+[ext_resource type="Texture2D" uid="uid://crd8nacs6tyri" path="res://Dialogue/jacobFace_shades.png" id="5_e0rkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5vhc"]
+size = Vector2(32, 32)
 
 [node name="DialogueCanvas" type="CanvasLayer"]
 script = ExtResource("1_qri3m")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 30.0
-offset_top = 489.0
-offset_right = 1354.0
-offset_bottom = 727.0
+offset_left = 53.0
+offset_top = 535.0
+offset_right = 1377.0
+offset_bottom = 773.0
 
 [node name="MessageLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = 339.0
-offset_top = 526.0
-offset_right = 1307.0
-offset_bottom = 689.0
+offset_left = 362.0
+offset_top = 572.0
+offset_right = 1330.0
+offset_bottom = 735.0
 theme_override_font_sizes/normal_font_size = 40
 text = "this is a test"
 
 [node name="PortraitTexture" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(159, 609)
+position = Vector2(182, 655)
 texture = ExtResource("2_l3rui")
 
-[node name="DialogueSession" parent="." instance=ExtResource("3_yoa75")]
+[node name="DialogueSession1" parent="." instance=ExtResource("3_yoa75")]
 
-[node name="DialogueInstance" parent="DialogueSession" instance=ExtResource("4_i1try")]
+[node name="Area2D" type="Area2D" parent="DialogueSession1"]
+collision_mask = 2
 
-[editable path="DialogueSession"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueSession1/Area2D"]
+shape = SubResource("RectangleShape2D_t5vhc")
+
+[node name="DialogueInstance" parent="DialogueSession1" instance=ExtResource("4_i1try")]
+message = "Dialogue 1 Placeholder Text"
+image = ExtResource("5_e0rkd")
+
+[node name="LevelCompleteDialogue" parent="." instance=ExtResource("3_yoa75")]
+
+[node name="DialogueInstance" parent="LevelCompleteDialogue" instance=ExtResource("4_i1try")]
+message = "Level Complete placeholder text!"
+image = ExtResource("5_e0rkd")
+
+[editable path="DialogueSession1"]
+[editable path="LevelCompleteDialogue"]

@@ -1,11 +1,11 @@
 extends Node
 class_name DialogueSession
 
-@export var dialogue_instances: Array = []
+@export var dialogue_instances: Array[DialogueInstance] = []
 @export var repeatable:bool = false #determins if a dialouge session can be repeated.
 var can_start_session = true   #determins if this dialogue session can be started, prevents from unwanted repeating dialogue
 #var last_instance:DialogueInstance #stores the current dialogue instance not used
-var instance_index:int = 0
+@export var instance_index:int = 0
 
 func start_dialogue():
 	if can_start_session == false:
@@ -18,11 +18,6 @@ func start_dialogue():
 		if child is DialogueInstance:
 			dialogue_instances.append(child)
 	set_dialogue()
-
-
-func _input(event):
-	if Input.is_action_just_pressed("continue_dialogue"):
-		continue_dialogue()
 
 
 func continue_dialogue():
@@ -60,5 +55,10 @@ func end_dialogue():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	start_dialogue()
-	pass # Replace with function body.
+	if body.is_in_group("Player"):
+		start_dialogue()
+
+
+func _on_level_exit_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		start_dialogue()

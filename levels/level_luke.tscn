@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cfva4awygiw7j" path="res://entity/small_sprite.png" id="6_yducg"]
 
 [node name="Level_Luke" instance=ExtResource("1_aire8")]
+metadata/_edit_horizontal_guides_ = [-94.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 position = Vector2(452, 209)
