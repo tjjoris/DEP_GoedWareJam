@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/prop_normalworld_tree3.png" id="11_v8r2w"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_flfp5"]
-size = Vector2(200, 200)
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yuh4"]
+radius = 444.072
 
 [node name="Level_Jacob" instance=ExtResource("1_widja")]
 
