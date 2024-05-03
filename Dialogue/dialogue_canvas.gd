@@ -20,7 +20,6 @@ func _input(_event) -> void:
 	if not in_dialogue_state:
 		return
 	if Input.is_action_just_pressed("continue_dialogue") and dialogue_next_ready:
-		print("continue dialogue pressed")
 		continue_dialogue()
 
 
