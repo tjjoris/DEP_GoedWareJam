@@ -1,11 +1,12 @@
-[gd_scene load_steps=41 format=3 uid="uid://dk2uj6ba805pf"]
+[gd_scene load_steps=42 format=3 uid="uid://dk2uj6ba805pf"]
 
 [ext_resource type="Script" path="res://entity/PlayerController.gd" id="1_p721y"]
-[ext_resource type="PackedScene" uid="uid://dtc8p5c8rhi0n" path="res://entity/movement_handler.tscn" id="2_spqht"]
-[ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="3_jqi70"]
-[ext_resource type="PackedScene" uid="uid://bply2ywhnkcyl" path="res://entity/jump_handler.tscn" id="3_l5ta7"]
+[ext_resource type="AudioStream" uid="uid://drsj0lyf7jhgi" path="res://audio/sfx/hurt00.wav" id="2_5e77j"]
+[ext_resource type="PackedScene" path="res://entity/movement_handler.tscn" id="2_spqht"]
+[ext_resource type="PackedScene" path="res://systems/hit_box.tscn" id="3_jqi70"]
+[ext_resource type="PackedScene" uid="uid://cjtns50vu54k1" path="res://entity/jump_handler.tscn" id="3_l5ta7"]
 [ext_resource type="Texture2D" uid="uid://kqgp4gwqru8u" path="res://entity/player/sprites/sprite_Scientist_anim_death.png" id="4_iu1si"]
-[ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="4_ixfs3"]
+[ext_resource type="PackedScene" path="res://systems/hurt_box.tscn" id="4_ixfs3"]
 [ext_resource type="Texture2D" uid="uid://dlok2nimip0ko" path="res://entity/player/sprites/sprite_Scientist_anim_idle.png" id="4_wk40d"]
 [ext_resource type="Texture2D" uid="uid://bgf4p6lg3i7ww" path="res://entity/player/sprites/sprite_Scientist_anim_jump.png" id="6_33d18"]
 [ext_resource type="Texture2D" uid="uid://cie0b6y7o68dk" path="res://entity/player/sprites/sprite_Scientist_anim_run.png" id="7_vafui"]
@@ -242,6 +243,11 @@ scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_p721y")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5e77j")
+volume_db = -5.0
+bus = &"SFX"
+
 [node name="Movement_Handler" parent="." instance=ExtResource("2_spqht")]
 
 [node name="Jump_Handler" parent="." instance=ExtResource("3_l5ta7")]
@@ -298,5 +304,6 @@ position = Vector2(-1, -18.5)
 scale = Vector2(0.5, 0.9)
 shape = SubResource("RectangleShape2D_acl5k")
 
+[editable path="Jump_Handler"]
 [editable path="HitBox"]
 [editable path="HurtBox"]

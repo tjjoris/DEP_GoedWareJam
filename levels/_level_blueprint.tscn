@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=9 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
@@ -7,10 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://bb6f8uxocbg58" path="res://levels/props/LevelExit.tscn" id="6_f2nyq"]
 [ext_resource type="PackedScene" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
+[ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="8_whkpq"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 process_mode = 3
 texture_filter = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_whkpq")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"
 
 [node name="UI" type="Node2D" parent="."]
 process_mode = 2

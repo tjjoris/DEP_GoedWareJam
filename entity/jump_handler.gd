@@ -1,7 +1,7 @@
 class_name JumpHandler
 
 extends Node2D
-
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 # Exporrted jump related variables
 ## Height of the player's jump.
 @export var JUMP_VELOCITY: float = -520.0
@@ -31,3 +31,4 @@ func handle_jump(entity: CharacterBody2D) -> void:
 		has_jumped = true
 		jumps_remaining -= 1
 		entity.velocity.y = JUMP_VELOCITY
+		audio_player.play()
