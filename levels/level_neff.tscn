@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://no476t1qmp2i"]
+[gd_scene load_steps=3 format=3 uid="uid://no476t1qmp2i"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_w1kre"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83mgv"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
+
 [node name="Level_Neff" instance=ExtResource("1_w1kre")]
+
+[node name="CollisionShape2D" parent="UI/DialogueCanvas/DialogueSession1/Area2D" index="0"]
+shape = SubResource("RectangleShape2D_83mgv")
 
 [editable path="UI/DialogueCanvas"]
 [editable path="UI/DialogueCanvas/DialogueSession1"]

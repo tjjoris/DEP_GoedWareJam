@@ -19,9 +19,8 @@ radius = 444.072
 
 [node name="Level_Jacob" instance=ExtResource("1_widja")]
 
-[node name="MessageLabel" parent="UI/DialogueCanvas/DialogueContainer/MarginContainer/HBoxContainer/MarginContainer" index="0"]
-visible_characters = 0
-visible_ratio = 0.0
+[node name="UI" parent="." index="1"]
+process_mode = 3
 
 [node name="Area2D" parent="UI/DialogueCanvas/DialogueSession1" index="0"]
 position = Vector2(817, 371)

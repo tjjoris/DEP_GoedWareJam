@@ -27,7 +27,6 @@ bus = &"Music"
 process_mode = 2
 
 [node name="DialogueCanvas" parent="UI" instance=ExtResource("7_x75au")]
-visible = false
 
 [node name="DialogueContainer" parent="UI/DialogueCanvas" index="0"]
 metadata/_edit_lock_ = true
