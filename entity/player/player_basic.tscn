@@ -1,6 +1,7 @@
-[gd_scene load_steps=41 format=3 uid="uid://dk2uj6ba805pf"]
+[gd_scene load_steps=42 format=3 uid="uid://dk2uj6ba805pf"]
 
 [ext_resource type="Script" path="res://entity/PlayerController.gd" id="1_p721y"]
+[ext_resource type="AudioStream" uid="uid://drsj0lyf7jhgi" path="res://audio/sfx/hurt00.wav" id="2_5e77j"]
 [ext_resource type="PackedScene" path="res://entity/movement_handler.tscn" id="2_spqht"]
 [ext_resource type="PackedScene" path="res://systems/hit_box.tscn" id="3_jqi70"]
 [ext_resource type="PackedScene" uid="uid://cjtns50vu54k1" path="res://entity/jump_handler.tscn" id="3_l5ta7"]
@@ -241,6 +242,11 @@ size = Vector2(26, 41)
 scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_p721y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5e77j")
+volume_db = -5.0
+bus = &"SFX"
 
 [node name="Movement_Handler" parent="." instance=ExtResource("2_spqht")]
 

@@ -8,5 +8,5 @@ script = ExtResource("1_sjej0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_vrrap")
-volume_db = -10.0
+volume_db = -5.0
 bus = &"SFX"
