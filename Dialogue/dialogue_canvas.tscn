@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://m8ic7c6lj3pg"]
+[gd_scene load_steps=6 format=3 uid="uid://m8ic7c6lj3pg"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_canvas.gd" id="1_qri3m"]
 [ext_resource type="FontFile" uid="uid://oom1vqe8wuui" path="res://Dialogue/fonts/FindersKeepers.ttf" id="3_0h7k6"]
+[ext_resource type="Texture2D" uid="uid://drfsndn74eiy" path="res://Dialogue/e_button.png" id="4_5v46b"]
 [ext_resource type="Texture2D" uid="uid://ddnw50a2gesor" path="res://Dialogue/portraits/drchazz_neutral_0.png" id="5_fdyth"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbe25"]
-bg_color = Color(0.447059, 0.392157, 0.396078, 0.541176)
+bg_color = Color(0.447059, 0.392157, 0.396078, 0.870588)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
@@ -71,3 +72,8 @@ theme_override_fonts/font = ExtResource("3_0h7k6")
 theme_override_font_sizes/font_size = 62
 text = "<Placeholder text>"
 autowrap_mode = 3
+
+[node name="EButton" type="Sprite2D" parent="DialogueContainer"]
+position = Vector2(1336, 238.8)
+scale = Vector2(2, 2)
+texture = ExtResource("4_5v46b")
