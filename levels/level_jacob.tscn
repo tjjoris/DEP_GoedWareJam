@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b45xw2ktcra6w"]
+[gd_scene load_steps=11 format=3 uid="uid://b45xw2ktcra6w"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="Texture2D" uid="uid://cstktr08biiys" path="res://Dialogue/yan_nukem.png" id="3_6wr2n"]
@@ -10,22 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/prop_normalworld_tree3.png" id="11_v8r2w"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ao80q"]
-resource_local_to_scene = true
-size = Vector2(50, 50)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_4yuh4"]
 radius = 444.072
 
 [node name="Level_Jacob" instance=ExtResource("1_widja")]
 
-[node name="Area2D" parent="UI/DialogueCanvas/DialogueSession1" index="0"]
-position = Vector2(817, 371)
-
-[node name="CollisionShape2D" parent="UI/DialogueCanvas/DialogueSession1/Area2D" index="0"]
-shape = SubResource("RectangleShape2D_ao80q")
-
-[node name="DialogueInstance2" parent="UI/DialogueCanvas/DialogueSession1" index="2" instance=ExtResource("10_7o4li")]
+[node name="UI_DialogueCanvas_DialogueSession1#DialogueInstance2" parent="." index="2" instance=ExtResource("10_7o4li")]
 message = "Second line of text!"
 image = ExtResource("3_6wr2n")
 
@@ -95,8 +85,11 @@ collision_mask = 5
 [node name="TerrainCollider2D" parent="Gameplay/Entities/Cockatrice" index="0"]
 visible = false
 
-[node name="LevelExit" parent="Gameplay/Entities" index="2"]
-position = Vector2(939, 451)
+[node name="DialogueTrigger" parent="Gameplay/Entities" index="2"]
+position = Vector2(418, 174)
+
+[node name="LevelExit" parent="Gameplay/Entities" index="3"]
+position = Vector2(939, 452)
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(108, 194)
@@ -122,12 +115,11 @@ texture = ExtResource("11_v8r2w")
 [connection signal="body_entered" from="Gameplay/Entities/SkyKey/Area2D" to="Gameplay/Entities/SkyKey" method="_on_area_2d_body_entered"]
 
 [editable path="UI/DialogueCanvas"]
-[editable path="UI/DialogueCanvas/DialogueSession1"]
-[editable path="UI/DialogueCanvas/LevelCompleteDialogue"]
 [editable path="Gameplay/Entities/Cockatrice"]
 [editable path="Gameplay/Entities/Cockatrice/Jump_Handler"]
 [editable path="Gameplay/Entities/Cockatrice/HitBox"]
 [editable path="Gameplay/Entities/Cockatrice/HurtBox"]
+[editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/LevelExit"]
 [editable path="Gameplay/Player"]
 [editable path="Gameplay/Player/Jump_Handler"]
