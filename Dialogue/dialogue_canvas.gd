@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var message_label = %MessageLabel
-@onready var portrait_texture = %PortraitTexture
+@onready var message_label: RichTextLabel = %MessageLabel
+@onready var portrait_texture: TextureRect = %PortraitTexture
 @onready var current_session: DialogueSession = $DialogueSession1
 
 func _input(_event):

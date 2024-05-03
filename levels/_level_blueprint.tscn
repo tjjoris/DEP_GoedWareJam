@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=10 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
 [ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="8_whkpq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrphj"]
+resource_local_to_scene = true
+size = Vector2(50, 50)
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 process_mode = 3
@@ -25,8 +29,14 @@ process_mode = 2
 [node name="DialogueCanvas" parent="UI" instance=ExtResource("7_x75au")]
 visible = false
 
+[node name="DialogueContainer" parent="UI/DialogueCanvas" index="0"]
+metadata/_edit_lock_ = true
+
 [node name="Area2D" parent="UI/DialogueCanvas/DialogueSession1" index="0"]
 position = Vector2(161, 336)
+
+[node name="CollisionShape2D" parent="UI/DialogueCanvas/DialogueSession1/Area2D" index="0"]
+shape = SubResource("RectangleShape2D_qrphj")
 
 [node name="DialogueInstance" parent="UI/DialogueCanvas/DialogueSession1" index="1"]
 message = "Dialogue 1 Placeholder Text. <PRESS E TO PHASE!>"
