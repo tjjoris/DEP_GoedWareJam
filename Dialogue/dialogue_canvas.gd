@@ -1,11 +1,13 @@
 extends CanvasLayer
 
-@onready var message_label = %MessageLabel
-@onready var portrait_texture = %PortraitTexture
+@onready var message_label: RichTextLabel = %MessageLabel
+@onready var portrait_texture: TextureRect = %PortraitTexture
 @onready var current_session: DialogueSession = $DialogueSession1
 
+var dialogue_next_ready = true
+
 func _input(_event):
-	if Input.is_action_just_pressed("continue_dialogue"):
+	if Input.is_action_just_pressed("continue_dialogue") and dialogue_next_ready:
 		continue_dialogue()
 
 func continue_dialogue():

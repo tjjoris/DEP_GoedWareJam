@@ -10,13 +10,7 @@ func _ready() -> void:
 	# on level load, inverts phase so that it shifts into the current phase
 	is_shifted = not is_shifted
 	phase_shift()
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_action_pressed("phase_shift"):
-		phase_shift()
 
 func phase_shift() -> void:
 	# swap between Overworld and Shadow states
@@ -53,3 +47,7 @@ func shift_to_overworld() -> void:
 
 func shift_groups():
 	get_tree().call_group("CanPhase", "do_phase_change", is_shifted)
+
+
+func _on_player_phase_shift() -> void:
+	phase_shift()
