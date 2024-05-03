@@ -5,11 +5,11 @@ extends CharacterBody2D
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var _is_dead = false
+var _can_move: bool = false
 
 func _physics_process(delta: float) -> void:
-	if not _is_dead:
-		movement_handler.handle_gravity(self, delta)
+	movement_handler.handle_gravity(self, delta)
+	if not _can_move:
 		
 		# Get the input direction and handle the movement/deceleration.
 		var direction: float = Input.get_axis("left", "right")
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		elif direction < 0:
 			animated_sprite.flip_h = true
 		
-		if is_on_floor() and not _is_dead:
+		if is_on_floor() and not _can_move:
 			if direction:
 				animated_sprite.play("run")
 			else:
@@ -35,15 +35,16 @@ func _physics_process(delta: float) -> void:
 			jump_handler.handle_jump(self)
 		if Input.is_action_pressed("jump"):
 			velocity.y -= jump_handler.HELD_JUMP_HEIGHT
-
+	else:
+		movement_handler.handle_movement(self, 0, delta)
 	move_and_slide()
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump") and _is_dead:
+	if event.is_action_pressed("jump") and _can_move:
 		death()
 
 func touched_shadow_monster_hitbox() -> void:
-	_is_dead = true
+	_can_move = true
 	audio_player.play()
 	animated_sprite.play("death")
 

@@ -6,15 +6,15 @@
 
 [node name="Level_Yan" instance=ExtResource("1_ahn3r")]
 
+[node name="PropNormalworldTree2" type="Sprite2D" parent="." index="2"]
+position = Vector2(777, 474)
+texture = ExtResource("3_uq8i1")
+
 [node name="SmolCow" parent="Gameplay" index="4" instance=ExtResource("3_bbc21")]
 position = Vector2(181, 590)
 
 [node name="Player" parent="Gameplay" index="5"]
 position = Vector2(554, 554)
-
-[node name="PropNormalworldTree2" type="Sprite2D" parent="." index="2"]
-position = Vector2(777, 474)
-texture = ExtResource("3_uq8i1")
 
 [editable path="UI/DialogueCanvas"]
 [editable path="UI/DialogueCanvas/DialogueSession1"]
