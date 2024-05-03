@@ -63,6 +63,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		start_dialogue()
 
 
-func _on_level_exit_body_entered(body: Node2D) -> void:
+func _on_level_exit_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("Player"):
 		start_dialogue()
