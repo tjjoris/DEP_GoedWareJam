@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var movement_handler: MovementHandler = $Movement_Handler
 @onready var jump_handler: JumpHandler = $Jump_Handler
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var _is_dead = false
