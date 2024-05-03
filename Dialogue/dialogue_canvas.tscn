@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://m8ic7c6lj3pg"]
+[gd_scene load_steps=5 format=3 uid="uid://m8ic7c6lj3pg"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_canvas.gd" id="1_qri3m"]
-[ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="3_qmp7w"]
-[ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="3_yoa75"]
-[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="4_i1try"]
+[ext_resource type="FontFile" uid="uid://oom1vqe8wuui" path="res://Dialogue/fonts/FindersKeepers.ttf" id="3_0h7k6"]
 [ext_resource type="Texture2D" uid="uid://ddnw50a2gesor" path="res://Dialogue/portraits/drchazz_neutral_0.png" id="5_fdyth"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbe25"]
@@ -14,10 +12,6 @@ border_width_right = 6
 border_width_bottom = 6
 border_color = Color(0.194452, 0.144279, 0.180784, 1)
 anti_aliasing = false
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5vhc"]
-resource_local_to_scene = true
-size = Vector2(50, 50)
 
 [node name="DialogueCanvas" type="CanvasLayer"]
 script = ExtResource("1_qri3m")
@@ -73,29 +67,7 @@ custom_minimum_size = Vector2(400, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("3_qmp7w")
+theme_override_fonts/font = ExtResource("3_0h7k6")
 theme_override_font_sizes/font_size = 62
-text = "Placeholder text. Cool right? but if I just keep talking it doesn't end."
+text = "<Placeholder text>"
 autowrap_mode = 3
-
-[node name="DialogueSession1" parent="." instance=ExtResource("3_yoa75")]
-
-[node name="Area2D" type="Area2D" parent="DialogueSession1"]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueSession1/Area2D"]
-shape = SubResource("RectangleShape2D_t5vhc")
-metadata/_edit_lock_ = true
-
-[node name="DialogueInstance" parent="DialogueSession1" instance=ExtResource("4_i1try")]
-message = "Dialogue 1 Placeholder Text"
-image = ExtResource("5_fdyth")
-
-[node name="LevelCompleteDialogue" parent="." instance=ExtResource("3_yoa75")]
-
-[node name="DialogueInstance" parent="LevelCompleteDialogue" instance=ExtResource("4_i1try")]
-message = "Level Complete placeholder text!"
-image = ExtResource("5_fdyth")
-
-[editable path="DialogueSession1"]
-[editable path="LevelCompleteDialogue"]

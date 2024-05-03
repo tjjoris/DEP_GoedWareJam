@@ -3,13 +3,17 @@ extends CanvasLayer
 @onready var dialogue_container: MarginContainer = %DialogueContainer
 @onready var message_label: Label = %MessageLabel
 @onready var portrait_texture: TextureRect = %PortraitTexture
-@onready var current_session: DialogueSession = $DialogueSession1
+var current_session: DialogueSession
 var dialogue_instances: Array[DialogueInstance] = []
 
 var in_dialogue_state = false
 var dialogue_next_ready = true
 var pause_during_dialogue = false
 var instance_index = 0
+
+
+func _ready() -> void:
+	GameManager.dialogue_canvas = self
 
 
 func _input(_event) -> void:
@@ -61,7 +65,7 @@ func continue_dialogue():
 
 func end_dialogue():
 	# removes pesky inputs as you exit dialogue scene
-	#get_viewport().set_input_as_handled()
+	get_viewport().set_input_as_handled()
 	dialogue_container.visible = false
 	if current_session.repeatable:
 		current_session.can_start_session = true
