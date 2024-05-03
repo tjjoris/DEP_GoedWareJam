@@ -1,4 +1,3 @@
-class_name GameManager
-# This is an always accessible singleton
+extends Node
 
-var test_var: float = 1.0
+static var player_can_move: bool = true

@@ -90,6 +90,7 @@ scale = Vector2(1, 1)
 
 [connection signal="body_entered" from="UI/DialogueCanvas/DialogueSession1/Area2D" to="UI/DialogueCanvas/DialogueSession1" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Gameplay/Entities/LevelExit" to="UI/DialogueCanvas/LevelCompleteDialogue" method="_on_level_exit_body_entered"]
+[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
 
 [editable path="UI/DialogueCanvas"]
 [editable path="UI/DialogueCanvas/DialogueSession1"]

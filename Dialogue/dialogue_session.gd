@@ -44,14 +44,18 @@ func set_dialogue():
 	if not dialogue_instances[instance_index].image == null:
 		get_parent().set_dialogue_texture(dialogue_instances[instance_index].image)
 	get_tree().paused = true
+	GameManager.player_can_move = false
 	
 	
 	
 func end_dialogue():
+	# removes pesky inputs as you exit dialogue scene
+	get_viewport().set_input_as_handled()
 	get_parent().visible = false
 	if repeatable:
 		can_start_session = true
 	get_tree().paused = false
+	GameManager.player_can_move = true
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

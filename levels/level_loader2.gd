@@ -37,6 +37,8 @@ func reload_current_scene():
 func deferred_reload_current_scene():
 	print("Reloading: " + get_tree().current_scene.name)
 	# It is now safe to reload the scene
+	
+	GameManager.player_can_move = true
 	get_tree().reload_current_scene()
 
 func goto_scene(path):
@@ -48,7 +50,8 @@ func goto_scene(path):
 
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
-
+	
+	GameManager.player_can_move = true
 	call_deferred("_deferred_goto_scene", path)
 
 
