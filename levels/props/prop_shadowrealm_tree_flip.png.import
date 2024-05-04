@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddnw50a2gesor"
-path="res://.godot/imported/drchazz_neutral_0.png-ceb015217ceb6bf7695b7eb9fa1ecc72.ctex"
+uid="uid://b8mp1mwmqtv38"
+path="res://.godot/imported/prop_shadowrealm_tree_flip.png-92750c26736302570c7b38435d498c7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogue/portraits/drchazz_neutral_0.png"
-dest_files=["res://.godot/imported/drchazz_neutral_0.png-ceb015217ceb6bf7695b7eb9fa1ecc72.ctex"]
+source_file="res://levels/props/prop_shadowrealm_tree_flip.png"
+dest_files=["res://.godot/imported/prop_shadowrealm_tree_flip.png-92750c26736302570c7b38435d498c7b.ctex"]
 
 [params]
 
