@@ -72,3 +72,5 @@ func end_dialogue():
 	# re-enable game state
 	GameManager.player_can_move = true
 	get_tree().paused = false
+	if current_session.load_next_level:
+		LevelLoader.goto_next_scene()

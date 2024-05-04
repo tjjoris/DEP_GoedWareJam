@@ -58,7 +58,7 @@ func touched_shadow_monster_hitbox() -> void:
 	death()
 
 func death() -> void:
-	LevelLoader2.reload_current_scene()
+	LevelLoader.reload_current_scene()
 	
 
 
