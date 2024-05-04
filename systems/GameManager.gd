@@ -6,20 +6,22 @@ extends Node
 signal collectable_value_changed(total_collectables)
 
 static var is_shifted: bool = false
+var total_collectables: int = 0
 static var player_can_move: bool = true
 static var player_is_dead: bool = false
 static var player_can_phase: bool = true
 
-var total_collectables: int = 0
+var _current_level_collectables = 0
 var collectable_score: int:
 	get:
-		return total_collectables
+		return _current_level_collectables
 	set(value):
-		total_collectables = value
-		collectable_value_changed.emit(total_collectables)
+		total_collectables += value
+		_current_level_collectables = value
+		collectable_value_changed.emit(_current_level_collectables)
 
 func _ready() -> void:
-	collectable_score = 0
+	total_collectables = 0
 
 static var dialogue_canvas: CanvasLayer
 
