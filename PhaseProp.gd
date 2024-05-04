@@ -5,14 +5,14 @@ extends Node2D
 
 
 func _ready() -> void:
-	handle_sprites()
+	call_deferred("handle_sprites")
 
 func do_phase_change(_entering_shadow_realm: bool):
 	# can be called before node is ready
 	if overworld_sprite == null || shadow_sprite == null:
 		return
 		
-	handle_sprites()
+	call_deferred("handle_sprites")
 
 
 func handle_sprites():

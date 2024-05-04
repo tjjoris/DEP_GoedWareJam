@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://pef6rpcggqkj"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_dlmks"]
+[ext_resource type="Texture2D" uid="uid://dlx77g3pkwyj0" path="res://levels/props/sprites/prop_log_1.png" id="2_1cua4"]
+
+[node name="ov_log_1" instance=ExtResource("1_dlmks")]
+
+[node name="OverworldSprite" parent="." index="0"]
+texture = ExtResource("2_1cua4")

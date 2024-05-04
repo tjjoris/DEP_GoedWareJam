@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://be1h7270jb3k7"]
 
-[ext_resource type="Script" path="res://levels/BackgroundShift.gd" id="1_shq5h"]
+[ext_resource type="Script" path="res://systems/BackgroundShift.gd" id="1_shq5h"]
 [ext_resource type="Texture2D" uid="uid://8v4bfpdvuqiv" path="res://levels/background/overworld/background_normalworld_0.png" id="2_vdyok"]
 [ext_resource type="Texture2D" uid="uid://cu6dxke8aes5q" path="res://levels/background/overworld/background_normalworld_1.png" id="3_af4an"]
 [ext_resource type="Texture2D" uid="uid://dhs6agunehdmx" path="res://levels/background/overworld/background_normalworld_2.png" id="4_axs70"]

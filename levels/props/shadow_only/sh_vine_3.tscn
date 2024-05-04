@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xuiji6yk2pgc"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_ylkt7"]
+[ext_resource type="Texture2D" uid="uid://dvyxsk4hfl5a5" path="res://levels/props/sprites/prop_vine_3_shadow.png" id="3_0kv65"]
+
+[node name="sh_vine_3" instance=ExtResource("1_ylkt7")]
+
+[node name="ShadowSprite" parent="." index="1"]
+texture = ExtResource("3_0kv65")

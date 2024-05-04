@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
-[ext_resource type="Script" path="res://levels/PhaseShifter.gd" id="2_la6m4"]
+[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="7_5kwlo"]

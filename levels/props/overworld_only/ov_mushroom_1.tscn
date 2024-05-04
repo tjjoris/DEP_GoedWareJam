@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xcwp57swu8d6"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_b0qa1"]
+[ext_resource type="Texture2D" uid="uid://bhi68147a01ji" path="res://levels/props/sprites/prop_mush_1.png" id="2_mdq0l"]
+
+[node name="ov_mushroom_1" instance=ExtResource("1_b0qa1")]
+
+[node name="OverworldSprite" parent="." index="0"]
+texture = ExtResource("2_mdq0l")
