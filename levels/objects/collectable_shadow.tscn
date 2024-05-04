@@ -5,6 +5,7 @@
 
 [node name="Sample_Shadow" groups=["CanPhase"] instance=ExtResource("1_0lmox")]
 collision_layer = 1
+is_phased = true
 
 [node name="Sprite2D" parent="." index="0"]
 self_modulate = Color(0.900717, 0.338065, 0.793049, 1)
