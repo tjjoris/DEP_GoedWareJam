@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2u3q5snk3mo7"]
+
+[ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_2lcsi"]
+[ext_resource type="PackedScene" uid="uid://itsafkp7mmbc" path="res://levels/props/shadow_only/sh_tree_shadow_right.tscn" id="2_cqmtp"]
+
+[node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_2lcsi")]
+
+[node name="sh_tree_shadow_right" parent="Gameplay/TileMap" index="0" instance=ExtResource("2_cqmtp")]
+position = Vector2(9, 415)
+
+[node name="LevelExit" parent="Gameplay/Entities" index="0"]
+position = Vector2(208, 384)
+
+[editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/LevelExit"]

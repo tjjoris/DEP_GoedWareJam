@@ -3,6 +3,7 @@ class_name DialogueSession
 
 
 @export var repeatable:bool = false #determins if a dialouge session can be repeated.
+@export var pause_during_dialogue = false # this will pause all game processing while playing this dialogue
 var can_start_session = true   #determins if this dialogue session can be started, prevents from unwanted repeating dialogue
 
 
