@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jsjiwkkabx2i" path="res://levels/props/sprites/prop_mush_4.png" id="2_ere3u"]
 [ext_resource type="Texture2D" uid="uid://d16ifrgvp6y7e" path="res://levels/props/sprites/prop_mush_4_shadow.png" id="3_o4qwr"]
 
-[node name="mushroom_4" instance=ExtResource("1_ob6yn")]
+[node name="duo_mushroom_4" instance=ExtResource("1_ob6yn")]
 
 [node name="OverworldSprite" parent="." index="0"]
 texture = ExtResource("2_ere3u")

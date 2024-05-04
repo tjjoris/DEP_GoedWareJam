@@ -1,0 +1,262 @@
+[gd_scene load_steps=62 format=3 uid="uid://byndt3lg7ggp8"]
+
+[ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_itcvo"]
+[ext_resource type="PackedScene" uid="uid://pef6rpcggqkj" path="res://levels/props/overworld_only/ov_log_1.tscn" id="2_yxckl"]
+[ext_resource type="PackedScene" uid="uid://dqqxuy0ughn6w" path="res://levels/props/overworld_only/ov_log_2.tscn" id="3_eq7so"]
+[ext_resource type="PackedScene" uid="uid://xcwp57swu8d6" path="res://levels/props/overworld_only/ov_mushroom_1.tscn" id="4_qq0qq"]
+[ext_resource type="PackedScene" uid="uid://c2somsjdutbq6" path="res://levels/props/overworld_only/ov_mushroom_3.tscn" id="5_gn7l0"]
+[ext_resource type="PackedScene" uid="uid://blwn3c83satm5" path="res://levels/props/overworld_only/ov_mushroom_2.tscn" id="5_nq2fr"]
+[ext_resource type="PackedScene" uid="uid://bujrfthnf8qao" path="res://levels/props/overworld_only/ov_mushroom_4.tscn" id="6_m8jfc"]
+[ext_resource type="PackedScene" uid="uid://orknqwg6lhva" path="res://levels/props/overworld_only/ov_plant_1.tscn" id="7_6qag0"]
+[ext_resource type="PackedScene" uid="uid://b7oidpmkkhnsx" path="res://levels/props/overworld_only/ov_plant_2.tscn" id="8_vrscr"]
+[ext_resource type="PackedScene" uid="uid://ccrps0ybc6bvb" path="res://levels/props/overworld_only/ov_plant_3.tscn" id="9_ma1u2"]
+[ext_resource type="PackedScene" uid="uid://bcjrxfq8eye3s" path="res://levels/props/overworld_only/ov_plant_4.tscn" id="10_acqnv"]
+[ext_resource type="PackedScene" uid="uid://b6dejntr7brky" path="res://levels/props/overworld_only/ov_plant_5.tscn" id="11_k1j4s"]
+[ext_resource type="PackedScene" uid="uid://bur7ul6cal2ic" path="res://levels/props/overworld_only/ov_rock_1.tscn" id="12_r5c1j"]
+[ext_resource type="PackedScene" uid="uid://c6vab83tvyefu" path="res://levels/props/overworld_only/ov_rock_2.tscn" id="13_k5may"]
+[ext_resource type="PackedScene" uid="uid://desehp05bitil" path="res://levels/props/overworld_only/ov_rock_3.tscn" id="14_exqcj"]
+[ext_resource type="PackedScene" uid="uid://dlkwbchocgatt" path="res://levels/props/overworld_only/ov_root_1.tscn" id="15_fu8u5"]
+[ext_resource type="PackedScene" uid="uid://belfepqgf2mey" path="res://levels/props/overworld_only/ov_root_2.tscn" id="16_gwhck"]
+[ext_resource type="PackedScene" uid="uid://bq7h2hmxvwife" path="res://levels/props/overworld_only/ov_tree_green.tscn" id="17_4rcsr"]
+[ext_resource type="PackedScene" uid="uid://l4qhlrje8f2a" path="res://levels/props/overworld_only/ov_tree_orange.tscn" id="18_mfhpq"]
+[ext_resource type="PackedScene" uid="uid://dlpi23fkpey02" path="res://levels/props/overworld_only/ov_tree_yellow.tscn" id="19_463ci"]
+[ext_resource type="PackedScene" uid="uid://bqoe7q23i35y" path="res://levels/props/overworld_only/ov_vine_3.tscn" id="20_ihbw3"]
+[ext_resource type="PackedScene" uid="uid://b3mf5j15k1uk1" path="res://levels/props/shadow_only/sh_log_1.tscn" id="21_l6kbi"]
+[ext_resource type="PackedScene" uid="uid://bv6kn1fsxelwo" path="res://levels/props/shadow_only/sh_log_2.tscn" id="22_jofq6"]
+[ext_resource type="PackedScene" uid="uid://cgiorpxhvgoh0" path="res://levels/props/shadow_only/sh_mushroom_1.tscn" id="23_5f04p"]
+[ext_resource type="PackedScene" uid="uid://bu7hx06gjc5g2" path="res://levels/props/shadow_only/sh_mushroom_2.tscn" id="24_evwir"]
+[ext_resource type="PackedScene" uid="uid://ccs3l6l58n6nf" path="res://levels/props/shadow_only/sh_mushroom_3.tscn" id="25_0c8bg"]
+[ext_resource type="PackedScene" uid="uid://cj5tdvp7jgpjk" path="res://levels/props/shadow_only/sh_mushroom_4.tscn" id="26_kum8r"]
+[ext_resource type="PackedScene" uid="uid://ctu4mfv3weixa" path="res://levels/props/shadow_only/sh_plant_1.tscn" id="27_0s66r"]
+[ext_resource type="PackedScene" uid="uid://b6g22rmrw1tfb" path="res://levels/props/shadow_only/sh_plant_2.tscn" id="28_gyqe2"]
+[ext_resource type="PackedScene" uid="uid://bn2pdot14ub8f" path="res://levels/props/shadow_only/sh_plant_3.tscn" id="29_t47gl"]
+[ext_resource type="PackedScene" uid="uid://dfg42jlohj7gs" path="res://levels/props/shadow_only/sh_plant_4.tscn" id="30_pnrvc"]
+[ext_resource type="PackedScene" uid="uid://yh0e5qlsrvul" path="res://levels/props/shadow_only/sh_plant_5.tscn" id="31_sn2sh"]
+[ext_resource type="PackedScene" uid="uid://cbdvsocc0hrlx" path="res://levels/props/shadow_only/sh_rock_1.tscn" id="33_nspo8"]
+[ext_resource type="PackedScene" uid="uid://cg2fwxwwfy7g6" path="res://levels/props/shadow_only/sh_rock_2.tscn" id="34_qvjmc"]
+[ext_resource type="PackedScene" uid="uid://wqwngtxtawe8" path="res://levels/props/shadow_only/sh_rock_3.tscn" id="35_grdpx"]
+[ext_resource type="PackedScene" uid="uid://ese6xugow8xm" path="res://levels/props/shadow_only/sh_root_1.tscn" id="36_16qfn"]
+[ext_resource type="PackedScene" uid="uid://dwel63w35g7jf" path="res://levels/props/shadow_only/sh_root_2.tscn" id="37_n7kgd"]
+[ext_resource type="PackedScene" uid="uid://d1vo4iwb32pjk" path="res://levels/props/shadow_only/sh_tree_shadow_left.tscn" id="38_x5jnj"]
+[ext_resource type="PackedScene" uid="uid://itsafkp7mmbc" path="res://levels/props/shadow_only/sh_tree_shadow_right.tscn" id="39_k1pgq"]
+[ext_resource type="PackedScene" uid="uid://xuiji6yk2pgc" path="res://levels/props/shadow_only/sh_vine_3.tscn" id="40_w2nb7"]
+[ext_resource type="PackedScene" uid="uid://deeiuv50yp7xj" path="res://levels/props/swapping/duo_log_1.tscn" id="41_ilb1k"]
+[ext_resource type="PackedScene" uid="uid://g1btt6xgop8l" path="res://levels/props/swapping/duo_log_2.tscn" id="42_7xfpx"]
+[ext_resource type="PackedScene" uid="uid://b2bo65c5ff6p5" path="res://levels/props/swapping/duo_mushroom_1.tscn" id="43_g4r1v"]
+[ext_resource type="PackedScene" uid="uid://bh6q382n3j0dx" path="res://levels/props/swapping/duo_mushroom_2.tscn" id="44_twqes"]
+[ext_resource type="PackedScene" uid="uid://cmhaaiv1mhv32" path="res://levels/props/swapping/duo_mushroom_3.tscn" id="45_dfcby"]
+[ext_resource type="PackedScene" uid="uid://bepjof7215t16" path="res://levels/props/swapping/duo_mushroom_4.tscn" id="46_epjc6"]
+[ext_resource type="PackedScene" uid="uid://w2kn8ndkiaaj" path="res://levels/props/swapping/duo_plant_1.tscn" id="47_cvna0"]
+[ext_resource type="PackedScene" uid="uid://btnl8ky1f3wii" path="res://levels/props/swapping/duo_plant_2.tscn" id="48_g0pki"]
+[ext_resource type="PackedScene" uid="uid://c7yjdnbxedh61" path="res://levels/props/swapping/duo_plant_3.tscn" id="49_0bn08"]
+[ext_resource type="PackedScene" uid="uid://lfmtwh30fnqd" path="res://levels/props/swapping/duo_plant_4.tscn" id="50_i83iq"]
+[ext_resource type="PackedScene" uid="uid://bjyfiugashq7e" path="res://levels/props/swapping/duo_plant_5.tscn" id="51_0n6eq"]
+[ext_resource type="PackedScene" uid="uid://b2ybqsywl22mc" path="res://levels/props/swapping/duo_rock_1.tscn" id="52_d6iwv"]
+[ext_resource type="PackedScene" uid="uid://boyn0qr7lxp42" path="res://levels/props/swapping/duo_rock_2.tscn" id="53_mwg5u"]
+[ext_resource type="PackedScene" uid="uid://k67xkpv53l33" path="res://levels/props/swapping/duo_rock_3.tscn" id="54_2fs0e"]
+[ext_resource type="PackedScene" uid="uid://cv0g5y0on6gtf" path="res://levels/props/swapping/duo_root_1.tscn" id="55_nrssd"]
+[ext_resource type="PackedScene" uid="uid://6h2wn6ikdb30" path="res://levels/props/swapping/duo_root_2.tscn" id="56_ejii4"]
+[ext_resource type="PackedScene" uid="uid://okqnq0fqenln" path="res://levels/props/swapping/duo_tree_green.tscn" id="57_20xwv"]
+[ext_resource type="PackedScene" uid="uid://gs53vkevtels" path="res://levels/props/swapping/duo_tree_orange.tscn" id="58_pr4t4"]
+[ext_resource type="PackedScene" uid="uid://dt75svhfvidne" path="res://levels/props/swapping/duo_tree_yellow.tscn" id="59_qrkvo"]
+[ext_resource type="PackedScene" uid="uid://ct0lueq8ibvu4" path="res://levels/props/swapping/duo_vine_3.tscn" id="60_mf4ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5ayu"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_itcvo")]
+
+[node name="TileMap" parent="Gameplay" index="2"]
+layer_0/tile_data = PackedInt32Array(1310753, 196611, 3, 1245217, 196611, 0, 1179681, 196610, 2, 1114145, 196610, 0, 1310752, 65539, 3, 1245216, 131075, 0, 1179680, 65538, 1, 1114144, 65538, 0, 1310751, 65539, 3, 1245215, 65539, 0, 1179679, 65538, 1, 1114143, 65538, 0, 1310750, 65539, 3, 1245214, 131075, 0, 1179678, 65538, 1, 1114142, 131074, 0, 1310749, 131075, 3, 1245213, 131075, 0, 1179677, 65538, 1, 1114141, 65538, 0, 1310748, 131075, 3, 1245212, 131075, 0, 1179676, 65538, 1, 1114140, 131074, 0, 1310747, 131075, 3, 1245211, 131075, 0, 1179675, 65538, 1, 1114139, 131074, 0, 1310746, 65539, 3, 1245210, 131075, 0, 1179674, 65538, 1, 1114138, 65538, 0, 1310745, 65539, 3, 1245209, 131075, 0, 1179673, 65538, 1, 1114137, 65538, 0, 1310744, 65539, 3, 1245208, 65539, 0, 1179672, 65538, 1, 1114136, 65538, 0, 1310743, 65539, 3, 1245207, 131075, 0, 1179671, 131074, 2, 1114135, 131074, 0, 1310742, 65539, 3, 1245206, 131075, 0, 1179670, 131074, 1, 1114134, 65538, 0, 1310741, 131075, 3, 1245205, 131075, 0, 1179669, 65538, 1, 1114133, 65538, 0, 1310740, 65539, 3, 1245204, 131075, 0, 1179668, 131074, 2, 1114132, 131074, 0, 1310739, 65539, 3, 1245203, 131075, 0, 1179667, 65538, 1, 1114131, 65538, 0, 1310738, 131075, 3, 1245202, 65539, 0, 1179666, 65538, 1, 1114130, 65538, 0, 1310737, 65539, 3, 1245201, 65539, 0, 1179665, 131074, 2, 1114129, 65538, 0, 1310736, 131075, 3, 1245200, 65539, 0, 1179664, 65538, 1, 1114128, 65538, 0, 1310735, 65539, 3, 1245199, 65539, 0, 1179663, 65538, 1, 1114127, 131074, 0, 1310734, 131075, 3, 1245198, 65539, 0, 1179662, 65538, 1, 1114126, 65538, 0, 1310733, 131075, 3, 1245197, 131075, 0, 1179661, 65538, 1, 1114125, 131074, 0, 1310732, 131075, 3, 1245196, 65539, 0, 1179660, 65538, 1, 1114124, 65538, 0, 1310731, 131075, 3, 1245195, 65539, 0, 1179659, 65538, 2, 1114123, 65538, 0, 1310730, 65539, 3, 1245194, 131075, 0, 1179658, 65538, 1, 1114122, 65538, 0, 1310729, 65539, 3, 1245193, 65539, 0, 1179657, 65538, 1, 1114121, 65538, 0, 1310728, 131075, 3, 1245192, 131075, 0, 1179656, 65538, 1, 1114120, 65538, 0, 1310727, 65539, 3, 1245191, 131075, 0, 1179655, 65538, 1, 1114119, 65538, 0, 1310726, 65539, 3, 1245190, 131075, 0, 1179654, 65538, 1, 1114118, 131074, 0, 1310725, 131075, 3, 1245189, 65539, 0, 1179653, 65538, 1, 1114117, 131074, 0, 1310724, 131075, 3, 1245188, 65539, 0, 1179652, 65538, 1, 1114116, 65538, 0, 1310723, 65539, 3, 1245187, 131075, 0, 1179651, 65538, 1, 1114115, 131074, 0, 1310722, 65539, 3, 1245186, 65539, 0, 1179650, 65538, 1, 1114114, 131074, 0, 1310721, 65539, 3, 1245185, 65539, 0, 1179649, 131074, 2, 1114113, 131074, 0, 1310720, 65539, 3, 1245184, 131075, 0, 1179648, 65538, 1, 1114112, 65538, 0, 1376255, 131075, 3, 1310719, 131075, 0, 1245183, 65538, 1, 1179647, 65538, 0, 1376254, 65539, 3, 1310718, 131075, 0, 1245182, 65538, 1, 1179646, 65538, 0, 1376253, 65539, 3, 1310717, 65539, 0, 1245181, 65538, 2, 1179645, 65538, 0, 1376252, 131075, 3, 1310716, 65539, 0, 1245180, 2, 2, 1179644, 2, 0, 983037, 393218, 0, 983036, 262146, 0, 589821, 393218, 0, 589820, 262146, 0, 1376251, 131075, 3, 1310715, 327683, 3, 1245179, 196611, 2, 1179643, 196611, 2, 1114107, 196611, 1, 1048571, 196611, 2, 983035, 196611, 1, 917499, 196611, 2, 851963, 196611, 2, 786427, 196611, 1, 720891, 196611, 1, 655355, 196611, 2, 589819, 196611, 2, 524283, 196611, 1, 458747, 196611, 1, 393211, 196611, 2, 327675, 196611, 2, 262139, 196611, 0, 1376250, 131075, 3, 1310714, 65539, 1, 1245178, 65539, 1, 1179642, 65539, 2, 1114106, 65539, 1, 1048570, 65539, 1, 983034, 65539, 2, 917498, 65539, 2, 851962, 65539, 2, 786426, 65539, 1, 720890, 65539, 1, 655354, 65539, 1, 589818, 65539, 1, 524282, 65539, 1, 458746, 65539, 1, 393210, 65539, 2, 327674, 65539, 1, 262138, 131075, 0, 1376249, 65539, 3, 1310713, 65539, 1, 1245177, 65539, 1, 1179641, 65539, 2, 1114105, 65539, 1, 1048569, 65539, 1, 983033, 65539, 1, 917497, 65539, 1, 851961, 65539, 2, 786425, 65539, 1, 720889, 65539, 1, 655353, 65539, 1, 589817, 65539, 1, 524281, 65539, 1, 458745, 65539, 1, 393209, 65539, 2, 327673, 65539, 1, 262137, 131075, 0, 1376248, 65539, 3, 1310712, 65539, 1, 1245176, 65539, 1, 1179640, 65539, 1, 1114104, 65539, 1, 1048568, 65539, 1, 983032, 65539, 2, 917496, 65539, 2, 851960, 65539, 1, 786424, 131075, 1, 720888, 65539, 2, 655352, 65539, 2, 589816, 65539, 1, 524280, 65539, 1, 458744, 65539, 1, 393208, 65539, 2, 327672, 65539, 1, 262136, 65539, 0, 1376247, 3, 3, 1310711, 3, 1, 1245175, 3, 2, 1179639, 3, 2, 1114103, 3, 2, 1048567, 3, 2, 983031, 3, 1, 917495, 3, 2, 851959, 3, 1, 786423, 3, 2, 720887, 3, 1, 655351, 3, 2, 589815, 3, 1, 524279, 3, 2, 458743, 3, 1, 393207, 3, 2, 327671, 3, 1, 262135, 3, 0, 786429, 393218, 0, 786428, 262146, 0, 917527, 7, 0, 917519, 7, 0, 917511, 7, 0)
+layer_1/tile_data = PackedInt32Array(1310753, 196611, 3, 1245217, 196611, 0, 1179681, 196608, 1, 1114145, 196608, 0, 1310752, 131075, 3, 1245216, 131075, 0, 1179680, 65536, 1, 1114144, 131072, 0, 1310751, 131075, 3, 1245215, 65539, 0, 1179679, 65536, 1, 1114143, 65536, 0, 1310750, 131075, 3, 1245214, 131075, 0, 1179678, 65536, 1, 1114142, 65536, 0, 1310749, 131075, 3, 1245213, 65539, 0, 1179677, 65536, 1, 1114141, 131072, 0, 1310748, 131075, 3, 1245212, 65539, 0, 1179676, 65536, 1, 1114140, 131072, 0, 1310747, 131075, 3, 1245211, 131075, 0, 1179675, 65536, 1, 1114139, 131072, 0, 1310746, 65539, 3, 1245210, 131075, 0, 1179674, 131072, 2, 1114138, 131072, 0, 1310745, 131075, 3, 1245209, 65539, 0, 1179673, 131072, 2, 1114137, 131072, 0, 1310744, 65539, 3, 1245208, 65539, 0, 1179672, 65536, 1, 1114136, 131072, 0, 1310743, 65539, 3, 1245207, 65539, 0, 1179671, 131072, 2, 1114135, 65536, 0, 1310742, 65539, 3, 1245206, 131075, 0, 1179670, 65536, 1, 1114134, 65536, 0, 1310741, 65539, 3, 1245205, 65539, 0, 1179669, 131072, 1, 1114133, 131072, 0, 1310740, 65539, 3, 1245204, 131075, 0, 1179668, 65536, 1, 1114132, 131072, 0, 1310739, 131075, 3, 1245203, 131075, 0, 1179667, 65536, 2, 1114131, 131072, 0, 1310738, 65539, 3, 1245202, 131075, 0, 1179666, 65536, 1, 1114130, 131072, 0, 1310737, 131075, 3, 1245201, 131075, 0, 1179665, 65536, 2, 1114129, 131072, 0, 1310736, 131075, 3, 1245200, 131075, 0, 1179664, 65536, 1, 1114128, 65536, 0, 1310735, 131075, 3, 1245199, 131075, 0, 1179663, 65536, 1, 1114127, 65536, 0, 1310734, 65539, 3, 1245198, 131075, 0, 1179662, 131072, 2, 1114126, 65536, 0, 1310733, 65539, 3, 1245197, 65539, 0, 1179661, 65536, 1, 1114125, 131072, 0, 1310732, 131075, 3, 1245196, 65539, 0, 1179660, 65536, 1, 1114124, 131072, 0, 1310731, 131075, 3, 1245195, 131075, 0, 1179659, 131072, 2, 1114123, 131072, 0, 1310730, 65539, 3, 1245194, 131075, 0, 1179658, 65536, 2, 1114122, 65536, 0, 1310729, 131075, 3, 1245193, 65539, 0, 1179657, 65536, 1, 1114121, 65536, 0, 1310728, 65539, 3, 1245192, 65539, 0, 1179656, 65536, 1, 1114120, 131072, 0, 1310727, 65539, 3, 1245191, 65539, 0, 1179655, 65536, 1, 1114119, 131072, 0, 1310726, 131075, 3, 1245190, 131075, 0, 1179654, 65536, 1, 1114118, 131072, 0, 1310725, 65539, 3, 1245189, 131075, 0, 1179653, 65536, 1, 1114117, 131072, 0, 1310724, 65539, 3, 1245188, 65539, 0, 1179652, 65536, 1, 1114116, 131072, 0, 1310723, 131075, 3, 1245187, 131075, 0, 1179651, 65536, 1, 1114115, 131072, 0, 1310722, 65539, 3, 1245186, 131075, 0, 1179650, 65536, 1, 1114114, 65536, 0, 1310721, 131075, 3, 1245185, 65539, 0, 1179649, 131072, 2, 1114113, 65536, 0, 1310720, 131075, 3, 1245184, 131075, 0, 1179648, 131072, 1, 1114112, 131072, 0, 1376255, 131075, 3, 1310719, 131075, 0, 1245183, 65536, 1, 1179647, 65536, 0, 1376254, 65539, 3, 1310718, 65539, 0, 1245182, 65536, 1, 1179646, 131072, 0, 1376253, 131075, 3, 1310717, 131075, 0, 1245181, 131072, 1, 1179645, 131072, 0, 1376252, 65539, 3, 1310716, 131075, 0, 1245180, 0, 1, 1179644, 0, 0, 983037, 393216, 0, 983036, 262144, 0, 1376251, 65539, 3, 1310715, 327683, 3, 1245179, 196611, 1, 1179643, 196611, 2, 1114107, 196611, 2, 1048571, 196611, 1, 983035, 196611, 1, 917499, 196611, 2, 851963, 196611, 1, 786427, 196611, 2, 720891, 196611, 1, 655355, 196611, 2, 589819, 196611, 2, 524283, 196611, 2, 458747, 196611, 2, 393211, 196611, 1, 327675, 196611, 2, 262139, 196611, 0, 1376250, 131075, 3, 1310714, 131075, 2, 1245178, 65539, 2, 1179642, 65539, 2, 1114106, 65539, 1, 1048570, 131075, 1, 983034, 65539, 1, 917498, 65539, 1, 851962, 65539, 2, 786426, 65539, 1, 720890, 65539, 1, 655354, 65539, 1, 589818, 65539, 1, 524282, 131075, 1, 458746, 65539, 2, 393210, 65539, 1, 327674, 65539, 1, 262138, 65539, 0, 1376249, 131075, 3, 1310713, 65539, 2, 1245177, 65539, 2, 1179641, 65539, 2, 1114105, 65539, 2, 1048569, 65539, 1, 983033, 65539, 1, 917497, 65539, 2, 851961, 65539, 2, 786425, 131075, 1, 720889, 65539, 1, 655353, 65539, 2, 589817, 131075, 2, 524281, 65539, 1, 458745, 65539, 1, 393209, 65539, 1, 327673, 65539, 1, 262137, 65539, 0, 1376248, 131075, 3, 1310712, 65539, 1, 1245176, 65539, 2, 1179640, 65539, 2, 1114104, 65539, 2, 1048568, 65539, 1, 983032, 65539, 1, 917496, 65539, 2, 851960, 65539, 1, 786424, 65539, 1, 720888, 65539, 2, 655352, 65539, 1, 589816, 65539, 1, 524280, 65539, 1, 458744, 65539, 1, 393208, 65539, 1, 327672, 65539, 1, 262136, 131075, 0, 1376247, 3, 3, 1310711, 3, 1, 1245175, 3, 1, 1179639, 3, 2, 1114103, 3, 1, 1048567, 3, 1, 983031, 3, 2, 917495, 3, 1, 851959, 3, 1, 786423, 3, 2, 720887, 3, 2, 655351, 3, 2, 589815, 3, 2, 524279, 3, 1, 458743, 3, 1, 393207, 3, 2, 327671, 3, 1, 262135, 3, 0, 786429, 393216, 0, 786428, 262144, 0, 589821, 393216, 0, 589820, 262144, 0, 917507, 7, 0, 917515, 7, 0, 917523, 7, 0)
+
+[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger" index="0"]
+shape = SubResource("RectangleShape2D_o5ayu")
+
+[node name="Overworld Props" type="Node2D" parent="Gameplay/ForegroundProps" index="0"]
+
+[node name="ov_log_1" parent="Gameplay/ForegroundProps/Overworld Props" index="0" instance=ExtResource("2_yxckl")]
+position = Vector2(28, 401)
+
+[node name="ov_log_2" parent="Gameplay/ForegroundProps/Overworld Props" index="1" instance=ExtResource("3_eq7so")]
+position = Vector2(73, 399)
+
+[node name="ov_mushroom_1" parent="Gameplay/ForegroundProps/Overworld Props" index="2" instance=ExtResource("4_qq0qq")]
+position = Vector2(115, 406)
+
+[node name="ov_mushroom_2" parent="Gameplay/ForegroundProps/Overworld Props" index="3" instance=ExtResource("5_nq2fr")]
+position = Vector2(138, 400)
+
+[node name="ov_mushroom_3" parent="Gameplay/ForegroundProps/Overworld Props" index="4" instance=ExtResource("5_gn7l0")]
+position = Vector2(161, 402)
+
+[node name="ov_mushroom_4" parent="Gameplay/ForegroundProps/Overworld Props" index="5" instance=ExtResource("6_m8jfc")]
+position = Vector2(184, 403)
+
+[node name="ov_plant_1" parent="Gameplay/ForegroundProps/Overworld Props" index="6" instance=ExtResource("7_6qag0")]
+position = Vector2(204, 402)
+
+[node name="ov_plant_2" parent="Gameplay/ForegroundProps/Overworld Props" index="7" instance=ExtResource("8_vrscr")]
+position = Vector2(235, 400)
+
+[node name="ov_plant_3" parent="Gameplay/ForegroundProps/Overworld Props" index="8" instance=ExtResource("9_ma1u2")]
+position = Vector2(267, 400)
+
+[node name="ov_plant_4" parent="Gameplay/ForegroundProps/Overworld Props" index="9" instance=ExtResource("10_acqnv")]
+position = Vector2(304, 396)
+
+[node name="ov_plant_5" parent="Gameplay/ForegroundProps/Overworld Props" index="10" instance=ExtResource("11_k1j4s")]
+position = Vector2(348, 396)
+
+[node name="ov_rock_1" parent="Gameplay/ForegroundProps/Overworld Props" index="11" instance=ExtResource("12_r5c1j")]
+position = Vector2(391, 395)
+
+[node name="ov_rock_2" parent="Gameplay/ForegroundProps/Overworld Props" index="12" instance=ExtResource("13_k5may")]
+position = Vector2(428, 393)
+
+[node name="ov_rock_3" parent="Gameplay/ForegroundProps/Overworld Props" index="13" instance=ExtResource("14_exqcj")]
+position = Vector2(459, 394)
+
+[node name="ov_root_1" parent="Gameplay/ForegroundProps/Overworld Props" index="14" instance=ExtResource("15_fu8u5")]
+position = Vector2(488, 394)
+
+[node name="ov_root_2" parent="Gameplay/ForegroundProps/Overworld Props" index="15" instance=ExtResource("16_gwhck")]
+position = Vector2(516, 394)
+
+[node name="ov_greentree" parent="Gameplay/ForegroundProps/Overworld Props" index="16" instance=ExtResource("17_4rcsr")]
+position = Vector2(554, 303)
+
+[node name="ov_tree_orange" parent="Gameplay/ForegroundProps/Overworld Props" index="17" instance=ExtResource("18_mfhpq")]
+position = Vector2(670, 300)
+
+[node name="ov_yellowtree" parent="Gameplay/ForegroundProps/Overworld Props" index="18" instance=ExtResource("19_463ci")]
+position = Vector2(764, 302)
+
+[node name="ov_vine_3" parent="Gameplay/ForegroundProps/Overworld Props" index="19" instance=ExtResource("20_ihbw3")]
+position = Vector2(816, 397)
+
+[node name="Shadowrealm Props" type="Node2D" parent="Gameplay/ForegroundProps" index="1"]
+
+[node name="sh_log_1" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="0" instance=ExtResource("21_l6kbi")]
+position = Vector2(27, 441)
+
+[node name="sh_log_2" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="1" instance=ExtResource("22_jofq6")]
+position = Vector2(72, 442)
+
+[node name="sh_mushroom_1" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="2" instance=ExtResource("23_5f04p")]
+position = Vector2(114, 439)
+
+[node name="sh_mushroom_2" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="3" instance=ExtResource("24_evwir")]
+position = Vector2(137, 438)
+
+[node name="sh_mushroom_3" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="4" instance=ExtResource("25_0c8bg")]
+position = Vector2(161, 438)
+
+[node name="sh_mushroom_4" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="5" instance=ExtResource("26_kum8r")]
+position = Vector2(182, 437)
+
+[node name="sh_plant_1" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="6" instance=ExtResource("27_0s66r")]
+position = Vector2(203, 439)
+
+[node name="sh_plant_2" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="7" instance=ExtResource("28_gyqe2")]
+position = Vector2(234, 434)
+
+[node name="sh_plant_3" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="8" instance=ExtResource("29_t47gl")]
+position = Vector2(268, 433)
+
+[node name="sh_plant_4" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="9" instance=ExtResource("30_pnrvc")]
+position = Vector2(305, 433)
+
+[node name="sh_plant_5" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="10" instance=ExtResource("31_sn2sh")]
+position = Vector2(349, 433)
+
+[node name="sh_rock_1" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="11" instance=ExtResource("33_nspo8")]
+position = Vector2(392, 435)
+
+[node name="sh_rock_2" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="12" instance=ExtResource("34_qvjmc")]
+position = Vector2(429, 435)
+
+[node name="sh_rock_3" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="13" instance=ExtResource("35_grdpx")]
+position = Vector2(459, 435)
+
+[node name="sh_root_1" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="14" instance=ExtResource("36_16qfn")]
+position = Vector2(487, 428)
+
+[node name="sh_root_2" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="15" instance=ExtResource("37_n7kgd")]
+position = Vector2(514, 427)
+
+[node name="sh_tree_shadow_left" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="16" instance=ExtResource("38_x5jnj")]
+position = Vector2(585, 337)
+
+[node name="sh_tree_shadow_right" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="17" instance=ExtResource("39_k1pgq")]
+position = Vector2(744, 334)
+
+[node name="sh_vine_3" parent="Gameplay/ForegroundProps/Shadowrealm Props" index="18" instance=ExtResource("40_w2nb7")]
+position = Vector2(818, 425)
+
+[node name="Dual Props" type="Node2D" parent="Gameplay/ForegroundProps" index="2"]
+
+[node name="duo_log_1" parent="Gameplay/ForegroundProps/Dual Props" index="0" instance=ExtResource("41_ilb1k")]
+position = Vector2(18, 590)
+
+[node name="duo_log_2" parent="Gameplay/ForegroundProps/Dual Props" index="1" instance=ExtResource("42_7xfpx")]
+position = Vector2(63, 588)
+
+[node name="duo_mushroom_1" parent="Gameplay/ForegroundProps/Dual Props" index="2" instance=ExtResource("43_g4r1v")]
+position = Vector2(104, 586)
+
+[node name="duo_mushroom_2" parent="Gameplay/ForegroundProps/Dual Props" index="3" instance=ExtResource("44_twqes")]
+position = Vector2(129, 582)
+
+[node name="duo_mushroom_3" parent="Gameplay/ForegroundProps/Dual Props" index="4" instance=ExtResource("45_dfcby")]
+position = Vector2(150, 583)
+
+[node name="duo_mushroom_4" parent="Gameplay/ForegroundProps/Dual Props" index="5" instance=ExtResource("46_epjc6")]
+position = Vector2(172, 582)
+
+[node name="duo_plant_1" parent="Gameplay/ForegroundProps/Dual Props" index="6" instance=ExtResource("47_cvna0")]
+position = Vector2(194, 584)
+
+[node name="duo_plant_2" parent="Gameplay/ForegroundProps/Dual Props" index="7" instance=ExtResource("48_g0pki")]
+position = Vector2(225, 580)
+
+[node name="duo_plant_3" parent="Gameplay/ForegroundProps/Dual Props" index="8" instance=ExtResource("49_0bn08")]
+position = Vector2(260, 580)
+
+[node name="duo_plant_4" parent="Gameplay/ForegroundProps/Dual Props" index="9" instance=ExtResource("50_i83iq")]
+position = Vector2(295, 578)
+
+[node name="duo_plant_5" parent="Gameplay/ForegroundProps/Dual Props" index="10" instance=ExtResource("51_0n6eq")]
+position = Vector2(340, 579)
+
+[node name="duo_rock_1" parent="Gameplay/ForegroundProps/Dual Props" index="11" instance=ExtResource("52_d6iwv")]
+position = Vector2(383, 581)
+
+[node name="duo_rock_2" parent="Gameplay/ForegroundProps/Dual Props" index="12" instance=ExtResource("53_mwg5u")]
+position = Vector2(420, 581)
+
+[node name="duo_rock_3" parent="Gameplay/ForegroundProps/Dual Props" index="13" instance=ExtResource("54_2fs0e")]
+position = Vector2(450, 580)
+
+[node name="duo_root_1" parent="Gameplay/ForegroundProps/Dual Props" index="14" instance=ExtResource("55_nrssd")]
+position = Vector2(479, 573)
+
+[node name="duo_root_2" parent="Gameplay/ForegroundProps/Dual Props" index="15" instance=ExtResource("56_ejii4")]
+position = Vector2(506, 571)
+
+[node name="duo_tree_green" parent="Gameplay/ForegroundProps/Dual Props" index="16" instance=ExtResource("57_20xwv")]
+position = Vector2(602, 653)
+
+[node name="duo_tree_orange" parent="Gameplay/ForegroundProps/Dual Props" index="17" instance=ExtResource("58_pr4t4")]
+position = Vector2(749, 658)
+
+[node name="duo_tree_yellow" parent="Gameplay/ForegroundProps/Dual Props" index="18" instance=ExtResource("59_qrkvo")]
+position = Vector2(898, 657)
+
+[node name="duo_vine_3" parent="Gameplay/ForegroundProps/Dual Props" index="19" instance=ExtResource("60_mf4ib")]
+position = Vector2(816, 571)
+
+[editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/DialogueTrigger"]
+[editable path="Gameplay/Entities/LevelExit"]
