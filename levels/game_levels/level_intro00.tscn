@@ -2,14 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_oywyi"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_3msxu"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="3_pjd6a"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="4_u2dnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2xdf"]
 resource_local_to_scene = true
 size = Vector2(326, 53)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_12u7l"]
-load_path = "res://.godot/imported/drchazz_neutral_0.png-ceb015217ceb6bf7695b7eb9fa1ecc72.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7baqx"]
 resource_local_to_scene = true
@@ -40,19 +38,19 @@ message = "Log entry 62b: Latest Portal-hop was more successful. New data collec
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger" index="3" instance=ExtResource("3_3msxu")]
 message = "I think I am finally starting to get the hang of this."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger" index="4" instance=ExtResource("3_3msxu")]
 message = "..."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance4" parent="Gameplay/Entities/DialogueTrigger" index="5" instance=ExtResource("3_3msxu")]
 message = "... Space-Time Location: Still unknown."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance5" parent="Gameplay/Entities/DialogueTrigger" index="6" instance=ExtResource("3_3msxu")]
 message = "I need to keep looking."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="LevelExit" parent="Gameplay/Entities" index="1"]
 position = Vector2(2014, 320)
@@ -68,13 +66,31 @@ message = "Collected another prime sample. Labelled this one Fl:23."
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger2" index="3" instance=ExtResource("3_3msxu")]
 message = "Any one of these samples will surely launch whole new chapters of scientific advancements we never could have imagined."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger2" index="4" instance=ExtResource("3_3msxu")]
 message = "... If I can ever manage to get these samples back home, that is."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
-[node name="DialogueTrigger3" parent="Gameplay/Entities" index="3" instance=ExtResource("4_u2dnq")]
+[node name="DialogueTrigger4" parent="Gameplay/Entities" index="3" instance=ExtResource("4_u2dnq")]
+position = Vector2(1826, 109)
+
+[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger4" index="0"]
+shape = SubResource("RectangleShape2D_7baqx")
+
+[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger4" index="2"]
+message = "New Sample description"
+
+[node name="DialogueTrigger5" parent="Gameplay/Entities" index="4" instance=ExtResource("4_u2dnq")]
+position = Vector2(1943, 524)
+
+[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger5" index="0"]
+shape = SubResource("RectangleShape2D_7baqx")
+
+[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger5" index="2"]
+message = "New Sample."
+
+[node name="DialogueTrigger3" parent="Gameplay/Entities" index="5" instance=ExtResource("4_u2dnq")]
 position = Vector2(2001, 314)
 
 [node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger3" index="0"]
@@ -89,11 +105,11 @@ message = "Entry 63a: New Dimensional Rift detected"
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger3" index="3" instance=ExtResource("3_3msxu")]
 message = "Hypothetically, if I pass through enough Rift Signatures, my suit should be able to successfully Quantangulate my location."
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger3" index="4" instance=ExtResource("3_3msxu")]
 message = "Maybe then I will be able to contact home base?"
-image = SubResource("CompressedTexture2D_12u7l")
+image = ExtResource("3_pjd6a")
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(123, 201)
@@ -102,4 +118,6 @@ position = Vector2(123, 201)
 [editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/LevelExit"]
 [editable path="Gameplay/Entities/DialogueTrigger2"]
+[editable path="Gameplay/Entities/DialogueTrigger4"]
+[editable path="Gameplay/Entities/DialogueTrigger5"]
 [editable path="Gameplay/Entities/DialogueTrigger3"]
