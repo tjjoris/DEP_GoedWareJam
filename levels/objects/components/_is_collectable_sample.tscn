@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bi1gommxa001h"]
+
+[node name="_IsCollectableSample" type="Node2D" groups=["IsCollectableSample"]]

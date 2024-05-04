@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://i2r4orsnsy7t"]
+
+[ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="1_22yb1"]
+[ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
+[ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
+[ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
+[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="5_pstk5"]
+[ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
+[ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="7_k8t4a"]
+[ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_rcc4d"]
+[ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="9_kcdxo"]
+[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="10_fh28u"]
+[ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="11_ypl1t"]
+
+[node name="_LEVEL_BLUEPRINT" type="Node2D"]
+process_mode = 3
+texture_filter = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_22yb1")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"
+
+[node name="UI" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="PlayerHUD" parent="UI" instance=ExtResource("2_k3v4q")]
+
+[node name="DialogueCanvas" parent="UI" instance=ExtResource("3_732qd")]
+
+[node name="DialogueContainer" parent="UI/DialogueCanvas" index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Gameplay" type="Node2D" parent="."]
+process_mode = 1
+
+[node name="Systems" type="Node2D" parent="Gameplay"]
+metadata/_edit_lock_ = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
+rotation = 0.10821
+color = Color(0.759625, 0.792005, 0.0139048, 1)
+energy = 0.62
+shadow_enabled = true
+
+[node name="KillFloor" parent="Gameplay/Systems" instance=ExtResource("4_euu1s")]
+position = Vector2(1200, 1200)
+
+[node name="PhaseShifter" type="Node2D" parent="Gameplay/Systems"]
+script = ExtResource("5_pstk5")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Gameplay/Systems"]
+texture_filter = 1
+color = Color(0.715373, 0.829394, 0.971375, 1)
+
+[node name="ParallaxBackground" parent="Gameplay/Systems" instance=ExtResource("6_147f0")]
+
+[node name="BackgroundProps" type="Node2D" parent="Gameplay"]
+
+[node name="TileMap" type="TileMap" parent="Gameplay"]
+texture_filter = 1
+tile_set = ExtResource("7_k8t4a")
+format = 2
+layer_0/name = "ShadowRealm"
+layer_0/tile_data = PackedInt32Array(1310723, 65539, 1, 1245187, 65539, 1, 1179651, 65539, 1, 1114115, 65539, 1, 1048579, 131075, 0, 1310722, 65539, 1, 1245186, 65539, 1, 1179650, 65539, 1, 1114114, 65539, 1, 1048578, 65539, 0, 1310721, 65539, 1, 1245185, 65539, 1, 1179649, 65539, 1, 1114113, 65539, 1, 1048577, 65539, 0, 1376259, 131075, 3, 1376258, 65539, 3, 1376257, 65539, 3, 1179648, 65539, 1, 1114112, 65539, 1, 1245183, 3, 2, 1179647, 3, 2, 1376256, 65539, 3, 1310720, 65539, 1, 1245184, 65539, 2, 1048576, 65539, 0, 1441791, 3, 3, 1376255, 3, 2, 1310719, 3, 2, 1114111, 3, 0, 1376261, 196611, 3, 1310725, 196611, 2, 1245189, 196611, 1, 1179653, 196611, 1, 1114117, 196611, 1, 1048581, 196611, 0, 1376260, 131075, 3, 1310724, 65539, 1, 1245188, 65539, 1, 1179652, 65539, 1, 1114116, 65539, 2, 1048580, 131075, 0, 1179646, 196610, 3, 1114110, 196610, 0, 1179645, 65538, 3, 1114109, 131074, 0, 1179644, 2, 3, 1114108, 2, 0, 983045, 7, 0)
+layer_1/name = "Overworld"
+layer_1/tile_data = PackedInt32Array(1376259, 65539, 3, 1310723, 65539, 1, 1245187, 65539, 1, 1179651, 65539, 1, 1114115, 65539, 1, 1048579, 131075, 0, 1376258, 65539, 3, 1310722, 65539, 2, 1245186, 131075, 1, 1179650, 65539, 2, 1114114, 65539, 1, 1048578, 65539, 0, 1376257, 65539, 3, 1310721, 65539, 1, 1245185, 65539, 2, 1179649, 65539, 1, 1114113, 65539, 1, 1048577, 131075, 0, 1179653, 196611, 1, 1114117, 196611, 2, 1179652, 65539, 1, 1114116, 65539, 1, 1376261, 196611, 3, 1310725, 196611, 1, 1245189, 196611, 1, 1048581, 196611, 0, 1376260, 131075, 3, 1310724, 131075, 2, 1245188, 65539, 2, 1048580, 131075, 0, 1376256, 65539, 3, 1310720, 65539, 2, 1245184, 65539, 1, 1179648, 65539, 2, 1114112, 65539, 2, 1048576, 131075, 0, 1441791, 3, 3, 1376255, 3, 1, 1310719, 3, 1, 1245183, 3, 2, 1179647, 3, 2, 1114111, 3, 0, 1114120, 196608, 3, 1048584, 196608, 0, 1114119, 131072, 3, 1048583, 131072, 0, 1114118, 0, 3, 1048582, 0, 0, 1048575, 7, 0)
+metadata/_edit_lock_ = true
+
+[node name="Entities" type="Node2D" parent="Gameplay"]
+
+[node name="LevelExit" parent="Gameplay/Entities" instance=ExtResource("8_rcc4d")]
+position = Vector2(193, 273)
+
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="2"]
+message = "Level Complete text!"
+
+[node name="Player" parent="Gameplay" instance=ExtResource("9_kcdxo")]
+position = Vector2(75, 369)
+scale = Vector2(1, 1)
+
+[node name="ForegroundProps" type="Node2D" parent="Gameplay"]
+
+[node name="Sample_Overworld" parent="." instance=ExtResource("10_fh28u")]
+position = Vector2(241, 496)
+
+[node name="Sample_Shadow" parent="." instance=ExtResource("11_ypl1t")]
+position = Vector2(-80, 495)
+
+[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
+
+[editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/LevelExit"]
