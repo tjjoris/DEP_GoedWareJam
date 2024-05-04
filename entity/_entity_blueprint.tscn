@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://c37kmcxle0w78"]
 
 [ext_resource type="Script" path="res://entity/EntityManager.gd" id="1_smrf7"]
-[ext_resource type="PackedScene" path="res://systems/hit_box.tscn" id="2_ppdpk"]
-[ext_resource type="PackedScene" path="res://systems/hurt_box.tscn" id="3_0bdmv"]
-[ext_resource type="PackedScene" path="res://entity/movement_handler.tscn" id="4_m18lt"]
-[ext_resource type="PackedScene" path="res://systems/detection_zone.tscn" id="4_u475q"]
-[ext_resource type="PackedScene" uid="uid://cjtns50vu54k1" path="res://entity/jump_handler.tscn" id="5_kwirb"]
+[ext_resource type="PackedScene" uid="uid://cvebck150tfga" path="res://systems/hit_box.tscn" id="2_ppdpk"]
+[ext_resource type="PackedScene" uid="uid://7cscc3lptvrs" path="res://systems/hurt_box.tscn" id="3_0bdmv"]
+[ext_resource type="PackedScene" uid="uid://dtc8p5c8rhi0n" path="res://entity/movement_handler.tscn" id="4_m18lt"]
+[ext_resource type="PackedScene" uid="uid://bpa8biyciryqp" path="res://systems/detection_zone.tscn" id="4_u475q"]
+[ext_resource type="PackedScene" uid="uid://bply2ywhnkcyl" path="res://entity/jump_handler.tscn" id="5_kwirb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t6n3p"]
 height = 22.0
@@ -36,12 +36,12 @@ shape = SubResource("CapsuleShape2D_t6n3p")
 
 [node name="OverworldState" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="OverworldState"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="OverworldState"]
 texture_filter = 1
 
 [node name="ShadowRealmState" type="Node2D" parent="."]
 
-[node name="Sprite2D2" type="Sprite2D" parent="ShadowRealmState"]
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="ShadowRealmState"]
 texture_filter = 1
 
 [node name="HitBox" parent="." instance=ExtResource("2_ppdpk")]
