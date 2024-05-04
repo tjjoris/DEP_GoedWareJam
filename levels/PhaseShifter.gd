@@ -2,13 +2,17 @@ extends Node2D
 #@export var is_shifted: bool = false;
 @onready var tile_map: TileMap = $"../../TileMap"
 @onready var parallax_background: ParallaxBackground = $"../ParallaxBackground"
+@export var start_shifted = false
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# on level load, inverts phase so that it shifts into the current phase
-	GameManager.is_shifted = not GameManager.is_shifted
+	if start_shifted:
+		GameManager.is_shifted = false
+	else:
+		GameManager.is_shifted = true
 	phase_shift()
 
 
