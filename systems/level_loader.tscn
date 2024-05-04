@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://kdtmtaxkb5el"]
+
+[ext_resource type="Script" path="res://systems/level_loader.gd" id="1_raeae"]
+[ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="2_ee5xx"]
+
+[node name="LevelLoader" type="Node"]
+process_mode = 3
+script = ExtResource("1_raeae")
+
+[node name="BGM_Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ee5xx")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"

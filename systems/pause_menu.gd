@@ -13,6 +13,7 @@ func _input(event : InputEvent):
 			hide()
 
 func _on_restart_button_pressed() -> void:
+	print("restart button pressed!")
 	LevelLoader.reload_current_scene()
 
 

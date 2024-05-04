@@ -150,10 +150,10 @@ position = Vector2(583, 194)
 [node name="rock_1" parent="Gameplay/ForegroundProps" index="22" instance=ExtResource("9_8sbkq")]
 position = Vector2(179, 588)
 
-[node name="Sample_Overworld" parent="." index="3" instance=ExtResource("21_tbdty")]
+[node name="Sample_Overworld" parent="." index="2" instance=ExtResource("21_tbdty")]
 position = Vector2(210, 122)
 
-[node name="Sample_Shadow" parent="." index="4" instance=ExtResource("22_1rlbl")]
+[node name="Sample_Shadow" parent="." index="3" instance=ExtResource("22_1rlbl")]
 position = Vector2(1564, 27)
 
 [editable path="UI/DialogueCanvas"]

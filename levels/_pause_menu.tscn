@@ -110,4 +110,6 @@ theme_override_fonts/font = ExtResource("1_448sd")
 theme_override_font_sizes/font_size = 32
 text = "RESUME"
 
+[connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/Restart button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]

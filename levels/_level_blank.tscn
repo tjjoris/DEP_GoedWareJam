@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://i2r4orsnsy7t"]
+[gd_scene load_steps=12 format=3 uid="uid://i2r4orsnsy7t"]
 
-[ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="1_22yb1"]
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
@@ -17,12 +16,6 @@
 process_mode = 3
 texture_filter = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_22yb1")
-volume_db = -5.0
-autoplay = true
-bus = &"Music"
-
 [node name="UI" type="Node2D" parent="."]
 process_mode = 3
 
@@ -34,6 +27,7 @@ process_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("4_7sj82")]
+visible = false
 
 [node name="Gameplay" type="Node2D" parent="."]
 process_mode = 1
