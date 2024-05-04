@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/sprites/prop_normalworld_tree2.png" id="2_14vdu"]
 [ext_resource type="Texture2D" uid="uid://b7b6imgg7vx" path="res://levels/props/sprites/prop_shadowrealm_tree.png" id="3_ihw2b"]
 
-[node name="duo_orangetree" instance=ExtResource("1_ihx7p")]
+[node name="duo_tree_orange" instance=ExtResource("1_ihx7p")]
 
 [node name="OverworldSprite" parent="." index="0"]
 texture = ExtResource("2_14vdu")
