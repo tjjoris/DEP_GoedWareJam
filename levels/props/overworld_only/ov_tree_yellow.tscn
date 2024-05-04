@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_jqxr8"]
 [ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/sprites/prop_normalworld_tree3.png" id="2_a01qy"]
 
-[node name="Prop_YellowTree" instance=ExtResource("1_jqxr8")]
+[node name="ov_yellowtree" instance=ExtResource("1_jqxr8")]
 
 [node name="OverworldSprite" parent="." index="0"]
 texture = ExtResource("2_a01qy")

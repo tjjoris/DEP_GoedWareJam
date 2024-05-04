@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="2_0si85"]
 [ext_resource type="Texture2D" uid="uid://docbedv15d0ig" path="res://levels/sprites/HUD_Portals_timewarp_chamber.png" id="2_isfbo"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_ik5cx"]
-[ext_resource type="Texture2D" uid="uid://ddnw50a2gesor" path="res://Dialogue/portraits/drchazz_neutral_0.png" id="4_uck7q"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="4_uck7q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wf760"]
 radius = 13.0

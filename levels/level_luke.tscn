@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_aire8"]
 [ext_resource type="Texture2D" uid="uid://35ftoqa1fkpq" path="res://entity/enemies/cultist_draft_1.2.png" id="2_f66il"]
-[ext_resource type="Script" path="res://levels/NextLevelButton.gd" id="3_8boql"]
-[ext_resource type="Script" path="res://levels/RestartLevel.gd" id="4_jvmhq"]
+[ext_resource type="Script" path="res://systems/NextLevelButton.gd" id="3_8boql"]
+[ext_resource type="Script" path="res://systems/RestartLevel.gd" id="4_jvmhq"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="5_d0ls2"]
-[ext_resource type="Texture2D" uid="uid://cfva4awygiw7j" path="res://entity/small_sprite.png" id="6_yducg"]
+[ext_resource type="Texture2D" path="res://entity/small_sprite.png" id="6_yducg"]
 
 [node name="Level_Luke" instance=ExtResource("1_aire8")]
 metadata/_edit_horizontal_guides_ = [-94.0]

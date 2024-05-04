@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://65ndbjymj4ni"]
+[gd_scene load_steps=3 format=3 uid="uid://brrx4v4byhktl"]
 
-[ext_resource type="Script" path="res://levels/KillFloor.gd" id="1_cu4wp"]
+[ext_resource type="Script" path="res://systems/KillFloor.gd" id="1_l234o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hujn"]
 size = Vector2(29.3601, 20)
 
 [node name="KillFloor" type="Area2D"]
 collision_mask = 7
-script = ExtResource("1_cu4wp")
+script = ExtResource("1_l234o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -3.14159

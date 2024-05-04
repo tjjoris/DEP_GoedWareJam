@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://gs53vkevtels"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_ihx7p"]
+[ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/sprites/prop_normalworld_tree2.png" id="2_14vdu"]
+[ext_resource type="Texture2D" uid="uid://b7b6imgg7vx" path="res://levels/props/sprites/prop_shadowrealm_tree.png" id="3_ihw2b"]
+
+[node name="duo_orangetree" instance=ExtResource("1_ihx7p")]
+
+[node name="OverworldSprite" parent="." index="0"]
+texture = ExtResource("2_14vdu")
+
+[node name="ShadowSprite" parent="." index="1"]
+texture = ExtResource("3_ihw2b")

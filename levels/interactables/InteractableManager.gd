@@ -6,8 +6,8 @@ extends Area2D
 func _ready() -> void:
 	animated_sprite.play("off")
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	animated_sprite.play("on")
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	animated_sprite.play("off")

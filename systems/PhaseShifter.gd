@@ -35,7 +35,7 @@ func shift_to_shadow() -> void:
 	tile_map.set_layer_enabled(1, false)
 	parallax_background.shift_to_shadow()
 	
-	shift_groups()
+	call_deferred("shift_groups")
 
 
 
@@ -47,7 +47,7 @@ func shift_to_overworld() -> void:
 	tile_map.set_layer_enabled(1, true)
 	parallax_background.shift_to_overworld()
 	
-	shift_groups()
+	call_deferred("shift_groups")
 
 
 func shift_groups():
@@ -58,5 +58,5 @@ func _on_player_phase_shift() -> void:
 	phase_shift()
 
 
-func _on_pressure_plate_body_entered(body: Node2D) -> void:
+func _on_pressure_plate_body_entered(_body: Node2D) -> void:
 	phase_shift()

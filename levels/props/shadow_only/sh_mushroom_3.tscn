@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccs3l6l58n6nf"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_c1mex"]
+[ext_resource type="Texture2D" uid="uid://tm4vkjjmr1fs" path="res://levels/props/sprites/prop_mush_3_shadow.png" id="3_ol4gq"]
+
+[node name="sh_mushroom_3" instance=ExtResource("1_c1mex")]
+
+[node name="ShadowSprite" parent="." index="1"]
+texture = ExtResource("3_ol4gq")

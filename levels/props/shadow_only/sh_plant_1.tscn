@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctu4mfv3weixa"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_7dcba"]
+[ext_resource type="Texture2D" uid="uid://cqcn6awuicqtp" path="res://levels/props/sprites/prop_plant_1_shadow.png" id="3_isxgd"]
+
+[node name="sh_plant_1" instance=ExtResource("1_7dcba")]
+
+[node name="ShadowSprite" parent="." index="1"]
+texture = ExtResource("3_isxgd")

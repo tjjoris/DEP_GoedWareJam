@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_1livl"]
 [ext_resource type="Texture2D" uid="uid://b8mp1mwmqtv38" path="res://levels/props/sprites/prop_shadowrealm_tree_flip.png" id="2_71bcp"]
 
-[node name="Prop_ShadowTree_R" instance=ExtResource("1_1livl")]
+[node name="sh_tree_shadow_right" instance=ExtResource("1_1livl")]
 
 [node name="ShadowSprite" parent="." index="1"]
 texture = ExtResource("2_71bcp")
