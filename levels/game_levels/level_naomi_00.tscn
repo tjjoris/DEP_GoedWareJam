@@ -1,0 +1,161 @@
+[gd_scene load_steps=24 format=3 uid="uid://vcg6eufyv028"]
+
+[ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_qdv3m"]
+[ext_resource type="PackedScene" uid="uid://w2kn8ndkiaaj" path="res://levels/props/plant_1.tscn" id="2_3y4gu"]
+[ext_resource type="PackedScene" uid="uid://bq7h2hmxvwife" path="res://levels/props/prop_greentree.tscn" id="2_ca120"]
+[ext_resource type="PackedScene" uid="uid://6h2wn6ikdb30" path="res://levels/props/root_2.tscn" id="3_bio84"]
+[ext_resource type="PackedScene" uid="uid://l4qhlrje8f2a" path="res://levels/props/prop_orangetree.tscn" id="3_fj705"]
+[ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="3_q1gac"]
+[ext_resource type="PackedScene" uid="uid://ct0lueq8ibvu4" path="res://levels/props/vine_3.tscn" id="4_7h4ta"]
+[ext_resource type="PackedScene" uid="uid://k67xkpv53l33" path="res://levels/props/rock_3.tscn" id="4_b3ick"]
+[ext_resource type="PackedScene" uid="uid://dlpi23fkpey02" path="res://levels/props/prop_yellowtree.tscn" id="4_i48d7"]
+[ext_resource type="PackedScene" uid="uid://cv0g5y0on6gtf" path="res://levels/props/root_1.tscn" id="5_yxf84"]
+[ext_resource type="PackedScene" uid="uid://btnl8ky1f3wii" path="res://levels/props/plant_2.tscn" id="6_458pk"]
+[ext_resource type="PackedScene" uid="uid://bjyfiugashq7e" path="res://levels/props/plant_5.tscn" id="8_3w5hw"]
+[ext_resource type="PackedScene" uid="uid://b2bo65c5ff6p5" path="res://levels/props/mushroom_1.tscn" id="8_so6om"]
+[ext_resource type="PackedScene" uid="uid://b2ybqsywl22mc" path="res://levels/props/rock_1.tscn" id="9_8sbkq"]
+[ext_resource type="PackedScene" uid="uid://cmhaaiv1mhv32" path="res://levels/props/mushroom_3.tscn" id="12_lmt5o"]
+[ext_resource type="PackedScene" uid="uid://lfmtwh30fnqd" path="res://levels/props/plant_4.tscn" id="14_x1hn3"]
+[ext_resource type="PackedScene" uid="uid://boyn0qr7lxp42" path="res://levels/props/rock_2.tscn" id="16_dxh2y"]
+[ext_resource type="PackedScene" uid="uid://g1btt6xgop8l" path="res://levels/props/log_2.tscn" id="17_g5ela"]
+[ext_resource type="PackedScene" uid="uid://bepjof7215t16" path="res://levels/props/mushroom_4.tscn" id="18_86bii"]
+[ext_resource type="PackedScene" uid="uid://bh6q382n3j0dx" path="res://levels/props/mushroom_2.tscn" id="19_5x3q5"]
+[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="21_tbdty"]
+[ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="22_1rlbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1giie"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[node name="level_naomi_00" instance=ExtResource("1_qdv3m")]
+
+[node name="plant_1" parent="Gameplay/BackgroundProps" index="0" instance=ExtResource("2_3y4gu")]
+position = Vector2(635, 448)
+
+[node name="root_2" parent="Gameplay/BackgroundProps" index="1" instance=ExtResource("3_bio84")]
+position = Vector2(567, 517)
+
+[node name="vine_3" parent="Gameplay/BackgroundProps" index="2" instance=ExtResource("4_7h4ta")]
+position = Vector2(1438, 324)
+
+[node name="root_3" parent="Gameplay/BackgroundProps" index="3" instance=ExtResource("3_bio84")]
+position = Vector2(1065, 424)
+
+[node name="root_4" parent="Gameplay/BackgroundProps" index="4" instance=ExtResource("5_yxf84")]
+position = Vector2(1075, 429)
+
+[node name="root_5" parent="Gameplay/BackgroundProps" index="5" instance=ExtResource("3_bio84")]
+position = Vector2(1425, 326)
+
+[node name="root_1" parent="Gameplay/BackgroundProps" index="6" instance=ExtResource("5_yxf84")]
+position = Vector2(556, 523)
+
+[node name="plant_2" parent="Gameplay/BackgroundProps" index="7" instance=ExtResource("2_3y4gu")]
+position = Vector2(1167, 916)
+
+[node name="Prop_GreenTree2" parent="Gameplay/BackgroundProps" index="8" instance=ExtResource("2_ca120")]
+position = Vector2(1289, 453)
+
+[node name="TileMap" parent="Gameplay" index="2"]
+layer_0/tile_data = PackedInt32Array(1245194, 196611, 2, 1179658, 196611, 0, 1245193, 65539, 1, 1179657, 65539, 0, 1245192, 65539, 1, 1179656, 131075, 0, 1245191, 131075, 2, 1245189, 3, 1, 1245188, 196610, 3, 1245186, 196611, 1, 1179650, 196611, 0, 1245185, 65539, 1, 1179649, 327683, 3, 786465, 393218, 1, 983060, 196610, 2, 1048595, 2, 3, 851968, 3, 1, 917504, 3, 2, 983040, 3, 2, 1048576, 3, 1, 1114112, 3, 2, 1179648, 3, 1, 1310721, 65539, 1, 1310722, 327683, 3, 1310724, 131075, 0, 1310725, 393219, 3, 1310726, 65539, 1, 1310727, 65539, 1, 1310728, 65539, 1, 1310729, 131075, 1, 1310730, 196611, 2, 1376266, 196611, 3, 1376265, 65539, 3, 1376264, 131075, 3, 1376263, 65539, 3, 1376262, 65539, 3, 1376261, 65539, 3, 1376260, 65539, 3, 1376259, 65539, 3, 1376258, 65539, 3, 1376257, 131075, 3, 1310720, 3, 1, 1245184, 3, 1, 1376256, 3, 3, 1179655, 131075, 0, 1114113, 196611, 2, 1245187, 2, 3, 1310723, 65539, 0, 1048577, 196611, 2, 655377, 393218, 1, 917521, 65538, 0, 983057, 65538, 3, 655378, 262147, 0, 917522, 65538, 0, 983058, 131074, 3, 458771, 327683, 0, 655379, 327683, 0, 917523, 65538, 0, 983059, 393218, 2, 458772, 131075, 3, 655380, 393219, 0, 917524, 196610, 0, 1048596, 196610, 3, 393237, 196611, 0, 458773, 196611, 3, 1048597, 262147, 0, 1048598, 393219, 0, 655376, 393219, 1, 917520, 2, 0, 983056, 2, 3, 458770, 262147, 0, 393236, 3, 0, 1114145, 2, 0, 1179681, 2, 1, 1245217, 2, 3, 1114146, 131074, 0, 1179682, 65538, 1, 1245218, 65538, 3, 1114147, 131074, 0, 1179683, 131074, 2, 1245219, 65538, 3, 1114148, 131074, 0, 1179684, 131074, 2, 1245220, 131074, 3, 1114149, 131074, 0, 1179685, 131074, 2, 1245221, 131074, 3, 1114150, 131074, 0, 1179686, 65538, 1, 1245222, 131074, 3, 1114151, 131074, 0, 1179687, 65538, 1, 1245223, 131074, 3, 1114152, 65538, 0, 1179688, 131074, 2, 1245224, 65538, 3, 983073, 393218, 1, 1114153, 65538, 0, 1179689, 65538, 1, 1245225, 65538, 3, 1114154, 131074, 0, 1179690, 131074, 2, 1245226, 65538, 3, 1114155, 196610, 0, 1179691, 196610, 2, 1245227, 196610, 3, 851969, 196611, 2, 917505, 196611, 1, 983041, 196611, 1, 720896, 3, 0, 786432, 3, 2, 720897, 196611, 0, 786433, 196611, 2, 1179651, 2, 0, 1179652, 196610, 0, 1179653, 3, 0, 1179654, 65539, 0, 1245190, 65539, 1, 1048588, 393218, 1, 1048589, 2, 0, 1114125, 2, 3, 1048590, 196610, 0, 1114126, 196610, 3, 524314, 7, 0, 589850, 262147, 0, 589851, 393219, 0, 327713, 2, 0, 393249, 2, 3, 327714, 65538, 0, 393250, 131074, 3, 327715, 196610, 0, 393251, 196610, 3, 327718, 393219, 1, 458793, 393219, 1, 589868, 262147, 0, 589869, 327683, 0, 589870, 327683, 0, 262191, 3, 0, 327727, 3, 1, 393263, 3, 1, 458799, 3, 2, 524335, 3, 2, 589871, 131075, 3, 131120, 3, 2, 196656, 3, 1, 262192, 393219, 3, 327728, 327683, 2, 393264, 196611, 1, 458800, 196611, 2, 524336, 196611, 1, 589872, 196611, 3, 65585, 196611, 0, 131121, 196611, 2, 196657, 196611, 2, 262193, 196611, 1, 327729, 196611, 3, 65584, 3, 0)
+layer_1/tile_data = PackedInt32Array(1179658, 196611, 0, 1179657, 131075, 0, 1179656, 131075, 0, 1179655, 65539, 0, 1179650, 196611, 0, 1179649, 327683, 3, 786465, 393216, 1, 655380, 393219, 0, 655379, 327683, 0, 655378, 327683, 0, 1048598, 393219, 0, 851968, 3, 1, 917504, 3, 2, 983040, 3, 1, 1048576, 3, 2, 1114112, 3, 1, 1179648, 3, 1, 1245194, 196611, 2, 1245193, 65539, 1, 1245191, 65539, 1, 1245185, 65539, 1, 1310721, 131075, 1, 1310722, 327683, 3, 1376257, 65539, 3, 1376258, 131075, 3, 1376259, 131075, 3, 1376260, 65539, 3, 1376261, 65539, 3, 1376262, 65539, 3, 1376263, 65539, 3, 1376264, 65539, 3, 1376265, 131075, 3, 1376266, 196611, 3, 1310730, 196611, 1, 1310729, 65539, 1, 1310728, 131075, 2, 1310727, 65539, 1, 1310726, 65539, 1, 1310725, 393219, 3, 1310724, 131075, 0, 1310723, 131075, 0, 1245184, 3, 2, 1376256, 3, 3, 1310720, 3, 2, 1245186, 327683, 3, 1245192, 65539, 2, 1114113, 196611, 1, 1179651, 0, 0, 1245187, 0, 3, 262150, 327680, 0, 262151, 393216, 0, 655377, 327683, 0, 917521, 65536, 0, 983057, 131072, 3, 917522, 131072, 0, 983058, 131072, 3, 458771, 327683, 0, 917523, 131072, 0, 983059, 393216, 2, 458772, 131075, 3, 917524, 196608, 0, 983060, 196608, 1, 1048596, 196608, 3, 393237, 196611, 0, 458773, 196611, 3, 1048597, 262147, 0, 262149, 262144, 0, 327691, 393216, 1, 393231, 393216, 1, 655376, 262147, 0, 917520, 0, 0, 983056, 0, 3, 458770, 262147, 0, 1048595, 0, 3, 393236, 3, 0, 983062, 7, 0, 1114145, 0, 0, 1179681, 0, 1, 1245217, 0, 3, 1114146, 131072, 0, 1179682, 65536, 1, 1245218, 131072, 3, 1114147, 131072, 0, 1179683, 131072, 1, 1245219, 65536, 3, 1114148, 65536, 0, 1179684, 65536, 1, 1245220, 65536, 3, 1114149, 65536, 0, 1179685, 65536, 1, 1245221, 65536, 3, 1114150, 65536, 0, 1179686, 65536, 1, 1245222, 131072, 3, 1114151, 131072, 0, 1179687, 65536, 1, 1245223, 131072, 3, 1114152, 65536, 0, 1179688, 65536, 1, 1245224, 65536, 3, 983073, 393216, 1, 1114153, 65536, 0, 1179689, 65536, 1, 1245225, 65536, 3, 1114154, 65536, 0, 1179690, 65536, 1, 1245226, 131072, 3, 1114155, 196608, 0, 1179691, 196608, 2, 1245227, 196608, 3, 851969, 196611, 2, 917505, 196611, 1, 983041, 196611, 1, 1048577, 196611, 2, 720896, 3, 0, 786432, 3, 2, 720897, 196611, 0, 786433, 196611, 2, 1179652, 196608, 0, 1245188, 196608, 3, 1179653, 3, 0, 1245189, 3, 2, 1179654, 131075, 0, 1245190, 131075, 2, 1048588, 393216, 1, 1048589, 0, 0, 1114125, 0, 3, 1048590, 196608, 0, 1114126, 196608, 3, 589856, 196608, 3, 589850, 262147, 0, 589851, 393219, 0, 524318, 0, 0, 589854, 0, 3, 458783, 7, 0, 524319, 131072, 0, 589855, 131072, 3, 524320, 196608, 0, 327718, 393219, 1, 458793, 393219, 1, 458799, 3, 1, 458800, 196611, 1, 131121, 196611, 1, 196657, 196611, 1, 262193, 196611, 2, 327729, 196611, 3, 589868, 262147, 0, 589869, 327683, 0, 589870, 327683, 0, 262191, 3, 0, 327727, 3, 2, 393263, 3, 2, 524335, 3, 1, 589871, 65539, 3, 131120, 3, 1, 196656, 3, 1, 262192, 393219, 3, 327728, 327683, 2, 393264, 196611, 2, 524336, 196611, 2, 589872, 196611, 3, 65584, 3, 0, 65585, 196611, 0)
+
+[node name="Cockatrice" parent="Gameplay/Entities" index="0" instance=ExtResource("3_q1gac")]
+position = Vector2(1238, 516)
+
+[node name="DialogueTrigger" parent="Gameplay/Entities" index="1"]
+position = Vector2(300, 559)
+
+[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger" index="0"]
+shape = SubResource("RectangleShape2D_1giie")
+
+[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger" index="2"]
+message = "okay this is getting rediculous"
+
+[node name="LevelExit" parent="Gameplay/Entities" index="2"]
+position = Vector2(1485, 261)
+
+[node name="Player" parent="Gameplay" index="4"]
+position = Vector2(85, 557)
+
+[node name="ForegroundProps" parent="Gameplay" index="5"]
+position = Vector2(91, 0)
+
+[node name="rock_7" parent="Gameplay/ForegroundProps" index="0" instance=ExtResource("4_b3ick")]
+position = Vector2(146, 575)
+
+[node name="Prop_GreenTree" parent="Gameplay/ForegroundProps" index="1" instance=ExtResource("2_ca120")]
+position = Vector2(1061, 452)
+
+[node name="mushroom_1" parent="Gameplay/ForegroundProps" index="2" instance=ExtResource("8_so6om")]
+position = Vector2(86, 577)
+
+[node name="rock_4" parent="Gameplay/ForegroundProps" index="3" instance=ExtResource("9_8sbkq")]
+position = Vector2(-19, 578)
+
+[node name="Prop_OrangeTree" parent="Gameplay/ForegroundProps" index="4" instance=ExtResource("3_fj705")]
+position = Vector2(1254, 460)
+
+[node name="plant_2" parent="Gameplay/ForegroundProps" index="5" instance=ExtResource("6_458pk")]
+position = Vector2(449, 453)
+
+[node name="mushroom_3" parent="Gameplay/ForegroundProps" index="6" instance=ExtResource("12_lmt5o")]
+position = Vector2(199, 584)
+
+[node name="plant_3" parent="Gameplay/ForegroundProps" index="7" instance=ExtResource("2_3y4gu")]
+position = Vector2(219, 1156)
+
+[node name="Prop_YellowTree" parent="Gameplay/ForegroundProps" index="8" instance=ExtResource("4_i48d7")]
+position = Vector2(32, 484)
+
+[node name="plant_1" parent="Gameplay/ForegroundProps" index="9" instance=ExtResource("2_3y4gu")]
+position = Vector2(538, 458)
+
+[node name="plant_4" parent="Gameplay/ForegroundProps" index="10" instance=ExtResource("14_x1hn3")]
+position = Vector2(371, 513)
+
+[node name="plant_5" parent="Gameplay/ForegroundProps" index="11" instance=ExtResource("8_3w5hw")]
+position = Vector2(481, 455)
+
+[node name="rock_3" parent="Gameplay/ForegroundProps" index="12" instance=ExtResource("16_dxh2y")]
+position = Vector2(1224, 550)
+
+[node name="rock_2" parent="Gameplay/ForegroundProps" index="13" instance=ExtResource("16_dxh2y")]
+position = Vector2(595, 517)
+
+[node name="mushroom_4" parent="Gameplay/ForegroundProps" index="14" instance=ExtResource("12_lmt5o")]
+position = Vector2(524, 321)
+
+[node name="mushroom_6" parent="Gameplay/ForegroundProps" index="15" instance=ExtResource("8_so6om")]
+position = Vector2(598, 195)
+
+[node name="log_2" parent="Gameplay/ForegroundProps" index="16" instance=ExtResource("17_g5ela")]
+position = Vector2(1179, 547)
+
+[node name="mushroom_5" parent="Gameplay/ForegroundProps" index="17" instance=ExtResource("18_86bii")]
+position = Vector2(537, 325)
+
+[node name="mushroom_2" parent="Gameplay/ForegroundProps" index="18" instance=ExtResource("19_5x3q5")]
+position = Vector2(438, 319)
+
+[node name="mushroom_7" parent="Gameplay/ForegroundProps" index="19" instance=ExtResource("18_86bii")]
+position = Vector2(790, 289)
+
+[node name="rock_5" parent="Gameplay/ForegroundProps" index="20" instance=ExtResource("16_dxh2y")]
+position = Vector2(1147, 162)
+
+[node name="rock_6" parent="Gameplay/ForegroundProps" index="21" instance=ExtResource("4_b3ick")]
+position = Vector2(583, 194)
+
+[node name="rock_1" parent="Gameplay/ForegroundProps" index="22" instance=ExtResource("9_8sbkq")]
+position = Vector2(179, 588)
+
+[node name="Sample_Overworld" parent="." index="3" instance=ExtResource("21_tbdty")]
+position = Vector2(210, 122)
+
+[node name="Sample_Shadow" parent="." index="4" instance=ExtResource("22_1rlbl")]
+position = Vector2(1564, 27)
+
+[editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/DialogueTrigger"]
+[editable path="Gameplay/Entities/LevelExit"]
