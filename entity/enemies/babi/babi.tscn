@@ -35,7 +35,6 @@ input_pickable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-2.05882, -12.831)
-scale = Vector2(1, 1)
 
 [node name="HurtBox" parent="." index="6"]
 position = Vector2(0, -12)
@@ -49,6 +48,7 @@ collision_layer = 4
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_apohl")
 
+[editable path="Jump_Handler"]
 [editable path="HitBox"]
 [editable path="HurtBox"]
 [editable path="DetectionZone"]
