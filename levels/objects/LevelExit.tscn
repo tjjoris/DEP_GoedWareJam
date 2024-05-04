@@ -82,7 +82,7 @@ input_pickable = false
 position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_r8khm")
 autoplay = "default"
-frame_progress = 0.433817
+frame_progress = 0.440639
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_wf760")

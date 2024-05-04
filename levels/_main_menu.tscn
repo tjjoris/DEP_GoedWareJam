@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://br62lynib8mfk"]
+
+[ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
+[ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_rw70s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.454982, 0.349657, 0.371597, 1)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ColorRect/ReferenceRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = 25.0
+offset_right = -130.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+text = "SELECT LEVEL"
+
+[node name="Button3" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+text = "OPTIONS"
+
+[node name="Button4" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+text = "ABOUT"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
