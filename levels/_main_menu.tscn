@@ -9,7 +9,7 @@ script = ExtResource("1_rw70s")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -67,12 +67,45 @@ theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 text = "SELECT LEVEL"
 
-[node name="Button3" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+[node name="PanelContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BGM_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-text = "OPTIONS"
+theme_override_font_sizes/font_size = 32
+text = "BGM VOLUME"
+horizontal_alignment = 1
+
+[node name="BGM_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="SFX_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 32
+text = "SFX VOLUME"
+horizontal_alignment = 1
+
+[node name="SFX_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
 
 [node name="Button4" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
@@ -82,3 +115,5 @@ theme_override_font_sizes/font_size = 64
 text = "ABOUT"
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
