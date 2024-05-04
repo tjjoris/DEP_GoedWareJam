@@ -1,14 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=15 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
+[ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_5s8g6"]
 [ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="7_5kwlo"]
-[ext_resource type="PackedScene" path="res://systems/kill_floor.tscn" id="7_x3klm"]
+[ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_7dj76"]
 [ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="8_whkpq"]
+[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="11_jmfhq"]
+[ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="12_8n0vo"]
+[ext_resource type="PackedScene" uid="uid://b3y0wli0octn4" path="res://levels/objects/collectable_sample.tscn" id="13_don0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khtds"]
 resource_local_to_scene = true
@@ -26,6 +30,8 @@ bus = &"Music"
 
 [node name="UI" type="Node2D" parent="."]
 process_mode = 3
+
+[node name="PlayerHUD" parent="UI" instance=ExtResource("2_5s8g6")]
 
 [node name="DialogueCanvas" parent="UI" instance=ExtResource("7_x75au")]
 
@@ -90,6 +96,27 @@ position = Vector2(75, 369)
 scale = Vector2(1, 1)
 
 [node name="ForegroundProps" type="Node2D" parent="Gameplay"]
+
+[node name="Sample_Overworld" parent="." instance=ExtResource("11_jmfhq")]
+position = Vector2(161, 338)
+
+[node name="Sample_Shadow" parent="." instance=ExtResource("12_8n0vo")]
+position = Vector2(160, 591)
+
+[node name="Sample_Shadow2" parent="." instance=ExtResource("12_8n0vo")]
+position = Vector2(591, 184)
+
+[node name="Sample_Shadow3" parent="." instance=ExtResource("12_8n0vo")]
+position = Vector2(94, 84)
+
+[node name="Sample_Overworld2" parent="." instance=ExtResource("11_jmfhq")]
+position = Vector2(1070, 54)
+
+[node name="CollectableSample" parent="." instance=ExtResource("13_don0w")]
+position = Vector2(1071, 373)
+
+[node name="CollectableSample2" parent="." instance=ExtResource("13_don0w")]
+position = Vector2(431, 627)
 
 [connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
 
