@@ -1,3 +1,4 @@
+class_name PhaseShifter
 extends Node2D
 #@export var is_shifted: bool = false;
 @onready var tile_map: TileMap = $"../../TileMap"
@@ -54,4 +55,8 @@ func shift_groups():
 
 
 func _on_player_phase_shift() -> void:
+	phase_shift()
+
+
+func _on_pressure_plate_body_entered(body: Node2D) -> void:
 	phase_shift()
