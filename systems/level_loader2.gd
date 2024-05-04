@@ -24,10 +24,11 @@ func _ready():
 
 func goto_next_scene():
 	scene_index += 1
-	goto_scene(levels[scene_index])
+	#goto_scene(levels[scene_index])
 	
-	# alternate option will be to use Godot's built in scene swapper:
-	#get_tree().change_scene_to_file(levels[scene_index])
+	GameManager._current_level_collectables = 0
+	GameManager.player_can_move = true
+	get_tree().change_scene_to_file(levels[scene_index])
 
 
 func reload_current_scene():
@@ -38,6 +39,7 @@ func deferred_reload_current_scene():
 	print("Reloading: " + get_tree().current_scene.name)
 	# It is now safe to reload the scene
 	
+	GameManager._current_level_collectables = 0
 	GameManager.player_can_move = true
 	get_tree().reload_current_scene()
 

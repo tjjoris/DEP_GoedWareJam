@@ -14,8 +14,11 @@ func _ready() -> void:
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		GameManager.collectable_score += 1
-		print("Player has collected " + str(GameManager.collectable_score) + " samples!")
-		queue_free()
+		remove_object()
+
+
+func remove_object():
+	queue_free()
 
 
 func do_phase_change(_entering_shadow_realm: bool):

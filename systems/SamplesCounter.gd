@@ -9,7 +9,6 @@ func _ready() -> void:
 	var samples = get_tree().get_nodes_in_group("IsCollectableSample")
 	if samples:
 		samples_in_level = samples.size()
-	sample_count_text.text = str(GameManager.collectable_score)
 	update_collectable_score(0)
 
 
