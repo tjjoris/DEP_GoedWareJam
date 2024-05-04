@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://i2r4orsnsy7t"]
+[gd_scene load_steps=13 format=3 uid="uid://i2r4orsnsy7t"]
 
 [ext_resource type="AudioStream" uid="uid://csvtnqktx8f0x" path="res://audio/music/OverworldBGM_01.wav" id="1_22yb1"]
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
+[ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
 [ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="5_pstk5"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
@@ -31,6 +32,8 @@ process_mode = 3
 
 [node name="DialogueContainer" parent="UI/DialogueCanvas" index="0"]
 metadata/_edit_lock_ = true
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("4_7sj82")]
 
 [node name="Gameplay" type="Node2D" parent="."]
 process_mode = 1
@@ -73,7 +76,7 @@ metadata/_edit_lock_ = true
 [node name="LevelExit" parent="Gameplay/Entities" instance=ExtResource("8_rcc4d")]
 position = Vector2(193, 273)
 
-[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="2"]
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
 message = "Level Complete text!"
 
 [node name="Player" parent="Gameplay" instance=ExtResource("9_kcdxo")]
