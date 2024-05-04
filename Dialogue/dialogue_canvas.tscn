@@ -24,56 +24,60 @@ anchors_preset = -1
 anchor_top = 0.62
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+offset_top = -128.0
+offset_bottom = -0.00109863
+
+[node name="MarginContainer2" type="MarginContainer" parent="DialogueContainer"]
+layout_mode = 2
 theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 128
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="Panel" type="Panel" parent="DialogueContainer"]
+[node name="Panel" type="Panel" parent="DialogueContainer/MarginContainer2"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qbe25")
 
-[node name="MarginContainer" type="MarginContainer" parent="DialogueContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="DialogueContainer/MarginContainer2"]
 layout_mode = 2
-theme_override_constants/margin_left = 32
+theme_override_constants/margin_left = 362
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="Panel" type="Panel" parent="DialogueContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="DialogueContainer/MarginContainer2/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogueContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogueContainer/MarginContainer2/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="PortraitTexture" type="TextureRect" parent="DialogueContainer/MarginContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture = ExtResource("2_forkd")
-
-[node name="MarginContainer" type="MarginContainer" parent="DialogueContainer/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="DialogueContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
+theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_bottom = 24
 
-[node name="MessageLabel" type="Label" parent="DialogueContainer/MarginContainer/HBoxContainer/MarginContainer"]
+[node name="MessageLabel" type="Label" parent="DialogueContainer/MarginContainer2/MarginContainer/HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 32)
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("3_0h7k6")
-theme_override_font_sizes/font_size = 62
+theme_override_font_sizes/font_size = 60
 text = "<Placeholder text>"
 autowrap_mode = 3
 
-[node name="EButton" type="Sprite2D" parent="DialogueContainer"]
-position = Vector2(1336, 238.8)
-scale = Vector2(2, 2)
+[node name="EButton" type="Sprite2D" parent="DialogueContainer/MarginContainer2"]
+position = Vector2(1365, 363.8)
+scale = Vector2(3, 3)
 texture = ExtResource("4_5v46b")
+
+[node name="PortraitTexture" type="TextureRect" parent="DialogueContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_forkd")
+stretch_mode = 4

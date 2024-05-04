@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxlkyrrvo5vg8"]
+
+[ext_resource type="PackedScene" uid="uid://col474ya5jbrn" path="res://systems/_TriggerObject2D.tscn" id="1_07fkx"]
+[ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/collectable_sample.png" id="2_05s27"]
+
+[node name="CollectableSample" instance=ExtResource("1_07fkx")]
+collision_layer = 1
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_05s27")
