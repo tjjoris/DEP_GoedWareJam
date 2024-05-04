@@ -119,5 +119,5 @@ func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
 	_state = States.CHASE
 
 
-func _on_detection_zone_body_exited(body: CharacterBody2D) -> void:
+func _on_detection_zone_body_exited(_body: CharacterBody2D) -> void:
 	_state = States.WANDER

@@ -45,9 +45,9 @@ func handle_jump():
 		velocity.y -= jump_handler.HELD_JUMP_HEIGHT
 
 
-func _unhandled_key_input(event: InputEvent) -> void:		
-	if event.is_action_pressed("phase_shift") and GameManager.player_can_move:
-		emit_signal("do_phase_shift")
+#func _unhandled_key_input(event: InputEvent) -> void:		
+	#if event.is_action_pressed("phase_shift") and GameManager.player_can_move:
+		#emit_signal("do_phase_shift")
 
 func touched_shadow_monster_hitbox() -> void:
 	GameManager.player_can_move = false
@@ -60,3 +60,8 @@ func touched_shadow_monster_hitbox() -> void:
 func death() -> void:
 	LevelLoader2.reload_current_scene()
 	
+
+
+func _on_rift_shard_detector_body_entered(_body: Node2D) -> void:
+	if GameManager.player_can_phase and GameManager.player_can_move:
+		emit_signal("do_phase_shift")
