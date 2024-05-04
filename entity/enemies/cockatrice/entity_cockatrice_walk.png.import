@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmdxg2wbrhudp"
-path="res://.godot/imported/small_sprite_idle_0.png-af641613601c2b5db501cfd0370f722a.ctex"
+uid="uid://j5r5fx4vwa36"
+path="res://.godot/imported/entity_cockatrice_walk.png-3085f67198d13ab9d7b91a313de68631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/alien/small_sprite_idle_0.png"
-dest_files=["res://.godot/imported/small_sprite_idle_0.png-af641613601c2b5db501cfd0370f722a.ctex"]
+source_file="res://entity/enemies/cockatrice/entity_cockatrice_walk.png"
+dest_files=["res://.godot/imported/entity_cockatrice_walk.png-3085f67198d13ab9d7b91a313de68631.ctex"]
 
 [params]
 

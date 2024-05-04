@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ske56rbw7g63"
-path="res://.godot/imported/small_bowtie_shadowrealm_idle_1.png-c60a4462db58282888980776b454db86.ctex"
+uid="uid://lbj0tunguekf"
+path="res://.godot/imported/entity_shadow_alien_walk.png-0276aa9d167e138af0b26a265f99ac5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/alien/small_bowtie_shadowrealm_idle_1.png"
-dest_files=["res://.godot/imported/small_bowtie_shadowrealm_idle_1.png-c60a4462db58282888980776b454db86.ctex"]
+source_file="res://entity/enemies/alien/entity_shadow_alien_walk.png"
+dest_files=["res://.godot/imported/entity_shadow_alien_walk.png-0276aa9d167e138af0b26a265f99ac5e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cikfjd58324it"
-path="res://.godot/imported/concept (1).png-fffd61a919d086b5cd3866627493191d.ctex"
+uid="uid://bqdo35hfbg5qk"
+path="res://.godot/imported/small_bowtie_shadow_idle.png-59d55127e28693677cfcb88bba514de5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/cockatrice/concept (1).png"
-dest_files=["res://.godot/imported/concept (1).png-fffd61a919d086b5cd3866627493191d.ctex"]
+source_file="res://entity/enemies/alien/small_bowtie_shadow_idle.png"
+dest_files=["res://.godot/imported/small_bowtie_shadow_idle.png-59d55127e28693677cfcb88bba514de5.ctex"]
 
 [params]
 

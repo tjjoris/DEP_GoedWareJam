@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxyrpw7j13lin"
-path="res://.godot/imported/small_sprite_idle_1.png-4a6aa5de8f100044c913c6621c49dca5.ctex"
+uid="uid://dkne18m0h5byf"
+path="res://.godot/imported/entity_alien_walk.png-07c97031eb3afc3d19b566ae5b074505.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/alien/small_sprite_idle_1.png"
-dest_files=["res://.godot/imported/small_sprite_idle_1.png-4a6aa5de8f100044c913c6621c49dca5.ctex"]
+source_file="res://entity/enemies/alien/entity_alien_walk.png"
+dest_files=["res://.godot/imported/entity_alien_walk.png-07c97031eb3afc3d19b566ae5b074505.ctex"]
 
 [params]
 

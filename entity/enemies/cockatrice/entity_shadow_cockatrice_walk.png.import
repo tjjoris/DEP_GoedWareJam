@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwwkp1npjtdy0"
-path="res://.godot/imported/critter_cockatrice_normal.png-ab51d859a743fdc9f1b4287e126d0ab9.ctex"
+uid="uid://jpignciqpk0j"
+path="res://.godot/imported/entity_shadow_cockatrice_walk.png-f5c31443bd118421a19a4e24fcf17886.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/cockatrice/critter_cockatrice_normal.png"
-dest_files=["res://.godot/imported/critter_cockatrice_normal.png-ab51d859a743fdc9f1b4287e126d0ab9.ctex"]
+source_file="res://entity/enemies/cockatrice/entity_shadow_cockatrice_walk.png"
+dest_files=["res://.godot/imported/entity_shadow_cockatrice_walk.png-f5c31443bd118421a19a4e24fcf17886.ctex"]
 
 [params]
 
