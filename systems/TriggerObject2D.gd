@@ -13,7 +13,8 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		print("Player has collected a sample!")
+		GameManager.collectable_score += 1
+		print("Player has collected " + str(GameManager.collectable_score) + " samples!")
 		queue_free()
 
 
@@ -30,7 +31,7 @@ func handle_phase():
 	#print(name+ " attempting to handle phase")
 	if is_phased == GameManager.is_shifted:
 		sprite_2d.visible = true
-		collision_shape_2d.set_process(true)
+		collision_shape_2d.disabled = false
 	else:
 		sprite_2d.visible = false
-		collision_shape_2d.set_process(false)
+		collision_shape_2d.disabled = true
