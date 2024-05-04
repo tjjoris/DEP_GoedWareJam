@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq0rv30ctl1ny"]
+
+[ext_resource type="PackedScene" uid="uid://col474ya5jbrn" path="res://systems/_TriggerObject2D.tscn" id="1_tagrc"]
+[ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/icon_sample.png" id="2_t3o38"]
+
+[node name="Sample_Overworld" groups=["CanPhase"] instance=ExtResource("1_tagrc")]
+collision_layer = 1
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_t3o38")
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
