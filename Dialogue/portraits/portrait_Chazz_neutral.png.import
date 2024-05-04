@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddnw50a2gesor"
-path="res://.godot/imported/drchazz_neutral_0.png-ceb015217ceb6bf7695b7eb9fa1ecc72.ctex"
+uid="uid://o2m5vk3ilup"
+path="res://.godot/imported/portrait_Chazz_neutral.png-3ae05c99b49a3e5a5f5dd1b26a694527.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogue/portraits/drchazz_neutral_0.png"
-dest_files=["res://.godot/imported/drchazz_neutral_0.png-ceb015217ceb6bf7695b7eb9fa1ecc72.ctex"]
+source_file="res://Dialogue/portraits/portrait_Chazz_neutral.png"
+dest_files=["res://.godot/imported/portrait_Chazz_neutral.png-3ae05c99b49a3e5a5f5dd1b26a694527.ctex"]
 
 [params]
 
