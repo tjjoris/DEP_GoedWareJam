@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b45xw2ktcra6w"]
+[gd_scene load_steps=15 format=3 uid="uid://b45xw2ktcra6w"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="Texture2D" uid="uid://cstktr08biiys" path="res://Dialogue/yan_nukem.png" id="3_6wr2n"]
@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://d1vo4iwb32pjk" path="res://levels/props/prop_shadowtree_l.tscn" id="5_2u3if"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="10_7o4li"]
 [ext_resource type="PackedScene" uid="uid://bq7h2hmxvwife" path="res://levels/props/prop_greentree.tscn" id="10_i5qul"]
-[ext_resource type="PackedScene" uid="uid://dxlkyrrvo5vg8" path="res://levels/objects/collectable_sample.tscn" id="11_b7l6e"]
+[ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="11_ib2b8"]
+[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="12_yjlal"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4yuh4"]
@@ -90,8 +91,11 @@ position = Vector2(348, 406)
 [node name="Prop_GreenTree3" parent="Gameplay/ForegroundProps" index="2" instance=ExtResource("10_i5qul")]
 position = Vector2(122, 41)
 
-[node name="CollectableSample" parent="." index="4" instance=ExtResource("11_b7l6e")]
-position = Vector2(206, 465)
+[node name="Sample_Shadow" parent="." index="4" instance=ExtResource("11_ib2b8")]
+position = Vector2(146, 466)
+
+[node name="Sample_Overworld" parent="." index="5" instance=ExtResource("12_yjlal")]
+position = Vector2(196, 465)
 
 [connection signal="body_entered" from="Gameplay/Entities/SkyKey/Area2D" to="Gameplay/Entities/SkyKey" method="_on_area_2d_body_entered"]
 

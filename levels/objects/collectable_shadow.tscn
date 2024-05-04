@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh33gar51l11g"]
+
+[ext_resource type="PackedScene" uid="uid://col474ya5jbrn" path="res://systems/_TriggerObject2D.tscn" id="1_0lmox"]
+[ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/icon_sample.png" id="2_a5v2g"]
+
+[node name="Sample_Shadow" groups=["CanPhase"] instance=ExtResource("1_0lmox")]
+collision_layer = 1
+
+[node name="Sprite2D" parent="." index="0"]
+self_modulate = Color(0.900717, 0.338065, 0.793049, 1)
+texture = ExtResource("2_a5v2g")
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
