@@ -82,12 +82,14 @@ input_pickable = false
 position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_r8khm")
 autoplay = "default"
-frame_progress = 0.440639
+frame_progress = 0.644358
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_wf760")
 
 [node name="DialogueSession" parent="." instance=ExtResource("2_0si85")]
+pause_during_dialogue = true
+load_next_level = true
 
 [node name="DialogueInstance" parent="DialogueSession" instance=ExtResource("3_ik5cx")]
 message = "Level Complete Placeholder Text!"

@@ -12,6 +12,7 @@ size = Vector2(32, 32)
 collision_mask = 2
 script = ExtResource("1_shc4y")
 pause_during_dialogue = true
+load_next_level = true
 
 [node name="Dialogue Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8evv4")
