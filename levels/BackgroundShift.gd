@@ -1,6 +1,4 @@
 extends ParallaxBackground
-@export var bg_overworld = preload("res://levels/sprites/_bg_allmage.png")
-@export var bg_shadow = preload("res://levels/sprites/_bg_allmage_shadow.png")
 const BACKGROUND_NORMALWORLD_0 = preload("res://levels/background/overworld/background_normalworld_0.png")
 const BACKGROUND_NORMALWORLD_1 = preload("res://levels/background/overworld/background_normalworld_1.png")
 const BACKGROUND_NORMALWORLD_2 = preload("res://levels/background/overworld/background_normalworld_2.png")
@@ -17,7 +15,7 @@ const BACKGROUND_SHADOWWORLD_3 = preload("res://levels/background/shadowworld/ba
 
 
 func shift_to_shadow():
-	if BACKGROUND_SHADOWWORLD_0:
+	if background_sprite_0:
 		background_sprite_0.texture = BACKGROUND_SHADOWWORLD_0
 		background_sprite_1.texture = BACKGROUND_SHADOWWORLD_1
 		background_sprite_2.texture = BACKGROUND_SHADOWWORLD_2
@@ -25,7 +23,7 @@ func shift_to_shadow():
 		pass
 
 func shift_to_overworld():
-	if background_sprite_0 != null && bg_overworld:
+	if background_sprite_0:
 		background_sprite_0.texture = BACKGROUND_NORMALWORLD_0
 		background_sprite_1.texture = BACKGROUND_NORMALWORLD_1
 		background_sprite_2.texture = BACKGROUND_NORMALWORLD_2

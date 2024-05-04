@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://1vpbihov3snn"]
+
+[ext_resource type="Script" path="res://PhaseProp.gd" id="1_ob60q"]
+
+[node name="_PROP2D" type="Node2D" groups=["CanPhase"]]
+script = ExtResource("1_ob60q")
+
+[node name="OverworldSprite" type="Sprite2D" parent="."]
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duie1axc6jsmy"
-path="res://.godot/imported/tree process.png-0fd678e941c7929f7e8f6671186855b0.ctex"
+uid="uid://cbbk2a30p4k5y"
+path="res://.godot/imported/prop_shadowrealm_tree_flip_flat.png-b297fd59c97d1a1ee3daee2596776274.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/props/tree process.png"
-dest_files=["res://.godot/imported/tree process.png-0fd678e941c7929f7e8f6671186855b0.ctex"]
+source_file="res://levels/props/sprites/prop_shadowrealm_tree_flip_flat.png"
+dest_files=["res://.godot/imported/prop_shadowrealm_tree_flip_flat.png-b297fd59c97d1a1ee3daee2596776274.ctex"]
 
 [params]
 

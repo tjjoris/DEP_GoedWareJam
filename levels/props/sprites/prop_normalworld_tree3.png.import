@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7b6imgg7vx"
-path="res://.godot/imported/prop_shadowrealm_tree.png-b332f5720c4ab3eedea5da36fe44465b.ctex"
+uid="uid://lf7u8xbns0qx"
+path="res://.godot/imported/prop_normalworld_tree3.png-9c711a31404f27a272e3a7c377db731f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/props/prop_shadowrealm_tree.png"
-dest_files=["res://.godot/imported/prop_shadowrealm_tree.png-b332f5720c4ab3eedea5da36fe44465b.ctex"]
+source_file="res://levels/props/sprites/prop_normalworld_tree3.png"
+dest_files=["res://.godot/imported/prop_normalworld_tree3.png-9c711a31404f27a272e3a7c377db731f.ctex"]
 
 [params]
 

@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://b45xw2ktcra6w"]
+[gd_scene load_steps=13 format=3 uid="uid://b45xw2ktcra6w"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="Texture2D" uid="uid://cstktr08biiys" path="res://Dialogue/yan_nukem.png" id="3_6wr2n"]
 [ext_resource type="Texture2D" uid="uid://dxkdd8ka8ja5j" path="res://levels/sprites/skyKey.png" id="3_7udai"]
 [ext_resource type="Script" path="res://levels/SkyKey.gd" id="4_jmm64"]
 [ext_resource type="Texture2D" uid="uid://du2vc2p13v70m" path="res://levels/sprites/pointLight.png" id="4_n6e2s"]
-[ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/prop_normalworld_tree2.png" id="10_5tcmt"]
+[ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/sprites/prop_normalworld_tree2.png" id="10_5tcmt"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="10_7o4li"]
-[ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/prop_normalworld_tree3.png" id="11_v8r2w"]
+[ext_resource type="PackedScene" uid="uid://bq7h2hmxvwife" path="res://levels/props/double_tree_green.tscn" id="10_i5qul"]
+[ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/sprites/prop_normalworld_tree3.png" id="11_v8r2w"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4yuh4"]
@@ -118,6 +119,9 @@ offset = Vector2(151, -66)
 [node name="PropNormalworldTree12" type="Sprite2D" parent="Gameplay/ForegroundProps" index="3"]
 position = Vector2(317, 401.5)
 texture = ExtResource("11_v8r2w")
+
+[node name="DoubleTree_Green" parent="." index="4" instance=ExtResource("10_i5qul")]
+position = Vector2(296, 141)
 
 [connection signal="body_entered" from="Gameplay/Entities/SkyKey/Area2D" to="Gameplay/Entities/SkyKey" method="_on_area_2d_body_entered"]
 

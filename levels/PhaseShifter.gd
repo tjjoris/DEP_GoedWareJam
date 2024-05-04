@@ -1,5 +1,5 @@
 extends Node2D
-@export var is_shifted: bool = false;
+#@export var is_shifted: bool = false;
 @onready var tile_map: TileMap = $"../../TileMap"
 @onready var parallax_background: ParallaxBackground = $"../ParallaxBackground"
 
@@ -8,7 +8,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# on level load, inverts phase so that it shifts into the current phase
-	is_shifted = not is_shifted
+	GameManager.is_shifted = not GameManager.is_shifted
 	phase_shift()
 
 
@@ -16,14 +16,14 @@ func phase_shift() -> void:
 	# swap between Overworld and Shadow states
 		# TileMap Layer 0 = Shadow
 		# TileMap Layer 1 = Overworld
-		if is_shifted:
+		if GameManager.is_shifted:
 			shift_to_overworld()
 		else:
 			shift_to_shadow()
 
 
 func shift_to_shadow() -> void:
-	is_shifted = true
+	GameManager.is_shifted = true
 	
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, true)
@@ -35,7 +35,7 @@ func shift_to_shadow() -> void:
 
 
 func shift_to_overworld() -> void:
-	is_shifted = false
+	GameManager.is_shifted = false
 	
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, false)
@@ -46,7 +46,7 @@ func shift_to_overworld() -> void:
 
 
 func shift_groups():
-	get_tree().call_group("CanPhase", "do_phase_change", is_shifted)
+	get_tree().call_group("CanPhase", "do_phase_change", GameManager.is_shifted)
 
 
 func _on_player_phase_shift() -> void:
