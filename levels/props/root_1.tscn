@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv0g5y0on6gtf"]
+
+[ext_resource type="PackedScene" uid="uid://1vpbihov3snn" path="res://levels/props/_prop_blueprint.tscn" id="1_wmbar"]
+[ext_resource type="Texture2D" uid="uid://ca55ac5impomy" path="res://levels/props/sprites/prop_vine_1.png" id="2_fiql3"]
+[ext_resource type="Texture2D" uid="uid://3px38g71nmbh" path="res://levels/props/sprites/prop_vine_1_shadow.png" id="3_laawx"]
+
+[node name="root_1" instance=ExtResource("1_wmbar")]
+
+[node name="OverworldSprite" parent="." index="0"]
+texture = ExtResource("2_fiql3")
+
+[node name="ShadowSprite" parent="." index="1"]
+texture = ExtResource("3_laawx")
