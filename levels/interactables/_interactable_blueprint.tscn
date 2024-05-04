@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://clvsu2p0qbiwy"]
+
+[ext_resource type="Script" path="res://levels/interactables/InteractableManager.gd" id="1_o3mr3"]
+
+[node name="_interactable_blueprint" type="Area2D"]
+script = ExtResource("1_o3mr3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
