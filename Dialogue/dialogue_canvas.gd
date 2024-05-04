@@ -39,7 +39,7 @@ func initialize_dialogue():
 	in_dialogue_state = true
 	setup_dialogue_panel()
 	GameManager.player_can_move = false
-	if pause_during_dialogue:
+	if current_session.pause_during_dialogue:
 		get_tree().paused = true
 
 
