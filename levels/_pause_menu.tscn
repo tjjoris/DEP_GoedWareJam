@@ -82,9 +82,11 @@ theme_override_font_sizes/font_size = 32
 text = "BGM VOLUME"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="BGM_slider" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-value = 80.0
+max_value = 1.0
+step = 0.05
+value = 0.8
 
 [node name="SFX_text" type="Label" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -94,9 +96,11 @@ theme_override_font_sizes/font_size = 32
 text = "SFX VOLUME"
 horizontal_alignment = 1
 
-[node name="HSlider2" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="SFX_slider" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-value = 80.0
+max_value = 1.0
+step = 0.05
+value = 0.8
 
 [node name="Panel2" type="Panel" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -112,4 +116,6 @@ text = "RESUME"
 
 [connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/Restart button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="value_changed" from="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="value_changed" from="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
