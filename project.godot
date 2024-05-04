@@ -24,6 +24,7 @@ LevelLoader2="*res://levels/level_loader2.tscn"
 
 window/size/viewport_width=1440
 window/size/viewport_height=810
+window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 window/stretch/scale_mode="integer"
