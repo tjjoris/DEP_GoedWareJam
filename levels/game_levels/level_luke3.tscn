@@ -290,7 +290,7 @@ shape = SubResource("RectangleShape2D_nhswq")
 message = "An oversized feather..."
 
 [node name="DialogueInstance2" parent="DialogueTrigger" index="3" instance=ExtResource("2_sumva")]
-message = "It's electromatic spectrum shifts from green to red when I hold it in front of a light."
+message = "It's electromagnetic spectrum shifts from green to red when I hold it in front of a light."
 image = ExtResource("3_h4lis")
 
 [node name="DialogueInstance3" parent="DialogueTrigger" index="4" instance=ExtResource("2_sumva")]
