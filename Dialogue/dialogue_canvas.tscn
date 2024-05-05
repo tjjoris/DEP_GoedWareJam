@@ -27,6 +27,9 @@ anchor_bottom = 1.0
 offset_top = -128.0
 offset_bottom = -0.00109863
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogueContainer"]
+unique_name_in_owner = true
+
 [node name="MarginContainer2" type="MarginContainer" parent="DialogueContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 32

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b3y0wli0octn4" path="res://levels/objects/collectable_sample.tscn" id="11_b7l6e"]
 [ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="11_ib2b8"]
 [ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="12_yjlal"]
-[ext_resource type="PackedScene" path="res://entity/enemies/alien/alien.tscn" id="13_6do8l"]
+[ext_resource type="PackedScene" uid="uid://c6jkyunputuig" path="res://entity/enemies/alien/alien.tscn" id="13_6do8l"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjg4m"]

@@ -16,9 +16,10 @@ var _current_level_collectables = 0
 var collectable_score: int:
 	get:
 		return _current_level_collectables
-	set(value):
-		_current_level_collectables = value
-		collectable_value_changed.emit(_current_level_collectables)
+
+func picked_up_collectable_sample():
+	_current_level_collectables += 1
+	collectable_value_changed.emit(_current_level_collectables)
 
 
 func _ready() -> void:

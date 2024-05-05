@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bi1gommxa001h" path="res://levels/objects/components/_is_collectable_sample.tscn" id="3_wh70i"]
 
 [node name="CollectableSample" instance=ExtResource("1_07fkx")]
+process_mode = 3
 collision_layer = 1
 
 [node name="Sprite2D" parent="." index="0"]
