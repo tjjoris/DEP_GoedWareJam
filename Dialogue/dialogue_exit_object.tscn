@@ -18,7 +18,7 @@ load_next_level = true
 shape = SubResource("RectangleShape2D_8evv4")
 
 [node name="DialogueInstance" parent="." instance=ExtResource("3_23cba")]
-message = "<placeholder>"
+message = "Level Complete!"
 image = ExtResource("4_jvfkp")
 
 [node name="LevelExit" parent="." instance=ExtResource("4_vx6ui")]
