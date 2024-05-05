@@ -9,7 +9,7 @@ var levels = ["res://levels/_main_menu.tscn",
 "res://levels/game_levels/level_intro00.tscn",
 "res://levels/game_levels/level_naomi_00.tscn",
 "res://levels/game_levels/jacob_level_01.tscn",
-"res://levels/game_levels/jacob_level_02.tscn",
+"res://levels/game_levels/andrew_level_01.tscn",
 ]
 
 

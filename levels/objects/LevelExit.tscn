@@ -97,3 +97,6 @@ message = "Level Complete Placeholder Text!"
 image = ExtResource("4_uck7q")
 
 [connection signal="body_entered" from="." to="DialogueSession" method="_on_level_exit_body_entered"]
+
+[editable path="DialogueSession"]
+[editable path="DialogueSession/DialogueInstance"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://c6jkyunputuig"]
+[gd_scene load_steps=37 format=3 uid="uid://c6jkyunputuig"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_i6x3x"]
 [ext_resource type="Texture2D" uid="uid://dnnfm24bldtlj" path="res://entity/enemies/alien/small_bowtie_idle.png" id="2_6njci"]
@@ -238,12 +238,13 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1qoq"]
+radius = 13.0
+height = 36.0
+
 [node name="alien" instance=ExtResource("1_i6x3x")]
 
-[node name="TerrainCollider2D" parent="." index="0"]
-visible = false
-
-[node name="Movement_Handler" parent="." index="1"]
+[node name="Movement_Handler" parent="." index="0"]
 SPEED = 60.0
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
@@ -252,7 +253,7 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.561979
 
-[node name="ShadowRealmState" parent="." index="4"]
+[node name="ShadowRealmState" parent="." index="3"]
 visible = false
 
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
@@ -261,11 +262,8 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.770665
 
-[node name="HitBox" parent="." index="5"]
-visible = false
-
-[node name="DetectionZone" parent="." index="7"]
-visible = false
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CapsuleShape2D_m1qoq")
 
 [editable path="Jump_Handler"]
 [editable path="HitBox"]

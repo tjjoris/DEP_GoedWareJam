@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/icon_sample.png" id="2_t3o38"]
 [ext_resource type="PackedScene" uid="uid://bi1gommxa001h" path="res://levels/objects/components/_is_collectable_sample.tscn" id="3_7p6r7"]
 
-[node name="Sample_Overworld" groups=["CanPhase"] instance=ExtResource("1_tagrc")]
+[node name="collectable_overworld" groups=["CanPhase"] instance=ExtResource("1_tagrc")]
 collision_layer = 1
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_t3o38")
 
-[node name="CollisionShape2D" parent="." index="1"]
-visible = false
-
 [node name="_IsCollectableSample" parent="." index="2" instance=ExtResource("3_7p6r7")]
+
+[node name="CollisionShape2D" parent="." index="3"]
+visible = false

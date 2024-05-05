@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://col474ya5jbrn"]
+[gd_scene load_steps=4 format=3 uid="uid://col474ya5jbrn"]
 
 [ext_resource type="Script" path="res://systems/TriggerObject2D.gd" id="1_a5wm4"]
+[ext_resource type="AudioStream" uid="uid://duqa08we46h7c" path="res://audio/sfx/Sample_00.wav" id="2_ums81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g0op0"]
 size = Vector2(25, 23)
@@ -10,6 +11,11 @@ collision_layer = 4
 collision_mask = 2
 input_pickable = false
 script = ExtResource("1_a5wm4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_ums81")
+bus = &"SFX"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true

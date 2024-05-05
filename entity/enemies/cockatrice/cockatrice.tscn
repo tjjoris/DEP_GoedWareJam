@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://y1a3hn2tbefu"]
+[gd_scene load_steps=25 format=3 uid="uid://y1a3hn2tbefu"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_oiiny"]
-[ext_resource type="Texture2D" uid="uid://o3baxyt8opr4" path="res://entity/enemies/cockatrice/critter_cockatrice_normal.png" id="2_sxmel"]
+[ext_resource type="Texture2D" uid="uid://xjeefh7ygve2" path="res://entity/enemies/cockatrice/critter_cockatrice_normal.png" id="2_sxmel"]
 [ext_resource type="Texture2D" uid="uid://j5r5fx4vwa36" path="res://entity/enemies/cockatrice/entity_cockatrice_walk.png" id="2_uuc5y"]
 [ext_resource type="Texture2D" uid="uid://jpignciqpk0j" path="res://entity/enemies/cockatrice/entity_shadow_cockatrice_walk.png" id="3_ay1fm"]
-[ext_resource type="Texture2D" uid="uid://b3ki0wuk3pw15" path="res://entity/enemies/cockatrice/critter_cockatrice_shadow.png" id="4_72dkc"]
+[ext_resource type="Texture2D" uid="uid://d2u61ln5oyy5t" path="res://entity/enemies/cockatrice/critter_cockatrice_shadow.png" id="4_72dkc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n8lfx"]
 atlas = ExtResource("2_uuc5y")
@@ -150,12 +150,12 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmt2c"]
+size = Vector2(42, 39)
+
 [node name="Cockatrice" instance=ExtResource("1_oiiny")]
 
-[node name="TerrainCollider2D" parent="." index="0"]
-visible = false
-
-[node name="Movement_Handler" parent="." index="1"]
+[node name="Movement_Handler" parent="." index="0"]
 SPEED = 120.0
 ACCELERATION = 500.0
 
@@ -171,11 +171,9 @@ sprite_frames = SubResource("SpriteFrames_vsu2k")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="HitBox" parent="." index="5"]
-visible = false
-
-[node name="DetectionZone" parent="." index="7"]
-visible = false
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_kmt2c")
 
 [node name="DetectionShape2D" parent="DetectionZone" index="1"]
 position = Vector2(-1.42109e-14, -15)

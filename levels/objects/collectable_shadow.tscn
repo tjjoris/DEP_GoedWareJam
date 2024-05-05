@@ -8,11 +8,11 @@
 collision_layer = 1
 is_phased = true
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="Sprite2D" parent="." index="1"]
 self_modulate = Color(0.900717, 0.338065, 0.793049, 1)
 texture = ExtResource("2_a5v2g")
 
-[node name="CollisionShape2D" parent="." index="1"]
-visible = false
-
 [node name="_IsCollectableSample" parent="." index="2" instance=ExtResource("3_45hgs")]
+
+[node name="CollisionShape2D" parent="." index="3"]
+visible = false

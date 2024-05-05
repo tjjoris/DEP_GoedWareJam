@@ -1,10 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfqquajfsyhl3"]
+[gd_scene load_steps=5 format=3 uid="uid://bfqquajfsyhl3"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_eqe6v"]
-[ext_resource type="Texture2D" uid="uid://lf7u8xbns0qx" path="res://levels/props/sprites/prop_normalworld_tree3.png" id="2_g2kup"]
-[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_66ssl"]
-[ext_resource type="Texture2D" uid="uid://ctxe15gyldhlx" path="res://levels/props/sprites/prop_normalworld_tree1.png" id="4_2hdib"]
-[ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/sprites/prop_normalworld_tree2.png" id="5_row3m"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="6_civcj"]
 [ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="7_og66b"]
 
@@ -35,18 +31,6 @@ SPEED = 0.0
 
 [node name="LevelExit" parent="Gameplay/Entities" index="3"]
 position = Vector2(964, 456)
-
-[node name="UI_DialogueCanvas_DialogueSession1#DialogueInstance2" parent="." index="2" instance=ExtResource("3_66ssl")]
-message = "Hey bro, what's up???"
-image = ExtResource("4_2hdib")
-
-[node name="UI_DialogueCanvas_DialogueSession1#DialogueInstance3" parent="." index="3" instance=ExtResource("3_66ssl")]
-message = "Hey bro, what's up???"
-image = ExtResource("5_row3m")
-
-[node name="UI_DialogueCanvas_DialogueSession1#DialogueInstance4" parent="." index="4" instance=ExtResource("3_66ssl")]
-message = "Hey bro, what's up???"
-image = ExtResource("2_g2kup")
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]

@@ -4,6 +4,10 @@ extends Node2D
 @onready var tile_map: TileMap = $"../../TileMap"
 @onready var parallax_background: ParallaxBackground = $"../ParallaxBackground"
 @export var start_shifted = false
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+
+@export var sfx_phase_to_shadow = preload("res://audio/sfx/phase_shadow_00.wav")
+@export var sfx_phase_to_overworld = preload("res://audio/sfx/phase_overworld.wav")
 
 
 
@@ -30,9 +34,12 @@ func phase_shift() -> void:
 func shift_to_shadow() -> void:
 	GameManager.is_shifted = true
 	
+	
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, true)
 	tile_map.set_layer_enabled(1, false)
+	audio_player.stream = sfx_phase_to_shadow
+	audio_player.play()
 	parallax_background.shift_to_shadow()
 	
 	call_deferred("shift_groups")
@@ -45,6 +52,8 @@ func shift_to_overworld() -> void:
 	#swap tilemap layers
 	tile_map.set_layer_enabled(0, false)
 	tile_map.set_layer_enabled(1, true)
+	audio_player.stream = sfx_phase_to_overworld
+	audio_player.play()
 	parallax_background.shift_to_overworld()
 	
 	call_deferred("shift_groups")
@@ -55,8 +64,12 @@ func shift_groups():
 
 
 func _on_player_phase_shift() -> void:
-	phase_shift()
+	print("what called this?")
 
 
 func _on_pressure_plate_body_entered(_body: Node2D) -> void:
+	phase_shift()
+
+
+func _on_player_do_phase_shift() -> void:
 	phase_shift()
