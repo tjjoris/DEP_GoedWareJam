@@ -2,10 +2,10 @@
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_5s8g6"]
-[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="3_7rlrf"]
+[ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_oijp3"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="7_5kwlo"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
@@ -47,8 +47,8 @@ shadow_enabled = true
 [node name="KillFloor" parent="Gameplay/Systems" instance=ExtResource("7_x3klm")]
 position = Vector2(1200, 1200)
 
-[node name="PhaseShifter" type="Node2D" parent="Gameplay/Systems"]
-script = ExtResource("2_la6m4")
+[node name="PhaseShifter" parent="Gameplay/Systems" instance=ExtResource("5_oijp3")]
+position = Vector2(725.789, 564.98)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Gameplay/Systems"]
 texture_filter = 1
@@ -90,8 +90,6 @@ position = Vector2(75, 369)
 scale = Vector2(1, 1)
 
 [node name="ForegroundProps" type="Node2D" parent="Gameplay"]
-
-[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
