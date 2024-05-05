@@ -1,24 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://4nmlbntwj7vp"]
+[gd_scene load_steps=3 format=3 uid="uid://4nmlbntwj7vp"]
 
-[ext_resource type="Script" path="res://systems/TriggerObject2D.gd" id="1_onhwd"]
-[ext_resource type="Texture2D" uid="uid://fjwvq3dat4jd" path="res://levels/objects/sprites/spikes_overworld.png" id="2_qqis8"]
+[ext_resource type="PackedScene" uid="uid://b3dje383htens" path="res://levels/objects/spiketrap_shadow.tscn" id="1_lcg4n"]
+[ext_resource type="PackedScene" uid="uid://do8g11wkjijk6" path="res://levels/objects/spiketrap_overworld.tscn" id="2_3dpqb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0op0"]
-size = Vector2(32, 24)
+[node name="SpikeTrap_Both" type="Node2D"]
 
-[node name="SpikeTrap_Both" type="Area2D" groups=["IsDeathTrap"]]
-collision_layer = 4
-collision_mask = 2
-input_pickable = false
-script = ExtResource("1_onhwd")
+[node name="SpikeTrap_Shadow" parent="." instance=ExtResource("1_lcg4n")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-unique_name_in_owner = true
-texture = ExtResource("2_qqis8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_g0op0")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="SpikeTrap_Overworld" parent="." instance=ExtResource("2_3dpqb")]
