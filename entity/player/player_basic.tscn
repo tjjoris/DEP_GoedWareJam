@@ -229,9 +229,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pclx"]
-radius = 8.5
-height = 25.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wwd"]
+size = Vector2(16, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxh82"]
 size = Vector2(26, 41)
@@ -239,9 +238,9 @@ size = Vector2(26, 41)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acl5k"]
 size = Vector2(26, 41)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3e8vx"]
-radius = 15.5
-height = 44.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_stmnb"]
+radius = 18.0
+height = 64.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(2, 2)
@@ -282,9 +281,8 @@ animation = &"death"
 autoplay = "idle"
 
 [node name="TerrainColliderShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -13)
-shape = SubResource("CapsuleShape2D_3pclx")
+shape = SubResource("RectangleShape2D_c4wwd")
 
 [node name="HitBox" parent="." instance=ExtResource("3_jqi70")]
 visible = false
@@ -311,14 +309,13 @@ scale = Vector2(0.5, 0.9)
 shape = SubResource("RectangleShape2D_acl5k")
 
 [node name="RiftShardDetector" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 8
 script = ExtResource("11_gobqr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RiftShardDetector"]
-position = Vector2(-1, -18.5)
-shape = SubResource("CapsuleShape2D_3e8vx")
+position = Vector2(0, -12.5)
+shape = SubResource("CapsuleShape2D_stmnb")
 
 [connection signal="body_entered" from="RiftShardDetector" to="." method="_on_rift_shard_detector_body_entered"]
 
