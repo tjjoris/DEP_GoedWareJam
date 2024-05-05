@@ -1,10 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://b5mkvrjb3e5c5"]
+[gd_scene load_steps=30 format=3 uid="uid://cyrs52bofj7tj"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
-[ext_resource type="Texture2D" uid="uid://74qkoegtwgx" path="res://entity/enemies/babi/entity_ram_baby_idle.png" id="2_gutf6"]
-[ext_resource type="Texture2D" uid="uid://bhv3dk8u6mb0i" path="res://entity/enemies/babi/entity_ram_baby_walk.png" id="3_unxtm"]
-[ext_resource type="Texture2D" uid="uid://b48k88bejgc0i" path="res://entity/enemies/babi/entity_ram_baby_shadow_walk.png" id="4_d48cm"]
-[ext_resource type="Texture2D" uid="uid://chr880gy77kxv" path="res://entity/enemies/babi/entity_ram_baby_shadow_idle.png" id="4_granv"]
+[ext_resource type="Texture2D" uid="uid://q25meoaxxoa7" path="res://entity/enemies/babi/entity_ram_baby_idle.png" id="2_gutf6"]
+[ext_resource type="Texture2D" uid="uid://blt13dwhi0yrj" path="res://entity/enemies/babi/entity_ram_baby_walk.png" id="3_unxtm"]
+[ext_resource type="Texture2D" uid="uid://c137cu47nw5w4" path="res://entity/enemies/babi/entity_ram_baby_shadow_walk.png" id="4_d48cm"]
+[ext_resource type="Texture2D" uid="uid://c0j5ihs5pws3e" path="res://entity/enemies/babi/entity_ram_baby_shadow_idle.png" id="4_granv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wco54"]
 atlas = ExtResource("2_gutf6")
@@ -184,7 +184,6 @@ height = 192.0
 max_wonder_time = 6.0
 
 [node name="TerrainCollider2D" parent="." index="0"]
-visible = false
 position = Vector2(0, -11)
 
 [node name="Movement_Handler" parent="." index="1"]
@@ -225,7 +224,6 @@ shape = SubResource("CapsuleShape2D_2awpn")
 position = Vector2(0, -12)
 
 [node name="DetectionZone" parent="." index="7"]
-visible = false
 position = Vector2(0, -35)
 collision_layer = 4
 

@@ -261,9 +261,6 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.770665
 
-[node name="HitBox" parent="." index="5"]
-visible = false
-
 [node name="DetectionZone" parent="." index="7"]
 visible = false
 
