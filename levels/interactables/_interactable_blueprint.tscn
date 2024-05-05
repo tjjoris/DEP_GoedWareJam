@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://clvsu2p0qbiwy"]
+
+[node name="_interactable_blueprint" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

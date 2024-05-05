@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 @onready var movement_handler: MovementHandler = $Movement_Handler
+@onready var detection_zone: Area2D = %DetectionZone
 
+@onready var overworld_sprite: AnimatedSprite2D = $OverworldState/Sprite2D
+@onready var shadow_sprite: AnimatedSprite2D = $ShadowRealmState/Sprite2D2
 
 ## Overworld/ShadowRealm states
 @export var overworld_state: Node2D = null
@@ -9,7 +12,6 @@ extends CharacterBody2D
 @onready var hit_box: Area2D = $HitBox
 
 var _in_shadow_realm: bool = false
-@onready var detection_zone: Area2D = %DetectionZone
 
 
 # possible movement states for entity
@@ -41,9 +43,20 @@ func _ready() -> void:
 		detection_zone.monitoring = true
 	else:
 		detection_zone.monitoring = false
+var i: int = 0
 
 func _physics_process(delta: float) -> void:
 	movement_handler.handle_gravity(self, delta)
+	if _direction != 0:
+		overworld_sprite.play("walk")
+		shadow_sprite.play("walk")
+	
+	if _direction < 0:
+		overworld_sprite.flip_h = false
+		shadow_sprite.flip_h = false
+	elif _direction > 0:
+		overworld_sprite.flip_h = true
+		shadow_sprite.flip_h = true
 	
 	match _state:
 		States.WANDER:
@@ -56,13 +69,20 @@ func _physics_process(delta: float) -> void:
 # wanders back and forth until it hits a wall (goomba ai)
 func wander(delta: float) -> void:
 	# if creatures stops, changes direction
-	if(velocity.x == 0):
+	if velocity.x == 0:
 		_direction *= -1
+	
 	movement_handler.handle_movement(self, _direction, delta)
 
 # chases the player until it catches up
 func chase(delta: float, target: CharacterBody2D) -> void:
 	var target_direction = (target.global_position - self.position).normalized().x
+	if target_direction < 0:
+		overworld_sprite.flip_h = false
+		shadow_sprite.flip_h = false
+	elif target_direction > 0:
+		overworld_sprite.flip_h = true
+		shadow_sprite.flip_h = true
 	movement_handler.handle_movement(self, target_direction, delta)
 
 func _on_phase_changed(entering_shadow_realm: bool):
@@ -119,5 +139,5 @@ func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
 	_state = States.CHASE
 
 
-func _on_detection_zone_body_exited(body: CharacterBody2D) -> void:
+func _on_detection_zone_body_exited(_body: CharacterBody2D) -> void:
 	_state = States.WANDER

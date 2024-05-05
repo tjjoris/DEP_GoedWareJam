@@ -11,19 +11,20 @@ config_version=5
 [application]
 
 config/name="DEP_GoedWareJam"
-run/main_scene="res://levels/level_jacob.tscn"
+run/main_scene="res://levels/_main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://systems/GameManager.gd"
-LevelLoader2="*res://levels/level_loader2.tscn"
+GameManager="*res://systems/game_manager.tscn"
+LevelLoader="*res://systems/level_loader.tscn"
 
 [display]
 
 window/size/viewport_width=1440
 window/size/viewport_height=810
+window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 window/stretch/scale_mode="integer"
@@ -75,6 +76,7 @@ continue_dialogue={
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemy"
+2d_physics/layer_4="Rift Shard"
 
 [rendering]
 

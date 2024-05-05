@@ -1,8 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5mkvrjb3e5c5"]
+[gd_scene load_steps=7 format=3 uid="uid://b5mkvrjb3e5c5"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
 [ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemies/babi/baby.png" id="2_aeu27"]
-[ext_resource type="Texture2D" uid="uid://bnvwlln6qh83w" path="res://entity/enemies/babi/baby_shadow_2.png" id="3_rt4m4"]
+[ext_resource type="Texture2D" uid="uid://bnvwlln6qh83w" path="res://entity/enemies/babi/baby_tall.png" id="3_3v1ub"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoebl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aeu27")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20dff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3v1ub")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apohl"]
 radius = 64.0
@@ -14,28 +36,31 @@ height = 192.0
 position = Vector2(0, -11)
 
 [node name="Movement_Handler" parent="." index="1"]
-SPEED = 60.0
+SPEED = 5.0
 ACCELERATION = 1400.0
 
 [node name="OverworldState" parent="." index="3"]
+visible = false
 position = Vector2(0, -13)
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
-texture = ExtResource("2_aeu27")
+sprite_frames = SubResource("SpriteFrames_hoebl")
+animation = &"walk"
 
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
 position = Vector2(6, -14)
-texture = ExtResource("3_rt4m4")
+sprite_frames = SubResource("SpriteFrames_20dff")
+animation = &"walk"
 offset = Vector2(-6, -49)
 
 [node name="HitBox" parent="." index="5"]
+visible = false
 position = Vector2(0, -12)
 scale = Vector2(1.21429, 4.03543)
 input_pickable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(-2.05882, -12.831)
-scale = Vector2(1, 1)
+position = Vector2(-2.47058, -9.41659)
 
 [node name="HurtBox" parent="." index="6"]
 position = Vector2(0, -12)
@@ -49,6 +74,7 @@ collision_layer = 4
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_apohl")
 
+[editable path="Jump_Handler"]
 [editable path="HitBox"]
 [editable path="HurtBox"]
 [editable path="DetectionZone"]

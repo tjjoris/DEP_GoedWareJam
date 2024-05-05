@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Dialogue/dialogue_session.gd" id="1_7krth"]
 [ext_resource type="Texture2D" uid="uid://du2vc2p13v70m" path="res://levels/sprites/pointLight.png" id="2_74qsk"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_5v1e8"]
-[ext_resource type="Texture2D" uid="uid://ddnw50a2gesor" path="res://Dialogue/portraits/drchazz_neutral_0.png" id="4_dd1j8"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="4_mbn5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8evv4"]
 resource_local_to_scene = true
@@ -22,6 +22,6 @@ texture = ExtResource("2_74qsk")
 
 [node name="DialogueInstance" parent="." instance=ExtResource("3_5v1e8")]
 message = "<placeholder>"
-image = ExtResource("4_dd1j8")
+image = ExtResource("4_mbn5g")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

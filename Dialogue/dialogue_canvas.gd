@@ -39,7 +39,7 @@ func initialize_dialogue():
 	in_dialogue_state = true
 	setup_dialogue_panel()
 	GameManager.player_can_move = false
-	if pause_during_dialogue:
+	if current_session.pause_during_dialogue:
 		get_tree().paused = true
 
 
@@ -72,3 +72,5 @@ func end_dialogue():
 	# re-enable game state
 	GameManager.player_can_move = true
 	get_tree().paused = false
+	if current_session.load_next_level:
+		LevelLoader.goto_next_scene()

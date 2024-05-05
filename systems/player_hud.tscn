@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmssmeg6a877j"]
+
+[ext_resource type="Script" path="res://systems/SamplesCounter.gd" id="1_2g0dv"]
+[ext_resource type="FontFile" uid="uid://oom1vqe8wuui" path="res://Dialogue/fonts/FindersKeepers.ttf" id="1_5vgtf"]
+[ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/icon_sample.png" id="2_5pv2s"]
+
+[node name="PlayerHUD" type="CanvasLayer"]
+
+[node name="SamplesContainer" type="ReferenceRect" parent="."]
+offset_left = 1203.0
+offset_top = 35.0
+offset_right = 1403.0
+offset_bottom = 135.0
+script = ExtResource("1_2g0dv")
+
+[node name="PanelContainer" type="PanelContainer" parent="SamplesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SamplesContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="SamplesContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5vgtf")
+theme_override_font_sizes/font_size = 28
+text = "Samples Collected:"
+
+[node name="IconSample" type="Sprite2D" parent="SamplesContainer"]
+position = Vector2(185, 50)
+scale = Vector2(3, 3)
+texture = ExtResource("2_5pv2s")
+
+[node name="SampleCountText" type="Label" parent="SamplesContainer"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 150.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("1_5vgtf")
+theme_override_font_sizes/font_size = 60
+text = "55/55"
+horizontal_alignment = 1
+vertical_alignment = 1

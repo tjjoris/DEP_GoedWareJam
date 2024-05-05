@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dk2uj6ba805pf"]
+[gd_scene load_steps=44 format=3 uid="uid://dk2uj6ba805pf"]
 
 [ext_resource type="Script" path="res://entity/PlayerController.gd" id="1_p721y"]
 [ext_resource type="AudioStream" uid="uid://drsj0lyf7jhgi" path="res://audio/sfx/hurt00.wav" id="2_5e77j"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dlok2nimip0ko" path="res://entity/player/sprites/sprite_Scientist_anim_idle.png" id="4_wk40d"]
 [ext_resource type="Texture2D" uid="uid://bgf4p6lg3i7ww" path="res://entity/player/sprites/sprite_Scientist_anim_jump.png" id="6_33d18"]
 [ext_resource type="Texture2D" uid="uid://cie0b6y7o68dk" path="res://entity/player/sprites/sprite_Scientist_anim_run.png" id="7_vafui"]
+[ext_resource type="Script" path="res://entity/player/RiftShardDetector.gd" id="11_gobqr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ib4ie"]
 atlas = ExtResource("4_iu1si")
@@ -238,9 +239,14 @@ size = Vector2(26, 41)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acl5k"]
 size = Vector2(26, 41)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3e8vx"]
+radius = 15.5
+height = 44.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(2, 2)
 collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_p721y")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -303,6 +309,18 @@ monitorable = true
 position = Vector2(-1, -18.5)
 scale = Vector2(0.5, 0.9)
 shape = SubResource("RectangleShape2D_acl5k")
+
+[node name="RiftShardDetector" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("11_gobqr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RiftShardDetector"]
+position = Vector2(-1, -18.5)
+shape = SubResource("CapsuleShape2D_3e8vx")
+
+[connection signal="body_entered" from="RiftShardDetector" to="." method="_on_rift_shard_detector_body_entered"]
 
 [editable path="Jump_Handler"]
 [editable path="HitBox"]

@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=3 uid="uid://bb6f8uxocbg58"]
+
+[ext_resource type="Texture2D" uid="uid://ch73u8ew25d6b" path="res://levels/objects/sprites/texture.png" id="1_b1n3n"]
+[ext_resource type="PackedScene" uid="uid://bmutturm673rc" path="res://Dialogue/dialogue_session.tscn" id="2_0si85"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_ik5cx"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="4_uck7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50pkb"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onpib"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n384"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trwvo"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dauxh"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmaf7"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sscqt"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybu6x"]
+atlas = ExtResource("1_b1n3n")
+region = Rect2(0, 448, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8khm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50pkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onpib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n384")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trwvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dauxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmaf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sscqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybu6x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wf760"]
+radius = 19.0
+height = 48.0
+
+[node name="LevelExit" type="Area2D"]
+process_mode = 3
+collision_layer = 4
+collision_mask = 2
+input_pickable = false
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+sprite_frames = SubResource("SpriteFrames_r8khm")
+autoplay = "default"
+frame_progress = 0.644358
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wf760")
+
+[node name="DialogueSession" parent="." instance=ExtResource("2_0si85")]
+pause_during_dialogue = true
+load_next_level = true
+
+[node name="DialogueInstance" parent="DialogueSession" instance=ExtResource("3_ik5cx")]
+message = "Level Complete Placeholder Text!"
+image = ExtResource("4_uck7q")
+
+[connection signal="body_entered" from="." to="DialogueSession" method="_on_level_exit_body_entered"]
