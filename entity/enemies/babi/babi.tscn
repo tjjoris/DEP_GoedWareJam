@@ -1,29 +1,175 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5mkvrjb3e5c5"]
+[gd_scene load_steps=29 format=3 uid="uid://b5mkvrjb3e5c5"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
-[ext_resource type="Texture2D" uid="uid://j8o7tihrqkst" path="res://entity/enemies/babi/baby.png" id="2_aeu27"]
-[ext_resource type="Texture2D" uid="uid://bnvwlln6qh83w" path="res://entity/enemies/babi/baby_tall.png" id="3_3v1ub"]
+[ext_resource type="Texture2D" uid="uid://ct3diek1jrhbn" path="res://entity/enemies/babi/entity_ram_baby_idle.png" id="2_gutf6"]
+[ext_resource type="Texture2D" uid="uid://b26ocuddxquw3" path="res://entity/enemies/babi/entity_ram_baby_walk.png" id="3_unxtm"]
+[ext_resource type="Texture2D" uid="uid://f83jnjx7upxs" path="res://entity/enemies/babi/entity_ram_baby_shadow_walk.png" id="4_d48cm"]
+[ext_resource type="Texture2D" uid="uid://bof6odpksmbdu" path="res://entity/enemies/babi/entity_ram_baby_shadow_idle.png" id="4_granv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wco54"]
+atlas = ExtResource("2_gutf6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvl4w"]
+atlas = ExtResource("2_gutf6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opm27"]
+atlas = ExtResource("2_gutf6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgyrs"]
+atlas = ExtResource("2_gutf6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2rqc"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uavxy"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65v0"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tn8q"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ro1d"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6kxg"]
+atlas = ExtResource("3_unxtm")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hoebl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_aeu27")
+"texture": SubResource("AtlasTexture_wco54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvl4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opm27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgyrs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2rqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uavxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p65v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tn8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ro1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6kxg")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 12.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2ara"]
+atlas = ExtResource("4_granv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqv6"]
+atlas = ExtResource("4_granv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqhcr"]
+atlas = ExtResource("4_granv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi3jn"]
+atlas = ExtResource("4_granv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve8ge"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlagq"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agra6"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3esx"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5xuw"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24oxn"]
+atlas = ExtResource("4_d48cm")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20dff"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_3v1ub")
+"texture": SubResource("AtlasTexture_k2ara")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqhcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi3jn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve8ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlagq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agra6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3esx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5xuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24oxn")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apohl"]
@@ -31,27 +177,34 @@ radius = 64.0
 height = 192.0
 
 [node name="SmolCow" instance=ExtResource("1_swj3t")]
+max_wonder_time = 6.0
 
 [node name="TerrainCollider2D" parent="." index="0"]
 position = Vector2(0, -11)
 
 [node name="Movement_Handler" parent="." index="1"]
-SPEED = 5.0
+SPEED = 80.0
 ACCELERATION = 1400.0
 
 [node name="OverworldState" parent="." index="3"]
-visible = false
 position = Vector2(0, -13)
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
 sprite_frames = SubResource("SpriteFrames_hoebl")
-animation = &"walk"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.707043
+
+[node name="ShadowRealmState" parent="." index="4"]
+visible = false
+position = Vector2(-2, -12)
 
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
-position = Vector2(6, -14)
 sprite_frames = SubResource("SpriteFrames_20dff")
-animation = &"walk"
-offset = Vector2(-6, -49)
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.375989
+offset = Vector2(2, -1)
 
 [node name="HitBox" parent="." index="5"]
 visible = false
