@@ -1,6 +1,10 @@
 class_name JumpHandler
 
 extends Node2D
+
+@export var sfx_jump = preload("res://audio/sfx/jump00.wav")
+@export var sfx_double_jump = preload("res://audio/sfx/doublejump00.wav")
+
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 # Exporrted jump related variables
 ## Height of the player's jump.
@@ -22,6 +26,8 @@ func _ready() -> void:
 
 
 func handle_jump(entity: CharacterBody2D) -> void:
+	set_jump_audio(entity)
+	
 	# Allows you to jump after falling from ledge
 	if entity.is_on_floor() == false and has_jumped == false:
 		jumps_remaining -= 1
@@ -32,3 +38,12 @@ func handle_jump(entity: CharacterBody2D) -> void:
 		jumps_remaining -= 1
 		entity.velocity.y = JUMP_VELOCITY
 		audio_player.play()
+
+func set_jump_audio(entity: CharacterBody2D):
+	# check if audio files are wired up first
+	if sfx_jump and sfx_double_jump:
+		# Set the audio sample based on if grounded or mid-air
+		if entity.is_on_floor():
+			audio_player.stream = sfx_jump
+		else:
+			audio_player.stream = sfx_double_jump
