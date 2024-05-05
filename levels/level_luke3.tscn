@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://w60u7w8fjcwo"]
+[gd_scene load_steps=32 format=3 uid="uid://w60u7w8fjcwo"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_x1pik"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="2_jouhr"]
@@ -7,6 +7,29 @@
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="5_6v8or"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="6_2xb05"]
 [ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="7_cyee0"]
+[ext_resource type="PackedScene" uid="uid://itsafkp7mmbc" path="res://levels/props/shadow_only/sh_tree_shadow_right.tscn" id="8_3jfpy"]
+[ext_resource type="PackedScene" uid="uid://dwel63w35g7jf" path="res://levels/props/shadow_only/sh_root_2.tscn" id="9_d5es8"]
+[ext_resource type="PackedScene" uid="uid://wqwngtxtawe8" path="res://levels/props/shadow_only/sh_rock_3.tscn" id="10_il2nd"]
+[ext_resource type="PackedScene" uid="uid://ctu4mfv3weixa" path="res://levels/props/shadow_only/sh_plant_1.tscn" id="12_0vn75"]
+[ext_resource type="PackedScene" uid="uid://g1btt6xgop8l" path="res://levels/props/swapping/duo_log_2.tscn" id="13_3ky1d"]
+[ext_resource type="PackedScene" uid="uid://bepjof7215t16" path="res://levels/props/swapping/duo_mushroom_4.tscn" id="14_qw3q4"]
+[ext_resource type="PackedScene" uid="uid://6h2wn6ikdb30" path="res://levels/props/swapping/duo_root_2.tscn" id="15_n8is7"]
+[ext_resource type="PackedScene" uid="uid://boyn0qr7lxp42" path="res://levels/props/swapping/duo_rock_2.tscn" id="16_2gn8b"]
+[ext_resource type="PackedScene" uid="uid://cgiorpxhvgoh0" path="res://levels/props/shadow_only/sh_mushroom_1.tscn" id="17_865dp"]
+[ext_resource type="PackedScene" uid="uid://bu7hx06gjc5g2" path="res://levels/props/shadow_only/sh_mushroom_2.tscn" id="18_alihi"]
+[ext_resource type="PackedScene" uid="uid://ccs3l6l58n6nf" path="res://levels/props/shadow_only/sh_mushroom_3.tscn" id="19_67llc"]
+[ext_resource type="PackedScene" uid="uid://cj5tdvp7jgpjk" path="res://levels/props/shadow_only/sh_mushroom_4.tscn" id="20_amb8n"]
+[ext_resource type="PackedScene" uid="uid://b6g22rmrw1tfb" path="res://levels/props/shadow_only/sh_plant_2.tscn" id="21_27ei0"]
+[ext_resource type="PackedScene" uid="uid://b2ybqsywl22mc" path="res://levels/props/swapping/duo_rock_1.tscn" id="22_1uu8q"]
+[ext_resource type="PackedScene" uid="uid://k67xkpv53l33" path="res://levels/props/swapping/duo_rock_3.tscn" id="23_mjob8"]
+[ext_resource type="PackedScene" uid="uid://lfmtwh30fnqd" path="res://levels/props/swapping/duo_plant_4.tscn" id="23_nmhlj"]
+[ext_resource type="PackedScene" uid="uid://l4qhlrje8f2a" path="res://levels/props/overworld_only/ov_tree_orange.tscn" id="24_p7e4o"]
+[ext_resource type="PackedScene" uid="uid://pef6rpcggqkj" path="res://levels/props/overworld_only/ov_log_1.tscn" id="25_v6msb"]
+[ext_resource type="PackedScene" uid="uid://gs53vkevtels" path="res://levels/props/swapping/duo_tree_orange.tscn" id="26_tdf8c"]
+[ext_resource type="PackedScene" uid="uid://deeiuv50yp7xj" path="res://levels/props/swapping/duo_log_1.tscn" id="27_lhef8"]
+[ext_resource type="PackedScene" uid="uid://cv0g5y0on6gtf" path="res://levels/props/swapping/duo_root_1.tscn" id="28_fitew"]
+[ext_resource type="PackedScene" uid="uid://ct0lueq8ibvu4" path="res://levels/props/swapping/duo_vine_3.tscn" id="29_1avhk"]
+[ext_resource type="PackedScene" uid="uid://w2kn8ndkiaaj" path="res://levels/props/swapping/duo_plant_1.tscn" id="30_u40g5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhswq"]
 resource_local_to_scene = true
@@ -24,6 +47,102 @@ position = Vector2(1801, 325)
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(106, 369)
+
+[node name="sh_tree_shadow_right" parent="Gameplay/ForegroundProps" index="0" instance=ExtResource("8_3jfpy")]
+position = Vector2(1283, 291)
+
+[node name="sh_root_2" parent="Gameplay/ForegroundProps" index="1" instance=ExtResource("9_d5es8")]
+position = Vector2(1234, 382)
+
+[node name="sh_rock_3" parent="Gameplay/ForegroundProps" index="2" instance=ExtResource("10_il2nd")]
+position = Vector2(351, 549)
+
+[node name="sh_plant_1" parent="Gameplay/ForegroundProps" index="3" instance=ExtResource("12_0vn75")]
+position = Vector2(370, 547)
+
+[node name="duo_log_2" parent="Gameplay/ForegroundProps" index="4" instance=ExtResource("13_3ky1d")]
+position = Vector2(54, 515)
+
+[node name="duo_mushroom_4" parent="Gameplay/ForegroundProps" index="5" instance=ExtResource("14_qw3q4")]
+position = Vector2(-16, 510)
+
+[node name="duo_root_2" parent="Gameplay/ForegroundProps" index="6" instance=ExtResource("15_n8is7")]
+position = Vector2(150, 513)
+
+[node name="duo_rock_2" parent="Gameplay/ForegroundProps" index="7" instance=ExtResource("16_2gn8b")]
+position = Vector2(85, 518)
+
+[node name="sh_mushroom_1" parent="Gameplay/ForegroundProps" index="8" instance=ExtResource("17_865dp")]
+position = Vector2(-114, 509)
+
+[node name="sh_mushroom_2" parent="Gameplay/ForegroundProps" index="9" instance=ExtResource("18_alihi")]
+position = Vector2(-80, 511)
+
+[node name="sh_mushroom_3" parent="Gameplay/ForegroundProps" index="10" instance=ExtResource("19_67llc")]
+position = Vector2(-52, 510)
+
+[node name="sh_mushroom_4" parent="Gameplay/ForegroundProps" index="11" instance=ExtResource("20_amb8n")]
+position = Vector2(-176, 349)
+
+[node name="sh_plant_2" parent="Gameplay/ForegroundProps" index="12" instance=ExtResource("12_0vn75")]
+position = Vector2(-271, 352)
+
+[node name="sh_plant_3" parent="Gameplay/ForegroundProps" index="13" instance=ExtResource("21_27ei0")]
+position = Vector2(-236, 345)
+
+[node name="duo_rock_1" parent="Gameplay/ForegroundProps" index="14" instance=ExtResource("22_1uu8q")]
+position = Vector2(-69, 195)
+
+[node name="duo_rock_3" parent="Gameplay/ForegroundProps" index="15" instance=ExtResource("16_2gn8b")]
+position = Vector2(-1, 223)
+
+[node name="duo_rock_4" parent="Gameplay/ForegroundProps" index="16" instance=ExtResource("23_mjob8")]
+position = Vector2(82, 221)
+
+[node name="duo_plant_4" parent="Gameplay/ForegroundProps" index="17" instance=ExtResource("23_nmhlj")]
+position = Vector2(426, 543)
+
+[node name="ov_tree_orange" parent="Gameplay/ForegroundProps" index="18" instance=ExtResource("24_p7e4o")]
+position = Vector2(595, 392)
+
+[node name="ov_log_1" parent="Gameplay/ForegroundProps" index="19" instance=ExtResource("25_v6msb")]
+position = Vector2(671, 483)
+
+[node name="duo_tree_orange" parent="Gameplay/ForegroundProps" index="20" instance=ExtResource("26_tdf8c")]
+position = Vector2(1096, 354)
+
+[node name="duo_root_3" parent="Gameplay/ForegroundProps" index="21" instance=ExtResource("15_n8is7")]
+position = Vector2(1032, 447)
+
+[node name="duo_log_3" parent="Gameplay/ForegroundProps" index="22" instance=ExtResource("13_3ky1d")]
+position = Vector2(915, 445)
+
+[node name="duo_log_1" parent="Gameplay/ForegroundProps" index="23" instance=ExtResource("27_lhef8")]
+position = Vector2(993, 446)
+
+[node name="duo_rock_5" parent="Gameplay/ForegroundProps" index="24" instance=ExtResource("23_mjob8")]
+position = Vector2(1484, 354)
+
+[node name="duo_root_1" parent="Gameplay/ForegroundProps" index="25" instance=ExtResource("28_fitew")]
+position = Vector2(1657, 354)
+
+[node name="duo_rock_6" parent="Gameplay/ForegroundProps" index="26" instance=ExtResource("16_2gn8b")]
+position = Vector2(1706, 354)
+
+[node name="duo_rock_7" parent="Gameplay/ForegroundProps" index="27" instance=ExtResource("22_1uu8q")]
+position = Vector2(1639, 355)
+
+[node name="duo_rock_8" parent="Gameplay/ForegroundProps" index="28" instance=ExtResource("23_mjob8")]
+position = Vector2(1728, 353)
+
+[node name="duo_vine_3" parent="Gameplay/ForegroundProps" index="29" instance=ExtResource("29_1avhk")]
+position = Vector2(1356, 388)
+
+[node name="duo_plant_1" parent="Gameplay/ForegroundProps" index="30" instance=ExtResource("30_u40g5")]
+position = Vector2(1459, 352)
+
+[node name="duo_plant_5" parent="Gameplay/ForegroundProps" index="31" instance=ExtResource("23_nmhlj")]
+position = Vector2(1439, 348)
 
 [node name="Cockatrice" parent="." index="2" instance=ExtResource("2_jouhr")]
 position = Vector2(128, 496)
@@ -56,7 +175,7 @@ shape = SubResource("RectangleShape2D_nhswq")
 message = "A large feather..."
 
 [node name="DialogueInstance2" parent="DialogueTrigger" index="3" instance=ExtResource("6_2xb05")]
-message = "It fades from purple to green when I hold it up to the light."
+message = "It fades from green to red when I hold it up to the light."
 image = ExtResource("7_cyee0")
 
 [node name="DialogueInstance3" parent="DialogueTrigger" index="4" instance=ExtResource("6_2xb05")]
