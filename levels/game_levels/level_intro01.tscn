@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtor2qug3vns"]
+[gd_scene load_steps=5 format=3 uid="uid://cdtor2qug3vns"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_pd2gt"]
 [ext_resource type="PackedScene" uid="uid://b3dje383htens" path="res://levels/objects/spiketrap_shadow.tscn" id="2_ttesl"]
 [ext_resource type="PackedScene" uid="uid://do8g11wkjijk6" path="res://levels/objects/spiketrap_overworld.tscn" id="3_gaaq6"]
+[ext_resource type="PackedScene" uid="uid://4nmlbntwj7vp" path="res://levels/objects/spiketrap_both.tscn" id="4_0tpap"]
 
 [node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_pd2gt")]
 
@@ -17,6 +18,12 @@ position = Vector2(35, 515)
 
 [node name="SpikeTrap_Overworld" parent="." index="4" instance=ExtResource("3_gaaq6")]
 position = Vector2(219, 514)
+
+[node name="SpikeTrap_Both" parent="." index="5" instance=ExtResource("4_0tpap")]
+position = Vector2(269, 512)
+
+[node name="SpikeTrap_Overworld2" parent="." index="6" instance=ExtResource("3_gaaq6")]
+position = Vector2(1, 514)
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/LevelExit"]
