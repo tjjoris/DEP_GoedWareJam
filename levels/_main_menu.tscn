@@ -1,23 +1,47 @@
-[gd_scene load_steps=9 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=11 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
 [ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
+[ext_resource type="Texture2D" uid="uid://j1d623g72dst" path="res://levels/props/sprites/visual_silhuette.png" id="3_1v5yl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
-bg_color = Color(0.173609, 0.0329847, 0.25606, 0.811765)
+bg_color = Color(0.202712, 0.112572, 0.354524, 0.811765)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.460501, 0.30095, 0.721914, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysjhc"]
-bg_color = Color(0.666667, 0.313726, 0.219608, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewnqd"]
-bg_color = Color(0.309804, 0.517647, 0.203922, 1)
+bg_color = Color(0.935717, 0.445717, 0.214784, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bya5"]
-bg_color = Color(0.666667, 0.517647, 0.196078, 1)
+bg_color = Color(0.930713, 0.58224, 0.22669, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bs2y"]
+bg_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iejst"]
+bg_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cxox"]
-bg_color = Color(0.933333, 0.776471, 0.396078, 1)
+bg_color = Color(0.925227, 0.699186, 0.262552, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rw70s")
@@ -42,6 +66,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rndiv")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 405.0
+scale = Vector2(2, 2)
+texture = ExtResource("3_1v5yl")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
@@ -82,17 +113,16 @@ theme_override_constants/separation = 16
 [node name="Button" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ewnqd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ewnqd")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ewnqd")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_2bya5")
@@ -112,7 +142,8 @@ theme_override_constants/separation = 8
 
 [node name="BGM_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.873298, 0.873298, 0.873298, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 50
 text = "BGM VOLUME"
@@ -120,13 +151,15 @@ horizontal_alignment = 1
 
 [node name="BGM_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3bs2y")
 max_value = 1.0
 step = 0.05
 value = 0.8
 
 [node name="SFX_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.856067, 0.856067, 0.856067, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 50
 text = "SFX VOLUME"
@@ -134,6 +167,7 @@ horizontal_alignment = 1
 
 [node name="SFX_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_iejst")
 max_value = 1.0
 step = 0.05
 value = 0.8
@@ -141,7 +175,7 @@ value = 0.8
 [node name="Button4" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.843137, 0.482353, 0.254902, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")

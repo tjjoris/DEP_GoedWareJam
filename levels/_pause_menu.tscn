@@ -1,7 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj80dbx3uve3d"]
+[gd_scene load_steps=11 format=3 uid="uid://bj80dbx3uve3d"]
 
 [ext_resource type="Script" path="res://systems/pause_menu.gd" id="1_2f2mg"]
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_448sd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uepy8"]
+bg_color = Color(0.329424, 0.200429, 0.536488, 0.396078)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_putln"]
+bg_color = Color(0.937255, 0.447059, 0.215686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lbym"]
+bg_color = Color(0.929412, 0.580392, 0.227451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m1ee"]
+bg_color = Color(0.92549, 0.698039, 0.262745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn6s8"]
+bg_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1omq8"]
+bg_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_522i0"]
+bg_color = Color(0.949686, 0.882218, 0.482167, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncxy6"]
+bg_color = Color(0.92549, 0.698039, 0.262745, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -27,6 +66,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uepy8")
 
 [node name="MarginContainer" type="MarginContainer" parent="ReferenceRect"]
 layout_mode = 1
@@ -46,21 +86,26 @@ layout_mode = 2
 [node name="Restart button" type="Button" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_448sd")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_putln")
 text = "RESTART LEVEL"
 
 [node name="Main Menu Button" type="Button" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_448sd")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_2lbym")
 text = "MAIN MENU"
 
 [node name="Panel" type="Panel" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.38
+theme_override_styles/panel = SubResource("StyleBoxFlat_0m1ee")
 
 [node name="PanelContainer" type="MarginContainer" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -76,7 +121,7 @@ theme_override_constants/separation = 8
 
 [node name="BGM_text" type="Label" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_448sd")
 theme_override_font_sizes/font_size = 32
 text = "BGM VOLUME"
@@ -84,13 +129,14 @@ horizontal_alignment = 1
 
 [node name="BGM_slider" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_qn6s8")
 max_value = 1.0
 step = 0.05
 value = 0.8
 
 [node name="SFX_text" type="Label" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_448sd")
 theme_override_font_sizes/font_size = 32
 text = "SFX VOLUME"
@@ -98,6 +144,7 @@ horizontal_alignment = 1
 
 [node name="SFX_slider" type="HSlider" parent="ReferenceRect/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1omq8")
 max_value = 1.0
 step = 0.05
 value = 0.8
@@ -106,12 +153,15 @@ value = 0.8
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.38
+theme_override_styles/panel = SubResource("StyleBoxFlat_522i0")
 
 [node name="ResumeButton" type="Button" parent="ReferenceRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_448sd")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncxy6")
 text = "RESUME"
 
 [connection signal="pressed" from="ReferenceRect/MarginContainer/VBoxContainer/Restart button" to="." method="_on_restart_button_pressed"]
