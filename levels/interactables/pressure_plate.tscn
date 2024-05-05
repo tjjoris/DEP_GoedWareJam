@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csh53celtdgou"]
+[gd_scene load_steps=7 format=3 uid="uid://csh53celtdgou"]
 
 [ext_resource type="PackedScene" uid="uid://clvsu2p0qbiwy" path="res://levels/interactables/_interactable_blueprint.tscn" id="1_xccdn"]
 [ext_resource type="Texture2D" uid="uid://4sdm04jexuog" path="res://levels/interactables/sprites/object_pressureplate_off.png" id="2_5s546"]
+[ext_resource type="Script" path="res://levels/interactables/InteractableManager.gd" id="2_ge5ob"]
 [ext_resource type="Texture2D" uid="uid://b7rkiac71njkl" path="res://levels/interactables/sprites/object_pressureplate_on.png" id="3_y6nbi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wwbbw"]
@@ -12,7 +13,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"off",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -27,7 +28,8 @@ animations = [{
 size = Vector2(28, 17)
 
 [node name="pressure_plate" instance=ExtResource("1_xccdn")]
-collision_mask = 6
+collision_mask = 4
+script = ExtResource("2_ge5ob")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_wwbbw")

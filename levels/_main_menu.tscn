@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=9 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
+[ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
+bg_color = Color(0.173609, 0.0329847, 0.25606, 0.811765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysjhc"]
+bg_color = Color(0.666667, 0.313726, 0.219608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewnqd"]
+bg_color = Color(0.309804, 0.517647, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bya5"]
+bg_color = Color(0.666667, 0.517647, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cxox"]
+bg_color = Color(0.933333, 0.776471, 0.396078, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rw70s")
@@ -17,6 +33,15 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.454982, 0.349657, 0.371597, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rndiv")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
@@ -39,6 +64,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkjci")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel"]
 layout_mode = 1
@@ -58,6 +84,10 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ewnqd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ewnqd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ewnqd")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
@@ -65,6 +95,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_2bya5")
 text = "SELECT LEVEL"
 
 [node name="PanelContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
@@ -81,9 +112,9 @@ theme_override_constants/separation = 8
 
 [node name="BGM_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
+theme_override_colors/font_color = Color(0.873298, 0.873298, 0.873298, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 50
 text = "BGM VOLUME"
 horizontal_alignment = 1
 
@@ -95,9 +126,9 @@ value = 0.8
 
 [node name="SFX_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.43134, 0.43134, 0.43134, 1)
+theme_override_colors/font_color = Color(0.856067, 0.856067, 0.856067, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 50
 text = "SFX VOLUME"
 horizontal_alignment = 1
 
@@ -110,8 +141,10 @@ value = 0.8
 [node name="Button4" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.843137, 0.482353, 0.254902, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")
 text = "ABOUT"
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

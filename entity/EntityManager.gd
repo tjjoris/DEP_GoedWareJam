@@ -6,18 +6,24 @@ extends CharacterBody2D
 @onready var overworld_sprite: AnimatedSprite2D = $OverworldState/Sprite2D
 @onready var shadow_sprite: AnimatedSprite2D = $ShadowRealmState/Sprite2D2
 
+@onready var hit_box: Area2D = $HitBox
+@onready var wander_timer: Timer = $Timer
+
 ## Overworld/ShadowRealm states
 @export var overworld_state: Node2D = null
 @export var shadow_realm_state: Node2D = null
-@onready var hit_box: Area2D = $HitBox
+
+@export var idle_time: float = 1
+@export var max_wonder_time: float = 5
+@export var min_wonder_time: float = 3
 
 var _in_shadow_realm: bool = false
-
 
 # possible movement states for entity
 enum States {
 	WANDER,
-	CHASE
+	CHASE,
+	IDLE
 }
 var _state = null
 const _directions: Array = [-1, 1]
@@ -34,22 +40,25 @@ func _ready() -> void:
 		if shadow_realm_state == null:
 			print(name + " could not find ShadowRealm Node")
 	
+	
 	# decides a random direction the entity will wander in
 	_direction = _directions[randi() % _directions.size()]
 	# states the default state to wander
 	_state = States.WANDER
+	wander_timer.start(randf_range(min_wonder_time, max_wonder_time))
 	# sets the detection zone to monitor in the shadow realm
 	if _in_shadow_realm:
 		detection_zone.monitoring = true
 	else:
 		detection_zone.monitoring = false
-var i: int = 0
 
 func _physics_process(delta: float) -> void:
 	movement_handler.handle_gravity(self, delta)
-	if _direction != 0:
+	
+	if velocity.x != 0:
 		overworld_sprite.play("walk")
 		shadow_sprite.play("walk")
+	
 	
 	if _direction < 0:
 		overworld_sprite.flip_h = false
@@ -63,6 +72,8 @@ func _physics_process(delta: float) -> void:
 			wander(delta)
 		States.CHASE:
 			chase(delta, _target)
+		States.IDLE:
+			idle(delta)
 	
 	move_and_slide()
 
@@ -70,10 +81,8 @@ func _physics_process(delta: float) -> void:
 func wander(delta: float) -> void:
 	# if creatures stops, changes direction
 	if velocity.x == 0:
-		_direction *= -1
-	
-	#if not ray_cast_left.is_colliding() or not ray_cast_right.is_colliding():
-		#_direction *= -1
+		_direction = _direction * -1
+		
 	movement_handler.handle_movement(self, _direction, delta)
 
 # chases the player until it catches up
@@ -86,6 +95,17 @@ func chase(delta: float, target: CharacterBody2D) -> void:
 		overworld_sprite.flip_h = true
 		shadow_sprite.flip_h = true
 	movement_handler.handle_movement(self, target_direction, delta)
+
+func idle(delta: float):
+	movement_handler.handle_movement(self, 0, delta)
+	overworld_sprite.play("idle")
+	shadow_sprite.play("idle")
+	
+	await get_tree().create_timer(idle_time).timeout
+	wander_timer.start(randf_range(min_wonder_time, max_wonder_time))
+	
+	_state = States.WANDER
+
 
 func _on_phase_changed(entering_shadow_realm: bool):
 	# check to see if state is different before phase change
@@ -106,6 +126,7 @@ func do_phase_change(entering_shadow_realm: bool):
 		enter_shadow_realm()
 	else:
 		_state = States.WANDER
+		wander_timer.start(randf_range(min_wonder_time, max_wonder_time))
 		detection_zone.monitoring = false
 		enter_overworld()
 
@@ -127,7 +148,7 @@ func enter_shadow_realm():
 
 func enter_overworld():
 	#print(name + " entered the overworld.")
-	pass	
+	pass
 
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
@@ -143,3 +164,9 @@ func _on_detection_zone_body_entered(body: CharacterBody2D) -> void:
 
 func _on_detection_zone_body_exited(_body: CharacterBody2D) -> void:
 	_state = States.WANDER
+	wander_timer.start(randf_range(min_wonder_time, max_wonder_time))
+
+
+func _on_timer_timeout() -> void:
+	if _state != States.CHASE:
+		_state = States.IDLE

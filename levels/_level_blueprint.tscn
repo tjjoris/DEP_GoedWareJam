@@ -39,9 +39,9 @@ process_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
-rotation = 1.01578
+rotation = 0.368264
 color = Color(0.759625, 0.792005, 0.0139048, 1)
-energy = 0.62
+energy = 0.32
 shadow_enabled = true
 
 [node name="KillFloor" parent="Gameplay/Systems" instance=ExtResource("7_x3klm")]
