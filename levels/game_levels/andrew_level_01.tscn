@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="3_3vvw8"]
 [ext_resource type="PackedScene" uid="uid://b3y0wli0octn4" path="res://levels/objects/collectable_sample.tscn" id="4_kn7gp"]
 [ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="5_a4tks"]
-[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="6_db470"]
+[ext_resource type="PackedScene" uid="uid://cyrs52bofj7tj" path="res://entity/enemies/babi/babi.tscn" id="6_db470"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpeil"]
 resource_local_to_scene = true
