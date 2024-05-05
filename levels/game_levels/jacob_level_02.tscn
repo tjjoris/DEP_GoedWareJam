@@ -14,9 +14,6 @@ layer_0/tile_data = PackedInt32Array(1245195, 196610, 3, 1179659, 196610, 0, 124
 [node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger" index="0"]
 shape = SubResource("RectangleShape2D_oif18")
 
-[node name="Sample_Overworld" parent="." index="3"]
-position = Vector2(220, 339)
-
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/LevelExit"]

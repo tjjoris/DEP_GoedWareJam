@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b45xw2ktcra6w"]
+[gd_scene load_steps=12 format=3 uid="uid://b45xw2ktcra6w"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_widja"]
 [ext_resource type="PackedScene" uid="uid://itsafkp7mmbc" path="res://levels/props/shadow_only/sh_tree_shadow_right.tscn" id="4_mpwvm"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="11_ib2b8"]
 [ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="12_yjlal"]
 [ext_resource type="PackedScene" path="res://entity/enemies/alien/alien.tscn" id="13_6do8l"]
+[ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="14_sbmo0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjg4m"]
 resource_local_to_scene = true
@@ -61,6 +62,7 @@ position = Vector2(412, 189)
 
 [node name="alien" parent="Gameplay/Entities" index="9" instance=ExtResource("13_6do8l")]
 position = Vector2(188, 445)
+collision_mask = 1
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(108, 194)
@@ -73,6 +75,10 @@ position = Vector2(348, 406)
 
 [node name="Prop_GreenTree3" parent="Gameplay/ForegroundProps" index="2" instance=ExtResource("10_i5qul")]
 position = Vector2(122, 41)
+
+[node name="Cockatrice" parent="." index="2" instance=ExtResource("14_sbmo0")]
+position = Vector2(271, 431)
+collision_mask = 1
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
