@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg272lausbv01"]
+[gd_scene load_steps=8 format=3 uid="uid://dg272lausbv01"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_ahn3r"]
 [ext_resource type="PackedScene" uid="uid://c6jkyunputuig" path="res://entity/enemies/alien/alien.tscn" id="3_3px0b"]
 [ext_resource type="Texture2D" uid="uid://dkle4jryc03sq" path="res://levels/props/sprites/prop_normalworld_tree2.png" id="3_uq8i1"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="4_ol6y1"]
 [ext_resource type="PackedScene" uid="uid://csh53celtdgou" path="res://levels/interactables/pressure_plate.tscn" id="5_wvuqt"]
+[ext_resource type="PackedScene" uid="uid://b5mkvrjb3e5c5" path="res://entity/enemies/babi/babi.tscn" id="6_lnpfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkdvp"]
 resource_local_to_scene = true
@@ -22,13 +23,19 @@ position = Vector2(195, 596)
 collision_mask = 1
 
 [node name="Cockatrice" parent="Gameplay/Entities" index="1" instance=ExtResource("4_ol6y1")]
-position = Vector2(549, 505)
+position = Vector2(542, 602)
+
+[node name="SmolCow" parent="Gameplay/Entities" index="2" instance=ExtResource("6_lnpfq")]
+position = Vector2(428, 512)
+idle_time = 2.0
+max_wonder_time = 2.0
+min_wonder_time = 1.0
 
 [node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger" index="0"]
 shape = SubResource("RectangleShape2D_bkdvp")
 
-[node name="pressure_plate" parent="Gameplay/Entities" index="4" instance=ExtResource("5_wvuqt")]
-position = Vector2(461, 525)
+[node name="pressure_plate" parent="Gameplay/Entities" index="5" instance=ExtResource("5_wvuqt")]
+position = Vector2(217, 518)
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(237, 447)

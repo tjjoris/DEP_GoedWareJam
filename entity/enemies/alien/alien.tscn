@@ -250,7 +250,7 @@ SPEED = 60.0
 sprite_frames = SubResource("SpriteFrames_yblkr")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.830151
+frame_progress = 0.561979
 
 [node name="ShadowRealmState" parent="." index="4"]
 visible = false
