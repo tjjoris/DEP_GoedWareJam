@@ -1,9 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://clvsu2p0qbiwy"]
-
-[ext_resource type="Script" path="res://levels/interactables/InteractableManager.gd" id="1_o3mr3"]
+[gd_scene format=3 uid="uid://clvsu2p0qbiwy"]
 
 [node name="_interactable_blueprint" type="Area2D"]
-script = ExtResource("1_o3mr3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 animation = &""
