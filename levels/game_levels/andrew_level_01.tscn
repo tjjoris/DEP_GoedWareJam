@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://wh1i8s8g5qot"]
+[gd_scene load_steps=4 format=3 uid="uid://dfgxrsgwa76hw"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_er28s"]
-[ext_resource type="PackedScene" path="res://entity/enemies/alien/alien.tscn" id="2_2rqqm"]
+[ext_resource type="PackedScene" uid="uid://c6jkyunputuig" path="res://entity/enemies/alien/alien.tscn" id="2_2rqqm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpeil"]
 resource_local_to_scene = true
