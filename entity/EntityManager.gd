@@ -72,8 +72,6 @@ func wander(delta: float) -> void:
 	if velocity.x == 0:
 		_direction *= -1
 	
-	#if not ray_cast_left.is_colliding() or not ray_cast_right.is_colliding():
-		#_direction *= -1
 	movement_handler.handle_movement(self, _direction, delta)
 
 # chases the player until it catches up

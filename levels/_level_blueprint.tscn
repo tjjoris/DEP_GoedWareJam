@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
-[ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_5s8g6"]
+[ext_resource type="PackedScene" path="res://systems/player_hud.tscn" id="2_5s8g6"]
 [ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="2_la6m4"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
-[ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="3_7rlrf"]
+[ext_resource type="PackedScene" path="res://levels/_pause_menu.tscn" id="3_7rlrf"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="7_5kwlo"]
-[ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="7_x3klm"]
+[ext_resource type="PackedScene" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_7dj76"]
 
