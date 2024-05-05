@@ -5,6 +5,9 @@ extends Node2D
 @onready var parallax_background: ParallaxBackground = $"../ParallaxBackground"
 @export var start_shifted = false
 
+@export var sfx_phase_to_shadow = preload("res://audio/sfx/phase_shadow_00.wav")
+@export var sfx_phase_to_overworld = preload("res://audio/sfx/phase_overworld.wav")
+
 
 
 # Called when the node enters the scene tree for the first time.

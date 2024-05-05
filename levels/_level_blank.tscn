@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
-[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="5_pstk5"]
+[ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_ggd3f"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="7_k8t4a"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_rcc4d"]
@@ -42,8 +42,7 @@ shadow_enabled = true
 [node name="KillFloor" parent="Gameplay/Systems" instance=ExtResource("4_euu1s")]
 position = Vector2(1200, 1200)
 
-[node name="PhaseShifter" type="Node2D" parent="Gameplay/Systems"]
-script = ExtResource("5_pstk5")
+[node name="PhaseShifter" parent="Gameplay/Systems" instance=ExtResource("5_ggd3f")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Gameplay/Systems"]
 texture_filter = 1
@@ -76,8 +75,6 @@ position = Vector2(75, 369)
 scale = Vector2(1, 1)
 
 [node name="ForegroundProps" type="Node2D" parent="Gameplay"]
-
-[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/LevelExit"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://brrx4v4byhktl"]
+[gd_scene load_steps=4 format=3 uid="uid://brrx4v4byhktl"]
 
 [ext_resource type="Script" path="res://systems/KillFloor.gd" id="1_l234o"]
+[ext_resource type="AudioStream" uid="uid://c8srbnx5xaj1u" path="res://audio/sfx/LongFall00.wav" id="2_l4jtp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hujn"]
 size = Vector2(29.3601, 20)
@@ -13,5 +14,10 @@ script = ExtResource("1_l234o")
 rotation = -3.14159
 scale = Vector2(300, 20)
 shape = SubResource("RectangleShape2D_3hujn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l4jtp")
+volume_db = -5.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

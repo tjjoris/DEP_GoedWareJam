@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://f1rjklxrty6o"]
+
+[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="1_eqp8q"]
+
+[node name="PhaseShifter" type="Node2D"]
+script = ExtResource("1_eqp8q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
