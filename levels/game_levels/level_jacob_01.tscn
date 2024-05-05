@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ewdhfcuoj3m"]
+
+[ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_ti8mk"]
+
+[node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_ti8mk")]
+
+[editable path="UI/DialogueCanvas"]

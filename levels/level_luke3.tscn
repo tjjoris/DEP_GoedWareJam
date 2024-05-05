@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://w60u7w8fjcwo"]
+[gd_scene load_steps=34 format=3 uid="uid://445drr61smgx"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_x1pik"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="2_jouhr"]

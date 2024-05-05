@@ -50,6 +50,9 @@ func handle_jump():
 		#emit_signal("do_phase_shift")
 
 func touched_shadow_monster_hitbox() -> void:
+	# You can't kill what is already dead.
+	if GameManager.player_is_dead:
+		return
 	GameManager.player_can_move = false
 	GameManager.player_is_dead = true
 	audio_player.play()
