@@ -1,8 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://12maljdxnoer"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_instance.gd" id="1_w2ibm"]
-[ext_resource type="AudioStream" uid="uid://dbu8t02ml1nyu" path="res://audio/sfx/DialogueContinue00.wav" id="2_cmgr0"]
+[ext_resource type="AudioStream" uid="uid://rs0xjjt5631f" path="res://audio/sfx/Charlie_Neutral.wav" id="2_d0wl5"]
 
 [node name="DialogueInstance" type="Node"]
 script = ExtResource("1_w2ibm")
-sfx_clip = ExtResource("2_cmgr0")
+sfx_clip = ExtResource("2_d0wl5")
