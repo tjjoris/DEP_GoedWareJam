@@ -173,7 +173,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2awpn"]
-radius = 3.96488
+radius = 3.46927
 height = 23.8823
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apohl"]
@@ -183,14 +183,11 @@ height = 192.0
 [node name="SmolCow" instance=ExtResource("1_swj3t")]
 max_wonder_time = 6.0
 
-[node name="TerrainCollider2D" parent="." index="0"]
-position = Vector2(0, -11)
-
-[node name="Movement_Handler" parent="." index="1"]
+[node name="Movement_Handler" parent="." index="0"]
 SPEED = 80.0
 ACCELERATION = 1400.0
 
-[node name="OverworldState" parent="." index="3"]
+[node name="OverworldState" parent="." index="2"]
 position = Vector2(0, -13)
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
@@ -199,7 +196,7 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.707043
 
-[node name="ShadowRealmState" parent="." index="4"]
+[node name="ShadowRealmState" parent="." index="3"]
 visible = false
 position = Vector2(-2, -12)
 
@@ -210,13 +207,16 @@ autoplay = "idle"
 frame_progress = 0.375989
 offset = Vector2(2, -1)
 
+[node name="TerrainCollider2D" parent="." index="4"]
+position = Vector2(0, -11)
+
 [node name="HitBox" parent="." index="5"]
 position = Vector2(0, -12)
 scale = Vector2(1.21429, 4.03543)
 input_pickable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0.823527, -0.247805)
+position = Vector2(0.823527, 0.247805)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_2awpn")
 
