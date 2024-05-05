@@ -12,8 +12,11 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		GameManager.picked_up_collectable_sample()
-		remove_object()
+		if self.is_in_group("IsCollectableSample"):
+			GameManager.picked_up_collectable_sample()
+			remove_object()
+		if self.is_in_group("IsDeathTrap"):
+			body.touched_shadow_monster_hitbox()
 
 
 func remove_object():

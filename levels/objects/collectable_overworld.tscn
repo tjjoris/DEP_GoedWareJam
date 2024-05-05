@@ -8,10 +8,10 @@
 process_mode = 3
 collision_layer = 1
 
-[node name="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_t3o38")
 
-[node name="_IsCollectableSample" parent="." index="2" instance=ExtResource("3_7p6r7")]
-
-[node name="CollisionShape2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="." index="1"]
 visible = false
+
+[node name="_IsCollectableSample" parent="." index="2" instance=ExtResource("3_7p6r7")]
