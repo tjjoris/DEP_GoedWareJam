@@ -64,7 +64,7 @@ func shift_groups():
 
 
 func _on_player_phase_shift() -> void:
-	phase_shift()
+	print("what called this?")
 
 
 func _on_pressure_plate_body_entered(_body: Node2D) -> void:
@@ -72,4 +72,4 @@ func _on_pressure_plate_body_entered(_body: Node2D) -> void:
 
 
 func _on_player_do_phase_shift() -> void:
-	pass # Replace with function body.
+	phase_shift()

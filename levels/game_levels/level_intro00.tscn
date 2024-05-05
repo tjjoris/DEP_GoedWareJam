@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dg1e74y4ufykw"]
+[gd_scene load_steps=21 format=3 uid="uid://dg1e74y4ufykw"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_oywyi"]
 [ext_resource type="PackedScene" uid="uid://blwn3c83satm5" path="res://levels/props/overworld_only/ov_mushroom_2.tscn" id="2_hj17p"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ccrps0ybc6bvb" path="res://levels/props/overworld_only/ov_plant_3.tscn" id="13_83eiw"]
 [ext_resource type="PackedScene" uid="uid://bcjrxfq8eye3s" path="res://levels/props/overworld_only/ov_plant_4.tscn" id="14_qe51w"]
 [ext_resource type="PackedScene" uid="uid://b6dejntr7brky" path="res://levels/props/overworld_only/ov_plant_5.tscn" id="15_6e3nt"]
+[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="17_eiu6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2xdf"]
 resource_local_to_scene = true
@@ -141,6 +142,15 @@ image = ExtResource("3_pjd6a")
 message = "Maybe then I will be able to contact home base?"
 image = ExtResource("3_pjd6a")
 
+[node name="CollectableSample3" parent="Gameplay/Entities" index="6" instance=ExtResource("5_w8k5q")]
+position = Vector2(-303, 518)
+
+[node name="CollectableSample4" parent="Gameplay/Entities" index="7" instance=ExtResource("5_w8k5q")]
+position = Vector2(1940, 525)
+
+[node name="CollectableSample5" parent="Gameplay/Entities" index="8" instance=ExtResource("5_w8k5q")]
+position = Vector2(1823, 105)
+
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(123, 201)
 
@@ -192,14 +202,8 @@ position = Vector2(1566, 653)
 [node name="ov_mushroom_11" parent="Gameplay/ForegroundProps" index="15" instance=ExtResource("3_asio0")]
 position = Vector2(1593, 652)
 
-[node name="CollectableSample3" parent="." index="2" instance=ExtResource("5_w8k5q")]
-position = Vector2(-303, 518)
-
-[node name="CollectableSample4" parent="." index="3" instance=ExtResource("5_w8k5q")]
-position = Vector2(1940, 525)
-
-[node name="CollectableSample5" parent="." index="4" instance=ExtResource("5_w8k5q")]
-position = Vector2(1823, 105)
+[node name="Sample_Overworld" parent="." index="2" instance=ExtResource("17_eiu6o")]
+position = Vector2(397, 585)
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]

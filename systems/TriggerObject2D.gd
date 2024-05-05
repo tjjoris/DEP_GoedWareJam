@@ -5,7 +5,8 @@ extends Area2D
 @onready var sprite_2d: Sprite2D = %Sprite2D
 
 @onready var collision_shape_2d: CollisionShape2D = %CollisionShape2D
-
+@onready var audio_player: AudioStreamPlayer = %AudioStreamPlayer
+const clip = preload("res://audio/sfx/Sample_00.wav")
 
 func _ready() -> void:
 	handle_phase()
@@ -13,6 +14,10 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
+		if audio_player and clip:
+			print("should play noise here")
+			audio_player.stream = clip
+			audio_player.play()
 		GameManager.collectable_score += 1
 		remove_object()
 

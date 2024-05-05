@@ -91,6 +91,8 @@ scale = Vector2(1, 1)
 
 [node name="ForegroundProps" type="Node2D" parent="Gameplay"]
 
+[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_do_phase_shift"]
+
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/LevelExit"]
