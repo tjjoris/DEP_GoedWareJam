@@ -240,10 +240,7 @@ animations = [{
 
 [node name="alien" instance=ExtResource("1_i6x3x")]
 
-[node name="TerrainCollider2D" parent="." index="0"]
-visible = false
-
-[node name="Movement_Handler" parent="." index="1"]
+[node name="Movement_Handler" parent="." index="0"]
 SPEED = 60.0
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
@@ -252,7 +249,7 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.561979
 
-[node name="ShadowRealmState" parent="." index="4"]
+[node name="ShadowRealmState" parent="." index="3"]
 visible = false
 
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
@@ -260,12 +257,6 @@ sprite_frames = SubResource("SpriteFrames_15s0m")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.770665
-
-[node name="HitBox" parent="." index="5"]
-visible = false
-
-[node name="DetectionZone" parent="." index="7"]
-visible = false
 
 [editable path="Jump_Handler"]
 [editable path="HitBox"]
