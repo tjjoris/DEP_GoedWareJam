@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmssmeg6a877j"]
+[gd_scene load_steps=5 format=3 uid="uid://dmssmeg6a877j"]
 
 [ext_resource type="Script" path="res://systems/SamplesCounter.gd" id="1_2g0dv"]
 [ext_resource type="FontFile" uid="uid://oom1vqe8wuui" path="res://Dialogue/fonts/FindersKeepers.ttf" id="1_5vgtf"]
 [ext_resource type="Texture2D" uid="uid://bbiskms1el7ex" path="res://levels/objects/sprites/icon_sample.png" id="2_5pv2s"]
+[ext_resource type="AudioStream" uid="uid://bhhgikh3o1q1w" path="res://audio/sfx/PickupCollectable.wav" id="2_dmdkq"]
 
 [node name="PlayerHUD" type="CanvasLayer"]
+
+[node name="SFX_HUD" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 
 [node name="SamplesContainer" type="ReferenceRect" parent="."]
 offset_left = 1203.0
@@ -12,6 +16,7 @@ offset_top = 35.0
 offset_right = 1403.0
 offset_bottom = 135.0
 script = ExtResource("1_2g0dv")
+sample_collect = ExtResource("2_dmdkq")
 
 [node name="PanelContainer" type="PanelContainer" parent="SamplesContainer"]
 layout_mode = 1

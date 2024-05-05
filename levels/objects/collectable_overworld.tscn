@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bi1gommxa001h" path="res://levels/objects/components/_is_collectable_sample.tscn" id="3_7p6r7"]
 
 [node name="collectable_overworld" groups=["CanPhase"] instance=ExtResource("1_tagrc")]
+process_mode = 3
 collision_layer = 1
 
 [node name="Sprite2D" parent="." index="1"]
