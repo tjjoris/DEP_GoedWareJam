@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blt13dwhi0yrj"
-path="res://.godot/imported/entity_ram_baby_walk.png-932f1fc033373516823b8075b280db51.ctex"
+uid="uid://bqwr6j18ehvav"
+path="res://.godot/imported/visual_shadow_silhuette.png-11b04ebccd245b1835737b280ac39b50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entity/enemies/babi/entity_ram_baby_walk.png"
-dest_files=["res://.godot/imported/entity_ram_baby_walk.png-932f1fc033373516823b8075b280db51.ctex"]
+source_file="res://levels/props/sprites/visual_shadow_silhuette.png"
+dest_files=["res://.godot/imported/visual_shadow_silhuette.png-11b04ebccd245b1835737b280ac39b50.ctex"]
 
 [params]
 
