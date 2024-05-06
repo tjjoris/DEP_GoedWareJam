@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr2238mpamsdn"]
+
+[ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_qnbv1"]
+[ext_resource type="Texture2D" uid="uid://bsbox201d1mkq" path="res://levels/background/science_lab/science_lab_night.png" id="2_amhta"]
+
+[node name="_SCIENCE_LAB" instance=ExtResource("1_qnbv1")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI" index="0"]
+
+[node name="TextureRect" type="TextureRect" parent="UI/CanvasLayer" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_amhta")
+
+[node name="PlayerHUD" parent="UI" index="1"]
+visible = false
+
+[node name="Systems" parent="Gameplay" index="0"]
+visible = false
+
+[node name="ParallaxBackground" parent="Gameplay/Systems" index="4"]
+visible = false
+
+[node name="TileMap" parent="Gameplay" index="2"]
+visible = false
+
+[node name="Entities" parent="Gameplay" index="3"]
+visible = false
+
+[node name="LevelExit" parent="Gameplay/Entities" index="0"]
+visible = false
+
+[node name="Player" parent="Gameplay" index="4"]
+visible = false
+
+[node name="ForegroundProps" parent="Gameplay" index="5"]
+visible = false
+
+[editable path="UI/DialogueCanvas"]
