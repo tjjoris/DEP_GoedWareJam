@@ -86,6 +86,12 @@ image = ExtResource("3_pjd6a")
 [node name="LevelExit" parent="Gameplay/Entities" index="1"]
 position = Vector2(2014, 320)
 
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
+message = "... I really hope they're alright."
+
+[node name="DialogueInstance2" parent="Gameplay/Entities/LevelExit" index="2" instance=ExtResource("3_3msxu")]
+image = ExtResource("3_pjd6a")
+
 [node name="DialogueTrigger2" parent="Gameplay/Entities" index="2" instance=ExtResource("4_u2dnq")]
 position = Vector2(-307, 518)
 
@@ -93,7 +99,7 @@ position = Vector2(-307, 518)
 shape = SubResource("RectangleShape2D_7baqx")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger2" index="2"]
-message = "Collected another prime sample. Labelled this one Fl:23."
+message = "Collected another prime sample. Labelled this one Mu:23."
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger2" index="3" instance=ExtResource("3_3msxu")]
 message = "Any one of these samples will surely launch whole new chapters of scientific advancements we never could have imagined."
@@ -110,18 +116,17 @@ position = Vector2(1826, 109)
 shape = SubResource("RectangleShape2D_7baqx")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger4" index="2"]
-message = "New Sample description"
+message = "Still no sign of Char and the others."
 
-[node name="DialogueTrigger5" parent="Gameplay/Entities" index="4" instance=ExtResource("4_u2dnq")]
-position = Vector2(1943, 524)
+[node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger4" index="3" instance=ExtResource("3_3msxu")]
+message = "It's been weeks since we entered the portal."
+image = ExtResource("3_pjd6a")
 
-[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger5" index="0"]
-shape = SubResource("RectangleShape2D_7baqx")
+[node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger4" index="4" instance=ExtResource("3_3msxu")]
+message = "I was hoping I would find any evidence that they're okay by now."
+image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger5" index="2"]
-message = "New Sample."
-
-[node name="DialogueTrigger3" parent="Gameplay/Entities" index="5" instance=ExtResource("4_u2dnq")]
+[node name="DialogueTrigger3" parent="Gameplay/Entities" index="4" instance=ExtResource("4_u2dnq")]
 position = Vector2(2001, 314)
 
 [node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger3" index="0"]
@@ -142,13 +147,13 @@ image = ExtResource("3_pjd6a")
 message = "Maybe then I will be able to contact home base?"
 image = ExtResource("3_pjd6a")
 
-[node name="CollectableSample3" parent="Gameplay/Entities" index="6" instance=ExtResource("5_w8k5q")]
+[node name="CollectableSample3" parent="Gameplay/Entities" index="5" instance=ExtResource("5_w8k5q")]
 position = Vector2(-303, 518)
 
-[node name="CollectableSample4" parent="Gameplay/Entities" index="7" instance=ExtResource("5_w8k5q")]
+[node name="CollectableSample4" parent="Gameplay/Entities" index="6" instance=ExtResource("5_w8k5q")]
 position = Vector2(1940, 525)
 
-[node name="CollectableSample5" parent="Gameplay/Entities" index="8" instance=ExtResource("5_w8k5q")]
+[node name="CollectableSample5" parent="Gameplay/Entities" index="7" instance=ExtResource("5_w8k5q")]
 position = Vector2(1823, 105)
 
 [node name="Player" parent="Gameplay" index="4"]
@@ -210,5 +215,5 @@ position = Vector2(397, 585)
 [editable path="Gameplay/Entities/LevelExit"]
 [editable path="Gameplay/Entities/DialogueTrigger2"]
 [editable path="Gameplay/Entities/DialogueTrigger4"]
-[editable path="Gameplay/Entities/DialogueTrigger5"]
 [editable path="Gameplay/Entities/DialogueTrigger3"]
+[editable path="Gameplay/Entities/CollectableSample5"]

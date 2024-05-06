@@ -1,7 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://cn6c0okxe2q3q"]
+[gd_scene load_steps=32 format=3 uid="uid://cn6c0okxe2q3q"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_eu01o"]
-[ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="2_r5nj6"]
 [ext_resource type="PackedScene" uid="uid://dlpi23fkpey02" path="res://levels/props/overworld_only/ov_tree_yellow.tscn" id="2_tavnn"]
 [ext_resource type="PackedScene" uid="uid://belfepqgf2mey" path="res://levels/props/overworld_only/ov_root_2.tscn" id="3_f61lq"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="4_crxqq"]
@@ -32,14 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://b3dje383htens" path="res://levels/objects/spiketrap_shadow.tscn" id="29_cpql6"]
 [ext_resource type="PackedScene" uid="uid://b3y0wli0octn4" path="res://levels/objects/collectable_sample.tscn" id="30_khty4"]
 [ext_resource type="PackedScene" uid="uid://cbdvsocc0hrlx" path="res://levels/props/shadow_only/sh_rock_1.tscn" id="31_yb536"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubdhr"]
-resource_local_to_scene = true
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7shb"]
-resource_local_to_scene = true
-size = Vector2(32, 32)
 
 [node name="kay_level_00" instance=ExtResource("1_eu01o")]
 
@@ -89,6 +80,9 @@ layer_1/tile_data = PackedInt32Array(1376259, 131075, 2, 1310723, 65539, 2, 1245
 [node name="LevelExit" parent="Gameplay/Entities" index="0"]
 position = Vector2(1813, 466)
 
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
+message = "Here we go again!"
+
 [node name="Cockatrice" parent="Gameplay/Entities" index="1" instance=ExtResource("4_crxqq")]
 position = Vector2(1352, 493)
 
@@ -113,46 +107,7 @@ position = Vector2(470, 353)
 [node name="SpikeTrap_Shadow4" parent="Gameplay/Entities" index="8" instance=ExtResource("29_cpql6")]
 position = Vector2(501, 353)
 
-[node name="DialogueTrigger" parent="Gameplay/Entities" index="9" instance=ExtResource("2_r5nj6")]
-position = Vector2(259, 300)
-
-[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger" index="0"]
-position = Vector2(218, 3)
-shape = SubResource("RectangleShape2D_ubdhr")
-
-[node name="DialogueTrigger" parent="Gameplay/Entities/DialogueTrigger/Dialogue Collider" index="0" instance=ExtResource("2_r5nj6")]
-position = Vector2(259, 300)
-
-[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger/Dialogue Collider/DialogueTrigger" index="0"]
-position = Vector2(528, -106)
-shape = SubResource("RectangleShape2D_ubdhr")
-
-[node name="Sprite2D" parent="Gameplay/Entities/DialogueTrigger/Dialogue Collider/DialogueTrigger" index="1"]
-position = Vector2(529, -107)
-
-[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger/Dialogue Collider/DialogueTrigger" index="2"]
-message = "<I wish they were like this all the time...>"
-
-[node name="Sprite2D" parent="Gameplay/Entities/DialogueTrigger" index="1"]
-position = Vector2(224, -3)
-
-[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger" index="2"]
-message = "<-oof- Log 72b: Note to self to recalibrate acceptable portal parameters. Otherwise, unremarkable so far.>"
-
-[node name="DialogueTrigger4" parent="Gameplay/Entities" index="10" instance=ExtResource("2_r5nj6")]
-position = Vector2(1677, 472)
-
-[node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger4" index="0"]
-position = Vector2(4, 1)
-shape = SubResource("RectangleShape2D_d7shb")
-
-[node name="Sprite2D" parent="Gameplay/Entities/DialogueTrigger4" index="1"]
-position = Vector2(3, 1)
-
-[node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger4" index="2"]
-message = "<No way back this time.>"
-
-[node name="Sample_Shadow3" parent="Gameplay/Entities" index="11" instance=ExtResource("28_g0ica")]
+[node name="Sample_Shadow3" parent="Gameplay/Entities" index="9" instance=ExtResource("28_g0ica")]
 position = Vector2(1793, 247)
 
 [node name="Player" parent="Gameplay" index="4"]
@@ -256,6 +211,3 @@ position = Vector2(700, 292)
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/LevelExit"]
-[editable path="Gameplay/Entities/DialogueTrigger"]
-[editable path="Gameplay/Entities/DialogueTrigger/Dialogue Collider/DialogueTrigger"]
-[editable path="Gameplay/Entities/DialogueTrigger4"]

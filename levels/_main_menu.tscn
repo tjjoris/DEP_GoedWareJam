@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=15 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
 [ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
 [ext_resource type="Texture2D" uid="uid://j1d623g72dst" path="res://levels/props/sprites/visual_silhuette.png" id="3_1v5yl"]
-[ext_resource type="PackedScene" uid="uid://cnvhit5c272td" path="res://levels/_level_select.tscn" id="4_qhk7f"]
-[ext_resource type="PackedScene" uid="uid://d2xncg1rv5335" path="res://levels/_about_page.tscn" id="6_cmyou"]
+[ext_resource type="PackedScene" path="res://levels/_level_select.tscn" id="4_qhk7f"]
+[ext_resource type="PackedScene" path="res://levels/_about_page.tscn" id="6_cmyou"]
+[ext_resource type="Texture2D" uid="uid://c11gjvcaaoujy" path="res://systems/no_bg_logo.png" id="7_nigkp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
 bg_color = Color(0.202712, 0.112572, 0.354524, 0.811765)
@@ -39,6 +40,14 @@ bg_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cxox"]
 bg_color = Color(0.925227, 0.699186, 0.262552, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdetb"]
+bg_color = Color(0.935717, 0.445717, 0.214784, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -83,10 +92,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -300.0
-offset_right = 400.0
-offset_bottom = 300.0
+offset_left = -396.0
+offset_top = -225.0
+offset_right = 404.0
+offset_bottom = 375.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -187,9 +196,65 @@ text = "ABOUT"
 visible = false
 layout_mode = 1
 
+[node name="Button4" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="3"]
+text = "04"
+
+[node name="Button7" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="6"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
+text = "07"
+
+[node name="Button8" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="7"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
+text = "08"
+
+[node name="Button9" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="8"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
+text = "09"
+
+[node name="Button10" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="9"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
+text = "10"
+
+[node name="Button11" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="10"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1pjjh")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
+text = "11"
+
 [node name="AboutPage" parent="CanvasLayer/ColorRect" instance=ExtResource("6_cmyou")]
 visible = false
 layout_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 223.0
+offset_top = 44.0
+offset_right = 736.0
+offset_bottom = 149.0
+scale = Vector2(2, 2)
+texture = ExtResource("7_nigkp")
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button2" to="." method="_on_level_select_pressed"]
@@ -197,6 +262,11 @@ layout_mode = 1
 [connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button4" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/VBoxContainer2/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button7" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button8" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button9" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button10" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button11" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
 [connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/Panel/VBoxContainer2/back" to="." method="_on_back_from_about_pressed"]
 
 [editable path="CanvasLayer/ColorRect/LevelSelect"]

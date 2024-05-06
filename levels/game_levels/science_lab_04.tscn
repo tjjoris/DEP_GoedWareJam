@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://oamu0hycmqgd"]
+
+[ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_ctirl"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_phfpu"]
+[ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="3_ge828"]
+[ext_resource type="AudioStream" uid="uid://b158swmfm2ykb" path="res://audio/sfx/landing00.wav" id="4_71dai"]
+[ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="5_e8pxe"]
+[ext_resource type="Texture2D" uid="uid://d4k62qu6bpk1f" path="res://Dialogue/portraits/portrait_blank.png" id="6_qcbrl"]
+[ext_resource type="AudioStream" uid="uid://ctigkhbnxnojf" path="res://audio/sfx/CommanderKeenShiz00.wav" id="7_y8v3n"]
+[ext_resource type="Texture2D" uid="uid://dfq6kc3tj2jru" path="res://Dialogue/portraits/portrait_Vincent_neutral.png" id="8_8oaky"]
+[ext_resource type="AudioStream" uid="uid://ydacuxdqkhqi" path="res://audio/sfx/Vince_down.wav" id="9_4txax"]
+[ext_resource type="AudioStream" uid="uid://bhxrb7kfnnh2m" path="res://audio/sfx/Shut_00.wav" id="9_fpype"]
+[ext_resource type="AudioStream" uid="uid://blcxb500jxxua" path="res://audio/sfx/phase_overworld.wav" id="10_3muev"]
+[ext_resource type="Texture2D" uid="uid://drwv1ii3rdm1l" path="res://Dialogue/portraits/small_sprite_cropped.png" id="11_smf8t"]
+[ext_resource type="Texture2D" uid="uid://bqi7aelbfvavm" path="res://levels/background/science_lab/science_lab_night_portal.png" id="11_th5ba"]
+
+[node name="_SCIENCE_LAB" instance=ExtResource("1_ctirl")]
+
+[node name="DialogueInstance4" parent="DialogueSession" index="0" instance=ExtResource("2_phfpu")]
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("4_71dai")
+
+[node name="DialogueInstance5" parent="DialogueSession" index="1" instance=ExtResource("2_phfpu")]
+message = "I know Vincent won't let me do it my way."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance7" parent="DialogueSession" index="2" instance=ExtResource("2_phfpu")]
+message = "But she's been trapped for so long."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance6" parent="DialogueSession" index="3" instance=ExtResource("2_phfpu")]
+message = "Gale is on the other side, I know I can get to her."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance8" parent="DialogueSession" index="4" instance=ExtResource("2_phfpu")]
+message = "..."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance9" parent="DialogueSession" index="5" instance=ExtResource("2_phfpu")]
+message = "... Sorry Vincent.
+Guess you'll have to fire me when I get back."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance10" parent="DialogueSession" index="6" instance=ExtResource("2_phfpu")]
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("7_y8v3n")
+
+[node name="DialogueInstance" parent="DialogueSession" index="7"]
+message = ""
+image = ExtResource("6_qcbrl")
+sfx_clip = ExtResource("4_71dai")
+
+[node name="DialogueInstance11" parent="DialogueSession" index="8" instance=ExtResource("2_phfpu")]
+image = ExtResource("8_8oaky")
+sfx_clip = ExtResource("9_fpype")
+
+[node name="DialogueInstance3" parent="DialogueSession" index="9" instance=ExtResource("2_phfpu")]
+message = "Hey.
+Why is the portal activated?"
+image = ExtResource("8_8oaky")
+sfx_clip = ExtResource("9_4txax")
+
+[node name="DialogueInstance12" parent="DialogueSession" index="10" instance=ExtResource("2_phfpu")]
+message = "..."
+image = ExtResource("8_8oaky")
+sfx_clip = ExtResource("9_4txax")
+
+[node name="DialogueInstance13" parent="DialogueSession" index="11" instance=ExtResource("2_phfpu")]
+message = "...
+Where's Charlie...?"
+image = ExtResource("8_8oaky")
+sfx_clip = ExtResource("9_4txax")
+
+[node name="DialogueInstance2" parent="DialogueSession" index="12"]
+message = "<< TO BE CONTINUED >>"
+image = ExtResource("11_smf8t")
+sfx_clip = ExtResource("10_3muev")
+
+[node name="TextureRect" parent="UI/CanvasLayer" index="0"]
+texture = ExtResource("11_th5ba")
+
+[editable path="DialogueSession"]
+[editable path="UI/DialogueCanvas"]

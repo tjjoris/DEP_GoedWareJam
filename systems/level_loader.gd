@@ -8,13 +8,21 @@ var scene_index:int = 0
 var levels = ["res://levels/_main_menu.tscn",
 "res://levels/game_levels/level_intro00.tscn",
 "res://levels/game_levels/level_intro01.tscn",
+"res://levels/game_levels/science_lab_00.tscn",
 "res://levels/game_levels/level_naomi_00.tscn",
+"res://levels/game_levels/science_lab_01.tscn",
 "res://levels/game_levels/kay_level_00.tscn",
-"res://levels/game_levels/kay_level_01.tscn",
 "res://levels/game_levels/level_luke3.tscn",
-"res://levels/game_levels/naomi_yan_level_01.tscn",
-"res://levels/game_levels/andrew_level_01.tscn",
+"res://levels/game_levels/science_lab_02.tscn",
+"res://levels/game_levels/kay_level_00.tscn",
+"res://levels/game_levels/science_lab_03.tscn",
+"res://levels/game_levels/kay_level_02.tscn",
+"res://levels/game_levels/science_lab_04.tscn",
 ]
+#"res://levels/game_levels/andrew_level_01.tscn",
+#"res://levels/game_levels/naomi_yan_level_01.tscn",
+
+@onready var bgm_audio: AudioStreamPlayer = %BGM_Audio
 
 
 func _ready():

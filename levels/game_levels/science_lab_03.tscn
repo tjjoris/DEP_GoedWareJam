@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3mupromxoisi"]
+
+[ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_xih5m"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_1okbl"]
+[ext_resource type="Texture2D" uid="uid://dfq6kc3tj2jru" path="res://Dialogue/portraits/portrait_Vincent_neutral.png" id="3_1ywoh"]
+[ext_resource type="AudioStream" uid="uid://ydacuxdqkhqi" path="res://audio/sfx/Vince_down.wav" id="4_6f55h"]
+[ext_resource type="AudioStream" uid="uid://b158swmfm2ykb" path="res://audio/sfx/landing00.wav" id="5_avmyf"]
+[ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="6_0hp8l"]
+[ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="7_85dgw"]
+[ext_resource type="Texture2D" uid="uid://dyjv5wnus6osb" path="res://levels/background/science_lab/science_lab_day.png" id="8_40gy7"]
+[ext_resource type="AudioStream" uid="uid://drlfyckmf3dr4" path="res://audio/sfx/Dialogue_Grumble_down.wav" id="8_uqh08"]
+
+[node name="_SCIENCE_LAB" instance=ExtResource("1_xih5m")]
+
+[node name="DialogueInstance" parent="DialogueSession" index="0"]
+message = "So you’re saying that’s why only she passed through the portal?"
+
+[node name="DialogueInstance3" parent="DialogueSession" index="1" instance=ExtResource("2_1okbl")]
+message = "Her Dimension Stabilizing Suit malfunctioned?"
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="DialogueInstance2" parent="DialogueSession" index="2"]
+message = ""
+sfx_clip = ExtResource("5_avmyf")
+
+[node name="DialogueInstance4" parent="DialogueSession" index="3" instance=ExtResource("2_1okbl")]
+message = "Yes..."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="DialogueInstance6" parent="DialogueSession" index="4" instance=ExtResource("2_1okbl")]
+message = "Yes...
+Yes, that could explain the implosion force you all experienced as only she passed through."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="DialogueInstance5" parent="DialogueSession" index="5" instance=ExtResource("2_1okbl")]
+message = "Sir. My suit is still fully functional.
+If we can get the portal anchor stable again, and maybe if I can cause the same malfunction in my suit then I could-"
+image = ExtResource("6_0hp8l")
+sfx_clip = ExtResource("7_85dgw")
+
+[node name="DialogueInstance7" parent="DialogueSession" index="6" instance=ExtResource("2_1okbl")]
+message = "Denied."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("8_uqh08")
+
+[node name="DialogueInstance11" parent="DialogueSession" index="7" instance=ExtResource("2_1okbl")]
+message = "That is too dangerous, Charlie.
+We can’t lose you too."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="DialogueInstance8" parent="DialogueSession" index="8" instance=ExtResource("2_1okbl")]
+message = "BUT!"
+image = ExtResource("6_0hp8l")
+sfx_clip = ExtResource("7_85dgw")
+
+[node name="DialogueInstance9" parent="DialogueSession" index="9" instance=ExtResource("2_1okbl")]
+message = "No."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="DialogueInstance10" parent="DialogueSession" index="10" instance=ExtResource("2_1okbl")]
+message = "No.
+We’ll find another way."
+image = ExtResource("3_1ywoh")
+sfx_clip = ExtResource("4_6f55h")
+
+[node name="TextureRect" parent="UI/CanvasLayer" index="0"]
+texture = ExtResource("8_40gy7")
+
+[editable path="DialogueSession"]
+[editable path="UI/DialogueCanvas"]
