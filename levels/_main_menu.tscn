@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=13 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
 [ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
 [ext_resource type="Texture2D" uid="uid://j1d623g72dst" path="res://levels/props/sprites/visual_silhuette.png" id="3_1v5yl"]
+[ext_resource type="PackedScene" uid="uid://cnvhit5c272td" path="res://levels/_level_select.tscn" id="4_qhk7f"]
+[ext_resource type="PackedScene" uid="uid://d2xncg1rv5335" path="res://levels/_about_page.tscn" id="6_cmyou"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
 bg_color = Color(0.202712, 0.112572, 0.354524, 0.811765)
@@ -181,6 +183,21 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")
 text = "ABOUT"
 
+[node name="LevelSelect" parent="CanvasLayer/ColorRect" instance=ExtResource("4_qhk7f")]
+visible = false
+layout_mode = 1
+
+[node name="AboutPage" parent="CanvasLayer/ColorRect" instance=ExtResource("6_cmyou")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button2" to="." method="_on_level_select_pressed"]
 [connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button4" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/VBoxContainer2/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/Panel/VBoxContainer2/back" to="." method="_on_back_from_about_pressed"]
+
+[editable path="CanvasLayer/ColorRect/LevelSelect"]
+[editable path="CanvasLayer/ColorRect/AboutPage"]
