@@ -12,6 +12,7 @@ static var player_is_dead: bool = false
 static var player_can_phase: bool = true
 static var dialogue_canvas: CanvasLayer
 var _current_level_collectables = 0
+var dialogue_sessions : Array[DialogueSession] = []
 
 var collectable_score: int:
 	get:
@@ -33,5 +34,7 @@ func level_completed():
 
 
 func start_dialogue(dialogue:DialogueSession):
-	if dialogue_canvas:
+	if dialogue_canvas and not dialogue_sessions.has(dialogue):
+		print_debug(dialogue_sessions.size())
+		dialogue_sessions.append(dialogue)
 		dialogue_canvas.play_dialogue(dialogue)
