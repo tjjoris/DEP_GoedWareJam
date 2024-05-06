@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cyrs52bofj7tj"]
+[gd_scene load_steps=29 format=3 uid="uid://cowl2vas8aq5e"]
 
 [ext_resource type="PackedScene" uid="uid://c37kmcxle0w78" path="res://entity/_entity_blueprint.tscn" id="1_swj3t"]
 [ext_resource type="Texture2D" uid="uid://q25meoaxxoa7" path="res://entity/enemies/babi/entity_ram_baby_idle.png" id="2_gutf6"]
@@ -172,10 +172,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2awpn"]
-radius = 3.46927
-height = 23.8823
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apohl"]
 radius = 64.0
 height = 192.0
@@ -192,19 +188,16 @@ position = Vector2(0, -13)
 
 [node name="Sprite2D" parent="OverworldState" index="0"]
 sprite_frames = SubResource("SpriteFrames_hoebl")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.707043
 
 [node name="ShadowRealmState" parent="." index="3"]
-visible = false
 position = Vector2(-2, -12)
 
 [node name="Sprite2D2" parent="ShadowRealmState" index="0"]
 sprite_frames = SubResource("SpriteFrames_20dff")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.375989
 offset = Vector2(2, -1)
 
 [node name="TerrainCollider2D" parent="." index="4"]
@@ -216,11 +209,10 @@ scale = Vector2(1.21429, 4.03543)
 input_pickable = false
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0.823527, 0.247805)
-rotation = 1.57079
-shape = SubResource("CapsuleShape2D_2awpn")
+position = Vector2(0.411763, 0.371708)
 
 [node name="HurtBox" parent="." index="6"]
+visible = true
 position = Vector2(0, -12)
 
 [node name="DetectionZone" parent="." index="7"]
