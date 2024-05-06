@@ -6,10 +6,16 @@ extends Node2D
 @onready var BGM_BUS_ID = AudioServer.get_bus_index("Music")
 @onready var SFX_BUS_ID = AudioServer.get_bus_index("SFX")
 
+@onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/ReferenceRect
+@onready var level_select: ReferenceRect = $CanvasLayer/ColorRect/LevelSelect
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bgm_slider.value = db_to_linear(AudioServer.get_bus_volume_db(BGM_BUS_ID))
 	sfx_slider.value = db_to_linear(AudioServer.get_bus_volume_db(SFX_BUS_ID))
+	main_menu.visible = true
+	level_select.visible = false
 
 
 func _on_button_pressed() -> void:
@@ -24,3 +30,13 @@ func _on_bgm_slider_value_changed(value: float) -> void:
 func _on_sfx_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(SFX_BUS_ID, linear_to_db(value))
 	AudioServer.set_bus_mute(SFX_BUS_ID, value < 0.05)
+
+
+func _on_level_select_pressed() -> void:
+	main_menu.visible = false
+	level_select.visible = true
+
+
+func _on_back_pressed() -> void:
+	main_menu.visible = true
+	level_select.visible = false

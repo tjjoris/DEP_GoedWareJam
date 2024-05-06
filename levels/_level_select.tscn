@@ -1,0 +1,162 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnvhit5c272td"]
+
+[ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_7a71g"]
+[ext_resource type="Script" path="res://systems/level_select.gd" id="1_gp6hx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
+bg_color = Color(0.202712, 0.112572, 0.354524, 0.811765)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.460501, 0.30095, 0.721914, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysjhc"]
+bg_color = Color(0.935717, 0.445717, 0.214784, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bya5"]
+bg_color = Color(0.937255, 0.447059, 0.215686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[node name="LevelSelect" type="ReferenceRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gp6hx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkjci")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 234.0
+offset_bottom = 53.0
+
+[node name="back" type="Button" parent="Panel/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "< Return"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 53.0
+offset_right = 624.0
+offset_bottom = 96.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+text = "Level Selection"
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -63.0
+offset_right = 131.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(131, 63)
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Button1" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "01
+"
+
+[node name="Button2" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_2bya5")
+text = "02"
+
+[node name="Button3" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "03"
+
+[node name="Button4" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "04
+"
+
+[node name="Button5" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "05
+"
+
+[node name="Button6" type="Button" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_7a71g")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+text = "06"
+
+[connection signal="pressed" from="Panel/GridContainer/Button1" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="pressed" from="Panel/GridContainer/Button2" to="." method="_on_button_pressed" binds= [2]]
+[connection signal="pressed" from="Panel/GridContainer/Button3" to="." method="_on_button_pressed" binds= [3]]
+[connection signal="pressed" from="Panel/GridContainer/Button4" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="Panel/GridContainer/Button5" to="." method="_on_button_pressed" binds= [5]]
+[connection signal="pressed" from="Panel/GridContainer/Button6" to="." method="_on_button_pressed" binds= [6]]
