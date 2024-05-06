@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://brssjk37vhf7w"]
+
+[ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_nvxl4"]
+[ext_resource type="Texture2D" uid="uid://dyjv5wnus6osb" path="res://levels/background/science_lab/science_lab_day.png" id="2_0m1n0"]
+
+[node name="_SCIENCE_LAB" instance=ExtResource("1_nvxl4")]
+
+[node name="TextureRect" parent="UI/CanvasLayer" index="0"]
+texture = ExtResource("2_0m1n0")
+
+[editable path="DialogueSession"]
+[editable path="UI/DialogueCanvas"]
