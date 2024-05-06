@@ -76,7 +76,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("3_1v5yl")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -184,6 +183,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")
 text = "ABOUT"
 
 [node name="LevelSelect" parent="CanvasLayer/ColorRect" instance=ExtResource("4_qhk7f")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
