@@ -1,12 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://brssjk37vhf7w"]
+[gd_scene load_steps=8 format=3 uid="uid://brssjk37vhf7w"]
 
 [ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_nvxl4"]
-[ext_resource type="Texture2D" uid="uid://dyjv5wnus6osb" path="res://levels/background/science_lab/science_lab_day.png" id="2_0m1n0"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_oabve"]
+[ext_resource type="Texture2D" uid="uid://dfq6kc3tj2jru" path="res://Dialogue/portraits/portrait_Vincent_neutral.png" id="3_jpfim"]
+[ext_resource type="AudioStream" uid="uid://ydacuxdqkhqi" path="res://audio/sfx/Vince_down.wav" id="4_2on40"]
+[ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="5_3hi7g"]
+[ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="6_mhr7y"]
+[ext_resource type="Texture2D" uid="uid://kib1t3u7uvun" path="res://levels/background/science_lab/science_lab_morning.png" id="7_ag272"]
 
 [node name="_SCIENCE_LAB" instance=ExtResource("1_nvxl4")]
 
+[node name="DialogueInstance" parent="DialogueSession" index="0"]
+message = "We’ve already tried that a dozen times,
+we got nothing back.
+You know this."
+
+[node name="DialogueInstance2" parent="DialogueSession" index="1"]
+message = "I know, but maybe this time…"
+
+[node name="DialogueInstance9" parent="DialogueSession" index="2" instance=ExtResource("2_oabve")]
+message = "...
+"
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
+[node name="DialogueInstance3" parent="DialogueSession" index="3" instance=ExtResource("2_oabve")]
+message = "...
+It’s been weeks since the incident."
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
+[node name="DialogueInstance4" parent="DialogueSession" index="4" instance=ExtResource("2_oabve")]
+message = "Everything we’ve tried suggests that… well…"
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
+[node name="DialogueInstance5" parent="DialogueSession" index="5" instance=ExtResource("2_oabve")]
+message = "... That she just doesn't exist anymore?
+Gale is trapped on the other side, just I know it!"
+image = ExtResource("5_3hi7g")
+sfx_clip = ExtResource("6_mhr7y")
+
+[node name="DialogueInstance6" parent="DialogueSession" index="6" instance=ExtResource("2_oabve")]
+message = "Listen, we all want nothing more than having Dr.Chazz back. But maybe we need to start thinking of the possibility that…"
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
+[node name="DialogueInstance7" parent="DialogueSession" index="7" instance=ExtResource("2_oabve")]
+message = "!!"
+image = ExtResource("5_3hi7g")
+sfx_clip = ExtResource("6_mhr7y")
+
+[node name="DialogueInstance8" parent="DialogueSession" index="8" instance=ExtResource("2_oabve")]
+message = "... Okay.
+Request approved.
+Start warming up the giga-generators."
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
 [node name="TextureRect" parent="UI/CanvasLayer" index="0"]
-texture = ExtResource("2_0m1n0")
+texture = ExtResource("7_ag272")
 
 [editable path="DialogueSession"]
 [editable path="UI/DialogueCanvas"]

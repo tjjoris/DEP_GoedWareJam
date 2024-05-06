@@ -3,16 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_qlmie"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_xcgdl"]
 [ext_resource type="AudioStream" uid="uid://coxum65ehn32y" path="res://audio/sfx/DialogueBlip00.wav" id="3_8o1fh"]
+[ext_resource type="Texture2D" uid="uid://d4k62qu6bpk1f" path="res://Dialogue/portraits/portrait_blank.png" id="3_bvdg4"]
 [ext_resource type="Texture2D" uid="uid://dfq6kc3tj2jru" path="res://Dialogue/portraits/portrait_Vincent_neutral.png" id="3_fmi82"]
 [ext_resource type="AudioStream" uid="uid://ydacuxdqkhqi" path="res://audio/sfx/Vince_down.wav" id="4_pjv0a"]
 [ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="5_pprqv"]
 [ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="6_sc8as"]
-[ext_resource type="Texture2D" uid="uid://kib1t3u7uvun" path="res://levels/background/science_lab/science_lab_morning.png" id="8_0f8tc"]
 
 [node name="_SCIENCE_LAB" instance=ExtResource("1_qlmie")]
 
 [node name="DialogueInstance7" parent="DialogueSession" index="0" instance=ExtResource("2_xcgdl")]
 message = "< MEANWHILE, AT THE DIMENSIONAL ANOMALY RESEARCH LABORATORY. DEEP IN THE ARCTIC >"
+image = ExtResource("3_bvdg4")
 sfx_clip = ExtResource("3_8o1fh")
 
 [node name="DialogueInstance" parent="DialogueSession" index="1"]
@@ -42,9 +43,6 @@ sfx_clip = ExtResource("6_sc8as")
 message = "... yes sir."
 image = ExtResource("5_pprqv")
 sfx_clip = ExtResource("6_sc8as")
-
-[node name="TextureRect" parent="UI/CanvasLayer" index="0"]
-texture = ExtResource("8_0f8tc")
 
 [editable path="DialogueSession"]
 [editable path="UI/DialogueCanvas"]

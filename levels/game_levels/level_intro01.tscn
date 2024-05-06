@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdtor2qug3vns"]
+[gd_scene load_steps=18 format=3 uid="uid://cdtor2qug3vns"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_pd2gt"]
 [ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="2_ei2al"]
@@ -9,13 +9,32 @@
 [ext_resource type="PackedScene" uid="uid://4nmlbntwj7vp" path="res://levels/objects/spiketrap_both.tscn" id="7_k0yjm"]
 [ext_resource type="PackedScene" uid="uid://do8g11wkjijk6" path="res://levels/objects/spiketrap_overworld.tscn" id="8_25tjm"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="9_ia4bf"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="10_q44i5"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="11_7op6o"]
+[ext_resource type="Texture2D" uid="uid://dx3mevdxpdxjt" path="res://Dialogue/portraits/critter_cockatrice_normal_portrait.png" id="12_f0hik"]
+[ext_resource type="AudioStream" uid="uid://dyuxv5y2tp3eg" path="res://audio/sfx/cockatrice03.wav" id="13_ae1vd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x50m"]
 resource_local_to_scene = true
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_to4dv"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frbq5"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_676kv"]
+resource_local_to_scene = true
+size = Vector2(32, 147)
+
 [node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_pd2gt")]
 metadata/_edit_horizontal_guides_ = [641.0]
+
+[node name="PlayerHUD" parent="UI" index="0"]
+visible = false
 
 [node name="_Background_ONLY_" type="TileMap" parent="Gameplay/Systems" index="5"]
 visible = false
@@ -89,7 +108,63 @@ position = Vector2(-715, 258)
 shape = SubResource("RectangleShape2D_2x50m")
 
 [node name="DialogueInstance" parent="DialogueTrigger" index="2"]
-message = "Can't get through. What is that glowing thing back there?"
+message = "Can't get through here."
+
+[node name="DialogueInstance2" parent="DialogueTrigger" index="3" instance=ExtResource("10_q44i5")]
+message = "Wait...
+What is that glowing back there?"
+image = ExtResource("11_7op6o")
+
+[node name="DialogueTrigger2" parent="." index="3" instance=ExtResource("9_ia4bf")]
+position = Vector2(479, 372)
+
+[node name="Dialogue Collider" parent="DialogueTrigger2" index="0"]
+shape = SubResource("RectangleShape2D_to4dv")
+
+[node name="DialogueInstance" parent="DialogueTrigger2" index="2"]
+message = "Maybe I can use my 'Double-Jump-Jets' to reach that platform above me?"
+
+[node name="DialogueTrigger3" parent="." index="4" instance=ExtResource("9_ia4bf")]
+position = Vector2(1374, 122)
+
+[node name="Dialogue Collider" parent="DialogueTrigger3" index="0"]
+shape = SubResource("RectangleShape2D_frbq5")
+
+[node name="DialogueInstance" parent="DialogueTrigger3" index="2"]
+message = "Incredible.
+These strange shards are giving off a similar energy reading as the portals."
+
+[node name="DialogueInstance2" parent="DialogueTrigger3" index="3" instance=ExtResource("10_q44i5")]
+message = "Yet, they seem completely different.
+I wonder if my suit will still react to them?"
+image = ExtResource("11_7op6o")
+
+[node name="DialogueTrigger4" parent="." index="5" instance=ExtResource("9_ia4bf")]
+position = Vector2(1086, 116)
+
+[node name="Dialogue Collider" parent="DialogueTrigger4" index="0"]
+position = Vector2(0, -19.5)
+shape = SubResource("RectangleShape2D_676kv")
+
+[node name="DialogueInstance" parent="DialogueTrigger4" index="2"]
+message = "Well aren't you a fine looking specimen."
+
+[node name="DialogueInstance2" parent="DialogueTrigger4" index="3" instance=ExtResource("10_q44i5")]
+message = "< FRIENDLY CHIRP >"
+image = ExtResource("12_f0hik")
+sfx_clip = ExtResource("13_ae1vd")
+
+[node name="DialogueInstance3" parent="DialogueTrigger4" index="4" instance=ExtResource("10_q44i5")]
+message = "Don't worry little one.
+I'm not here to hurt you."
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance4" parent="DialogueTrigger4" index="5" instance=ExtResource("10_q44i5")]
+message = "Have you seen my friends?"
+image = ExtResource("11_7op6o")
 
 [editable path="UI/DialogueCanvas"]
 [editable path="DialogueTrigger"]
+[editable path="DialogueTrigger2"]
+[editable path="DialogueTrigger3"]
+[editable path="DialogueTrigger4"]
