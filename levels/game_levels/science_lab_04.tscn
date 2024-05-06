@@ -21,17 +21,17 @@ image = ExtResource("3_ge828")
 sfx_clip = ExtResource("4_71dai")
 
 [node name="DialogueInstance5" parent="DialogueSession" index="1" instance=ExtResource("2_phfpu")]
-message = "I know Vincent won't let me do it my way."
+message = "I know Vincent will not let me do it my way."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
 [node name="DialogueInstance7" parent="DialogueSession" index="2" instance=ExtResource("2_phfpu")]
-message = "But she's been trapped for so long."
+message = "But she has been trapped for so long."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
 [node name="DialogueInstance6" parent="DialogueSession" index="3" instance=ExtResource("2_phfpu")]
-message = "Gale is on the other side, I know I can get to her."
+message = "Gale is still on the other side, I know I can get to her."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
@@ -42,7 +42,7 @@ sfx_clip = ExtResource("5_e8pxe")
 
 [node name="DialogueInstance9" parent="DialogueSession" index="5" instance=ExtResource("2_phfpu")]
 message = "... Sorry Vincent.
-Guess you'll have to fire me when I get back."
+Guess you will have to fire me when I get back."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
@@ -72,7 +72,7 @@ sfx_clip = ExtResource("9_4txax")
 
 [node name="DialogueInstance13" parent="DialogueSession" index="11" instance=ExtResource("2_phfpu")]
 message = "...
-Where's Charlie...?"
+Where is Charlie...?"
 image = ExtResource("8_8oaky")
 sfx_clip = ExtResource("9_4txax")
 

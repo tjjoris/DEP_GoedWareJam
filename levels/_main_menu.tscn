@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
 [ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
 [ext_resource type="Texture2D" uid="uid://j1d623g72dst" path="res://levels/props/sprites/visual_silhuette.png" id="3_1v5yl"]
-[ext_resource type="PackedScene" path="res://levels/_level_select.tscn" id="4_qhk7f"]
+[ext_resource type="PackedScene" uid="uid://30khyxkab5i5" path="res://levels/_level_select.tscn" id="4_qhk7f"]
 [ext_resource type="PackedScene" path="res://levels/_about_page.tscn" id="6_cmyou"]
 [ext_resource type="Texture2D" uid="uid://c11gjvcaaoujy" path="res://systems/no_bg_logo.png" id="7_nigkp"]
 

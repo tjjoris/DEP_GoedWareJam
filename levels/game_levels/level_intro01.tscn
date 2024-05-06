@@ -42,9 +42,6 @@ size = Vector2(32, 32)
 [node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_pd2gt")]
 metadata/_edit_horizontal_guides_ = [641.0]
 
-[node name="PlayerHUD" parent="UI" index="0"]
-visible = false
-
 [node name="_Background_ONLY_" type="TileMap" parent="Gameplay/Systems" index="5"]
 visible = false
 tile_set = ExtResource("2_ei2al")
