@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdtor2qug3vns"]
+[gd_scene load_steps=19 format=3 uid="uid://cdtor2qug3vns"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_pd2gt"]
 [ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="2_ei2al"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="11_7op6o"]
 [ext_resource type="Texture2D" uid="uid://dx3mevdxpdxjt" path="res://Dialogue/portraits/critter_cockatrice_normal_portrait.png" id="12_f0hik"]
 [ext_resource type="AudioStream" uid="uid://dyuxv5y2tp3eg" path="res://audio/sfx/cockatrice03.wav" id="13_ae1vd"]
+[ext_resource type="AudioStream" uid="uid://bmru5nobg220u" path="res://audio/sfx/cockatrice02.wav" id="14_8ry0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x50m"]
 resource_local_to_scene = true
@@ -160,7 +161,24 @@ I'm not here to hurt you."
 image = ExtResource("11_7op6o")
 
 [node name="DialogueInstance4" parent="DialogueTrigger4" index="5" instance=ExtResource("10_q44i5")]
-message = "Have you seen my friends?"
+message = "Have you seen my research team?"
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance5" parent="DialogueTrigger4" index="6" instance=ExtResource("10_q44i5")]
+message = "< CURIOUS CHIRP >"
+image = ExtResource("12_f0hik")
+sfx_clip = ExtResource("14_8ry0w")
+
+[node name="DialogueInstance6" parent="DialogueTrigger4" index="7" instance=ExtResource("10_q44i5")]
+message = "They look like me and..."
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance7" parent="DialogueTrigger4" index="8" instance=ExtResource("10_q44i5")]
+message = "... I"
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance8" parent="DialogueTrigger4" index="9" instance=ExtResource("10_q44i5")]
+message = "... I've been trapped in this strange land for too long..."
 image = ExtResource("11_7op6o")
 
 [editable path="UI/DialogueCanvas"]
