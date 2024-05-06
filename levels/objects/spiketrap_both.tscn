@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://4nmlbntwj7vp"]
+
+[ext_resource type="PackedScene" uid="uid://b3dje383htens" path="res://levels/objects/spiketrap_shadow.tscn" id="1_lcg4n"]
+[ext_resource type="PackedScene" uid="uid://do8g11wkjijk6" path="res://levels/objects/spiketrap_overworld.tscn" id="2_3dpqb"]
+
+[node name="SpikeTrap_Both" type="Node2D"]
+
+[node name="SpikeTrap_Shadow" parent="." instance=ExtResource("1_lcg4n")]
+
+[node name="SpikeTrap_Overworld" parent="." instance=ExtResource("2_3dpqb")]

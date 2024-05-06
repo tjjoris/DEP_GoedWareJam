@@ -3,6 +3,9 @@ extends CanvasLayer
 @onready var dialogue_container: MarginContainer = %DialogueContainer
 @onready var message_label: Label = %MessageLabel
 @onready var portrait_texture: TextureRect = %PortraitTexture
+@onready var audio_player: AudioStreamPlayer = %AudioStreamPlayer
+
+
 var current_session: DialogueSession
 var dialogue_instances: Array[DialogueInstance] = []
 
@@ -47,8 +50,11 @@ func setup_dialogue_panel():
 	message_label.text = dialogue_instances[instance_index].message
 	if not dialogue_instances[instance_index].image == null:
 		portrait_texture.texture = dialogue_instances[instance_index].image
-	instance_index += 1
 	dialogue_container.visible = true
+	if dialogue_instances[instance_index].sfx_clip:
+		audio_player.stream = dialogue_instances[instance_index].sfx_clip
+		audio_player.play()
+	instance_index += 1
 
 
 func continue_dialogue():

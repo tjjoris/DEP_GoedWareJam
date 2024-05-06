@@ -50,16 +50,19 @@ func handle_jump():
 		#emit_signal("do_phase_shift")
 
 func touched_shadow_monster_hitbox() -> void:
+	# You can't kill what is already dead.
+	if GameManager.player_is_dead:
+		return
 	GameManager.player_can_move = false
 	GameManager.player_is_dead = true
 	audio_player.play()
 	animated_sprite.play("death")
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	death()
 
 func death() -> void:
+	await get_tree().create_timer(2.0).timeout
 	LevelLoader.reload_current_scene()
-	
 
 
 func _on_rift_shard_detector_body_entered(_body: Node2D) -> void:

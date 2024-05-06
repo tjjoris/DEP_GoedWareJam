@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8h0y336o254a"]
+
+[ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_3igc5"]
+
+[node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_3igc5")]
+
+[editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/LevelExit"]

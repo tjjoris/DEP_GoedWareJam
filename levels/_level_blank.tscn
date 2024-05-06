@@ -1,16 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://i2r4orsnsy7t"]
+[gd_scene load_steps=10 format=3 uid="uid://i2r4orsnsy7t"]
 
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
-[ext_resource type="Script" path="res://systems/PhaseShifter.gd" id="5_pstk5"]
+[ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_ggd3f"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="7_k8t4a"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_rcc4d"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="9_kcdxo"]
-[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="10_fh28u"]
-[ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="11_ypl1t"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 process_mode = 3
@@ -36,16 +34,15 @@ process_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
-rotation = 0.10821
+rotation = 0.23911
 color = Color(0.759625, 0.792005, 0.0139048, 1)
-energy = 0.62
+energy = 0.32
 shadow_enabled = true
 
 [node name="KillFloor" parent="Gameplay/Systems" instance=ExtResource("4_euu1s")]
 position = Vector2(1200, 1200)
 
-[node name="PhaseShifter" type="Node2D" parent="Gameplay/Systems"]
-script = ExtResource("5_pstk5")
+[node name="PhaseShifter" parent="Gameplay/Systems" instance=ExtResource("5_ggd3f")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Gameplay/Systems"]
 texture_filter = 1
@@ -70,22 +67,12 @@ metadata/_edit_lock_ = true
 [node name="LevelExit" parent="Gameplay/Entities" instance=ExtResource("8_rcc4d")]
 position = Vector2(193, 273)
 
-[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
-message = "Level Complete text!"
-
 [node name="Player" parent="Gameplay" instance=ExtResource("9_kcdxo")]
 position = Vector2(75, 369)
 scale = Vector2(1, 1)
 
 [node name="ForegroundProps" type="Node2D" parent="Gameplay"]
 
-[node name="Sample_Overworld" parent="." instance=ExtResource("10_fh28u")]
-position = Vector2(241, 496)
-
-[node name="Sample_Shadow" parent="." instance=ExtResource("11_ypl1t")]
-position = Vector2(-80, 495)
-
-[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_phase_shift"]
+[connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_do_phase_shift"]
 
 [editable path="UI/DialogueCanvas"]
-[editable path="Gameplay/Entities/LevelExit"]
