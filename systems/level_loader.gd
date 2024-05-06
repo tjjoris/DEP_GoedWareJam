@@ -16,6 +16,8 @@ var levels = ["res://levels/_main_menu.tscn",
 "res://levels/game_levels/andrew_level_01.tscn",
 ]
 
+@onready var bgm_audio: AudioStreamPlayer = %BGM_Audio
+
 
 func _ready():
 	var root = get_tree().root

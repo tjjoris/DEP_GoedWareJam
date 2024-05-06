@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://i2r4orsnsy7t"]
+[gd_scene load_steps=11 format=3 uid="uid://i2r4orsnsy7t"]
 
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
+[ext_resource type="Script" path="res://levels/Systems.gd" id="4_p8uc0"]
 [ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_ggd3f"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="7_k8t4a"]
@@ -31,6 +32,7 @@ visible = false
 process_mode = 1
 
 [node name="Systems" type="Node2D" parent="Gameplay"]
+script = ExtResource("4_p8uc0")
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
