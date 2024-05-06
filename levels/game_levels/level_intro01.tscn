@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdtor2qug3vns"]
+[gd_scene load_steps=20 format=3 uid="uid://cdtor2qug3vns"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_pd2gt"]
 [ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="2_ei2al"]
@@ -30,6 +30,10 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_676kv"]
 resource_local_to_scene = true
 size = Vector2(32, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wvj3"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
 
 [node name="_LEVEL_BLUEPRINT" instance=ExtResource("1_pd2gt")]
 metadata/_edit_horizontal_guides_ = [641.0]
@@ -181,8 +185,26 @@ image = ExtResource("11_7op6o")
 message = "... I've been trapped in this strange land for too long..."
 image = ExtResource("11_7op6o")
 
+[node name="DialogueTrigger5" parent="." index="6" instance=ExtResource("9_ia4bf")]
+position = Vector2(1437, 150)
+
+[node name="Dialogue Collider" parent="DialogueTrigger5" index="0"]
+shape = SubResource("RectangleShape2D_6wvj3")
+
+[node name="DialogueInstance" parent="DialogueTrigger5" index="2"]
+message = "Well that was unexpected."
+
+[node name="DialogueInstance2" parent="DialogueTrigger5" index="3" instance=ExtResource("10_q44i5")]
+message = "My Dimension-Stabilizing-Suit seems to have reacted by shifting into another dimension?"
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance3" parent="DialogueTrigger5" index="4" instance=ExtResource("10_q44i5")]
+message = "Will the scientific marvels never cease?"
+image = ExtResource("11_7op6o")
+
 [editable path="UI/DialogueCanvas"]
 [editable path="DialogueTrigger"]
 [editable path="DialogueTrigger2"]
 [editable path="DialogueTrigger3"]
 [editable path="DialogueTrigger4"]
+[editable path="DialogueTrigger5"]

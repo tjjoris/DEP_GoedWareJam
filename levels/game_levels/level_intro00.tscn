@@ -86,6 +86,12 @@ image = ExtResource("3_pjd6a")
 [node name="LevelExit" parent="Gameplay/Entities" index="1"]
 position = Vector2(2014, 320)
 
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
+message = "... I really hope they're alright."
+
+[node name="DialogueInstance2" parent="Gameplay/Entities/LevelExit" index="2" instance=ExtResource("3_3msxu")]
+image = ExtResource("3_pjd6a")
+
 [node name="DialogueTrigger2" parent="Gameplay/Entities" index="2" instance=ExtResource("4_u2dnq")]
 position = Vector2(-307, 518)
 
@@ -110,7 +116,15 @@ position = Vector2(1826, 109)
 shape = SubResource("RectangleShape2D_7baqx")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger4" index="2"]
-message = "New Sample description"
+message = "Still no sign of Char and the others."
+
+[node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger4" index="3" instance=ExtResource("3_3msxu")]
+message = "It's been weeks since we entered the portal."
+image = ExtResource("3_pjd6a")
+
+[node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger4" index="4" instance=ExtResource("3_3msxu")]
+message = "I was hoping I would find any evidence that they're okay by now."
+image = ExtResource("3_pjd6a")
 
 [node name="DialogueTrigger5" parent="Gameplay/Entities" index="4" instance=ExtResource("4_u2dnq")]
 position = Vector2(1943, 524)
@@ -212,3 +226,4 @@ position = Vector2(397, 585)
 [editable path="Gameplay/Entities/DialogueTrigger4"]
 [editable path="Gameplay/Entities/DialogueTrigger5"]
 [editable path="Gameplay/Entities/DialogueTrigger3"]
+[editable path="Gameplay/Entities/CollectableSample5"]
