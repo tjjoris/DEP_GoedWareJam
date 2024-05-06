@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://ckoip7t4fquyt"]
+[gd_scene load_steps=53 format=3 uid="uid://ckoip7t4fquyt"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_x16jk"]
 [ext_resource type="PackedScene" uid="uid://bh33gar51l11g" path="res://levels/objects/collectable_shadow.tscn" id="2_f201o"]
@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://xuiji6yk2pgc" path="res://levels/props/shadow_only/sh_vine_3.tscn" id="8_o4624"]
 [ext_resource type="PackedScene" uid="uid://wqwngtxtawe8" path="res://levels/props/shadow_only/sh_rock_3.tscn" id="8_rpw8y"]
 [ext_resource type="PackedScene" uid="uid://cg2fwxwwfy7g6" path="res://levels/props/shadow_only/sh_rock_2.tscn" id="9_qu3qn"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="10_pvntx"]
 [ext_resource type="PackedScene" uid="uid://cbdvsocc0hrlx" path="res://levels/props/shadow_only/sh_rock_1.tscn" id="10_qg8fs"]
+[ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="11_irh24"]
 [ext_resource type="PackedScene" uid="uid://y1a3hn2tbefu" path="res://entity/enemies/cockatrice/cockatrice.tscn" id="12_egjm6"]
 [ext_resource type="PackedScene" uid="uid://bq7h2hmxvwife" path="res://levels/props/overworld_only/ov_tree_green.tscn" id="13_olejy"]
 [ext_resource type="PackedScene" uid="uid://l4qhlrje8f2a" path="res://levels/props/overworld_only/ov_tree_orange.tscn" id="14_871db"]
@@ -179,6 +181,13 @@ layer_1/tile_data = PackedInt32Array(1376259, 3, 2, 1310723, 3, 1, 1245187, 3, 1
 
 [node name="LevelExit" parent="Gameplay/Entities" index="0"]
 position = Vector2(5462, 361)
+
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
+message = "Just gotta keep going."
+
+[node name="DialogueInstance2" parent="Gameplay/Entities/LevelExit" index="2" instance=ExtResource("10_pvntx")]
+message = "Eventually I'll reach them..."
+image = ExtResource("11_irh24")
 
 [node name="SmolCow" parent="Gameplay/Entities" index="1" instance=ExtResource("2_fkpg6")]
 position = Vector2(814, 169)
@@ -383,7 +392,33 @@ position = Vector2(5284, 413)
 shape = SubResource("RectangleShape2D_wkk4t")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger2" index="2"]
-message = "<All I need is a little rest.>"
+message = "Oof.
+That was exhausting."
+
+[node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger2" index="3" instance=ExtResource("10_pvntx")]
+message = "Personal log: To Dr.Lenn"
+image = ExtResource("11_irh24")
+
+[node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger2" index="4" instance=ExtResource("10_pvntx")]
+message = "Listen, I don't know if you will ever find this."
+image = ExtResource("11_irh24")
+
+[node name="DialogueInstance6" parent="Gameplay/Entities/DialogueTrigger2" index="5" instance=ExtResource("10_pvntx")]
+message = "Listen, I don't know if you will ever find this.
+Or if anyone will."
+image = ExtResource("11_irh24")
+
+[node name="DialogueInstance5" parent="Gameplay/Entities/DialogueTrigger2" index="6" instance=ExtResource("10_pvntx")]
+message = "Or if you're okay."
+image = ExtResource("11_irh24")
+
+[node name="DialogueInstance7" parent="Gameplay/Entities/DialogueTrigger2" index="7" instance=ExtResource("10_pvntx")]
+message = "But I hope to see you again soon."
+image = ExtResource("11_irh24")
+
+[node name="DialogueInstance8" parent="Gameplay/Entities/DialogueTrigger2" index="8" instance=ExtResource("10_pvntx")]
+message = "Tell you about all these great samples I've gathered for you to research."
+image = ExtResource("11_irh24")
 
 [node name="Player" parent="Gameplay" index="4"]
 position = Vector2(113, 180)
@@ -701,5 +736,6 @@ position = Vector2(4120, 578)
 position = Vector2(3694, 613)
 
 [editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Entities/LevelExit"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/DialogueTrigger2"]
