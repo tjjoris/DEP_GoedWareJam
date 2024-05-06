@@ -68,6 +68,9 @@ position = Vector2(109, 388)
 [node name="Dialogue Collider" parent="Gameplay/Entities/LevelExit" index="0"]
 position = Vector2(-2, 0)
 
+[node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
+message = "Ahh, someone get me out of this crazy place!"
+
 [node name="LevelExit" parent="Gameplay/Entities/LevelExit" index="2"]
 position = Vector2(-1, 2)
 
