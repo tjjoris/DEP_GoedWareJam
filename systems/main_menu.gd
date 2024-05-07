@@ -1,12 +1,12 @@
 extends Node2D
 
-@onready var bgm_slider: HSlider = $CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider
-@onready var sfx_slider: HSlider = $CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider
+@onready var bgm_slider: HSlider = $CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider
+@onready var sfx_slider: HSlider = $CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider
 
 @onready var BGM_BUS_ID = AudioServer.get_bus_index("Music")
 @onready var SFX_BUS_ID = AudioServer.get_bus_index("SFX")
 
-@onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/ReferenceRect
+@onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/MainMenu
 @onready var level_select: ReferenceRect = $CanvasLayer/ColorRect/LevelSelect
 @onready var about_page: ReferenceRect = $CanvasLayer/ColorRect/AboutPage
 
