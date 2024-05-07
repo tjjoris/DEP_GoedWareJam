@@ -39,7 +39,7 @@ func _on_level_select_pressed() -> void:
 	level_select.visible = true
 
 
-func _on_back_pressed() -> void:
+func _on_back_from_level_select_pressed() -> void:
 	main_menu.visible = true
 	level_select.visible = false
 

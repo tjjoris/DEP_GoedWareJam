@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://d2xncg1rv5335"]
+[gd_scene load_steps=53 format=3 uid="uid://c08tceqk5h8fp"]
 
 [ext_resource type="Script" path="res://systems/level_select.gd" id="1_8p4jx"]
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="2_v6p3g"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://jpignciqpk0j" path="res://entity/enemies/cockatrice/entity_shadow_cockatrice_walk.png" id="6_qvjxv"]
 [ext_resource type="Texture2D" uid="uid://cq7s0qk8nkwc1" path="res://levels/props/sprites/Spritesheet.png" id="7_rqdil"]
 [ext_resource type="Texture2D" uid="uid://ch73u8ew25d6b" path="res://levels/objects/sprites/texture.png" id="8_tcwhr"]
+[ext_resource type="PackedScene" uid="uid://dn71vrug7q7w5" path="res://UI/button_return.tscn" id="12_2wv8l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
 bg_color = Color(0.202712, 0.112572, 0.354524, 0.811765)
@@ -16,14 +17,6 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.460501, 0.30095, 0.721914, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ysjhc"]
-bg_color = Color(0.935717, 0.445717, 0.214784, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yp3t"]
 bg_color = Color(0.937255, 0.447059, 0.215686, 1)
@@ -344,26 +337,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lkjci")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-offset_right = 234.0
-offset_bottom = 53.0
-
-[node name="back" type="Button" parent="Panel/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_v6p3g")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
-text = "< Return"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 0
-offset_left = 184.0
-offset_top = 53.0
-offset_right = 624.0
-offset_bottom = 96.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_right = 220.0
+offset_bottom = 43.0
+grow_horizontal = 2
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_direction = 1
@@ -380,10 +362,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -205.5
-offset_top = -123.5
-offset_right = 205.5
-offset_bottom = 159.5
+offset_left = -150.0
+offset_top = -165.0
+offset_right = 261.0
+offset_bottom = 118.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -552,3 +534,10 @@ theme_override_font_sizes/font_size = 28
 text = "- Andrew Thinh Nguyen
       Coder
 "
+
+[node name="back" parent="." instance=ExtResource("12_2wv8l")]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 570.0
+offset_right = 170.0
+offset_bottom = 614.0
