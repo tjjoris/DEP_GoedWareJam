@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://oamu0hycmqgd"]
+[gd_scene load_steps=15 format=3 uid="uid://oamu0hycmqgd"]
 
 [ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_ctirl"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_phfpu"]
+[ext_resource type="AudioStream" uid="uid://devrnt5q63p1y" path="res://audio/music/BGM_Discombobulated_0.wav" id="2_q8f0m"]
 [ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="3_ge828"]
 [ext_resource type="AudioStream" uid="uid://b158swmfm2ykb" path="res://audio/sfx/landing00.wav" id="4_71dai"]
 [ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="5_e8pxe"]
@@ -15,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://bqi7aelbfvavm" path="res://levels/background/science_lab/science_lab_night_portal.png" id="11_th5ba"]
 
 [node name="_SCIENCE_LAB" instance=ExtResource("1_ctirl")]
+
+[node name="ForScience" parent="." index="0"]
+clip = ExtResource("2_q8f0m")
 
 [node name="DialogueInstance4" parent="DialogueSession" index="0" instance=ExtResource("2_phfpu")]
 image = ExtResource("3_ge828")
