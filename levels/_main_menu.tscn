@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=17 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
@@ -24,6 +24,9 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpb16"]
+bg_color = Color(0.848791, 0.26427, 0.283462, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bya5"]
 bg_color = Color(0.930713, 0.58224, 0.22669, 1)
 border_width_left = 5
@@ -31,6 +34,9 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_droen"]
+bg_color = Color(0.901865, 0.409864, 0.305078, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bs2y"]
 bg_color = Color(0.619608, 0.486275, 0.878431, 1)
@@ -45,6 +51,9 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g01wa"]
+bg_color = Color(0.848417, 0.553134, 0.286206, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rw70s")
@@ -120,6 +129,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mpb16")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
@@ -129,6 +139,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_2bya5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_droen")
 text = "SELECT LEVEL"
 
 [node name="PanelContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
@@ -182,6 +193,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g01wa")
 text = "ABOUT"
 
 [node name="LevelSelect" parent="CanvasLayer/ColorRect" instance=ExtResource("4_qhk7f")]

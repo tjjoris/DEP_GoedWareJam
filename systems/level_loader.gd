@@ -17,7 +17,7 @@ var levels = ["res://levels/_main_menu.tscn",
 "res://levels/game_levels/level_luke3.tscn",
 "res://levels/game_levels/science_lab_04.tscn",
 "res://levels/game_levels/kay_level_01.tscn",
-"res://levels/game_levels/kay_level_02.tscn",
+"res://levels/game_levels/level_kay_02.tscn",
 ]
 #"res://levels/game_levels/andrew_level_01.tscn",
 #"res://levels/game_levels/naomi_yan_level_01.tscn",
