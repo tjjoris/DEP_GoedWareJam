@@ -22,6 +22,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	if was_on_floor && !is_on_floor():
 		jump_handler.start_coyote_timer()
+	if is_on_floor_only() && not was_on_floor:
+		jump_handler.landed_on_ground()
 	
 func set_animation(direction: float):
 	if GameManager.player_is_dead:

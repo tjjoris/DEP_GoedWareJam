@@ -4,6 +4,7 @@ extends Node2D
 
 @export var sfx_jump = preload("res://audio/sfx/jump00.wav")
 @export var sfx_double_jump = preload("res://audio/sfx/doublejump00.wav")
+@export var sfx_land_on_ground = preload("res://audio/sfx/landing00.wav")
 @onready var coyote_timer: Timer = %CoyoteTimer
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
@@ -52,6 +53,12 @@ func is_coyote_time() -> bool:
 func start_coyote_timer():
 	coyote_timer.start()
 	pass
+
+
+func landed_on_ground():
+	# could be cool to change the sfx based on the tile landed on?
+	audio_player.stream = sfx_land_on_ground
+	audio_player.play()
 
 func set_jump_audio(entity: CharacterBody2D):
 	# check if audio files are wired up first
