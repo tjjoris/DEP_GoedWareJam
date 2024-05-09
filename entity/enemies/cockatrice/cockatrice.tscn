@@ -151,7 +151,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmt2c"]
-size = Vector2(42, 39)
+size = Vector2(32, 37)
 
 [node name="Cockatrice" instance=ExtResource("1_oiiny")]
 
@@ -170,6 +170,10 @@ position = Vector2(2, -4)
 sprite_frames = SubResource("SpriteFrames_vsu2k")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="TerrainCollider2D" parent="." index="4"]
+visible = true
+position = Vector2(1, -5)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, -4.5)
