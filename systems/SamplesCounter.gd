@@ -6,6 +6,7 @@ extends ReferenceRect
 var samples_in_level: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	show()
 	GameManager.connect("collectable_value_changed", self.update_collectable_score)
 	var samples = get_tree().get_nodes_in_group("IsCollectableSample")
 	if samples:

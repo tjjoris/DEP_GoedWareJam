@@ -42,7 +42,7 @@ func handle_jump(entity: CharacterBody2D) -> void:
 		jumps_remaining -= 1
 		entity.velocity.y = JUMP_VELOCITY
 		audio_player.play()
-	print(jumps_remaining)
+	#print(jumps_remaining)
 
 
 func is_coyote_time() -> bool:

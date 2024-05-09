@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://be1h7270jb3k7"]
+[gd_scene load_steps=6 format=3 uid="uid://be1h7270jb3k7"]
 
 [ext_resource type="Script" path="res://systems/BackgroundShift.gd" id="1_shq5h"]
-[ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="2_rddgc"]
 [ext_resource type="Texture2D" uid="uid://8v4bfpdvuqiv" path="res://levels/background/overworld/background_normalworld_0.png" id="2_vdyok"]
 [ext_resource type="Texture2D" uid="uid://cu6dxke8aes5q" path="res://levels/background/overworld/background_normalworld_1.png" id="3_af4an"]
 [ext_resource type="Texture2D" uid="uid://dhs6agunehdmx" path="res://levels/background/overworld/background_normalworld_2.png" id="4_axs70"]
@@ -9,12 +8,6 @@
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_shq5h")
-
-[node name="_BACKGROUNDONLY_" type="TileMap" parent="."]
-tile_set = ExtResource("2_rddgc")
-collision_visibility_mode = 1
-format = 2
-metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer_0" type="ParallaxLayer" parent="."]
 texture_filter = 1
