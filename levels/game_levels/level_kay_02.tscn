@@ -57,7 +57,7 @@ size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkk4t"]
 resource_local_to_scene = true
-size = Vector2(32, 32)
+size = Vector2(32, 228)
 
 [node name="level_kay_02" instance=ExtResource("1_x16jk")]
 
@@ -393,6 +393,7 @@ rotation = -3.14159
 position = Vector2(5284, 413)
 
 [node name="Dialogue Collider" parent="Gameplay/Entities/DialogueTrigger2" index="0"]
+position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_wkk4t")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger2" index="2"]
@@ -417,7 +418,7 @@ message = "Or if you're okay."
 image = ExtResource("11_irh24")
 
 [node name="DialogueInstance7" parent="Gameplay/Entities/DialogueTrigger2" index="7" instance=ExtResource("10_pvntx")]
-message = "But I hope we find each other again again soon Char."
+message = "But I hope we find each other again soon Char."
 image = ExtResource("11_irh24")
 
 [node name="DialogueInstance8" parent="Gameplay/Entities/DialogueTrigger2" index="8" instance=ExtResource("10_pvntx")]
