@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dg1e74y4ufykw"]
+[gd_scene load_steps=28 format=3 uid="uid://dg1e74y4ufykw"]
 
 [ext_resource type="PackedScene" uid="uid://b4o3d6g8vi3xw" path="res://levels/_level_blueprint.tscn" id="1_oywyi"]
 [ext_resource type="PackedScene" uid="uid://blwn3c83satm5" path="res://levels/props/overworld_only/ov_mushroom_2.tscn" id="2_hj17p"]
@@ -36,6 +36,10 @@ resource_local_to_scene = true
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wj3on"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgc1x"]
 resource_local_to_scene = true
 size = Vector2(32, 32)
 
@@ -99,9 +103,11 @@ image = ExtResource("3_pjd6a")
 position = Vector2(2014, 320)
 
 [node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
-message = "... I really hope they're alright."
+message = "Okay.
+It's not so bad, every portal jump is one step closer to home."
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/LevelExit" index="2" instance=ExtResource("3_3msxu")]
+message = "New portal data here I come!"
 image = ExtResource("3_pjd6a")
 
 [node name="DialogueTrigger2" parent="Gameplay/Entities" index="2" instance=ExtResource("4_u2dnq")]
@@ -146,10 +152,10 @@ position = Vector2(-41, 5)
 shape = SubResource("RectangleShape2D_h0kuk")
 
 [node name="DialogueInstance" parent="Gameplay/Entities/DialogueTrigger3" index="2"]
-message = "Entry 63a: New Dimensional Rift detected"
+message = "Entry 63a: New Portal detected."
 
 [node name="DialogueInstance2" parent="Gameplay/Entities/DialogueTrigger3" index="3" instance=ExtResource("3_3msxu")]
-message = "Hypothetically, if I pass through enough Rift Signatures, my suit should be able to successfully Quantangulate my location."
+message = "Hypothetically, if I pass through enough Portals, my suit should be able to successfully Quantangulate my location."
 image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger3" index="4" instance=ExtResource("3_3msxu")]
@@ -286,58 +292,69 @@ For all I know, it's entirely possible this species could have died off on this 
 image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance6" parent="DialogueTrigger" index="6" instance=ExtResource("3_3msxu")]
-message = "Only to be discovered by a visitor from another universe."
+message = "... only to be discovered by a lost visitor, from another universe."
 image = ExtResource("3_pjd6a")
 
 [node name="DialogueInstance12" parent="DialogueTrigger" index="7" instance=ExtResource("3_3msxu")]
 message = "..."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance7" parent="DialogueTrigger" index="8" instance=ExtResource("3_3msxu")]
-message = "If I never make it back to my dimension, and I am somehow discovered by knoweldge seeking inhabitants of this world:"
+[node name="DialogueTrigger2" parent="." index="9" instance=ExtResource("4_u2dnq")]
+position = Vector2(1943, 523)
+
+[node name="Dialogue Collider" parent="DialogueTrigger2" index="0"]
+shape = SubResource("RectangleShape2D_mgc1x")
+
+[node name="DialogueInstance" parent="DialogueTrigger2" index="2"]
+message = "... creepy cave...
+
+New supplimental Log:"
+
+[node name="DialogueInstance7" parent="DialogueTrigger2" index="3" instance=ExtResource("3_3msxu")]
+message = "If I never make it back to my dimension, and I am somehow discovered by knoweldge seeking inhabitants of this world;"
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance8" parent="DialogueTrigger" index="9" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance8" parent="DialogueTrigger2" index="4" instance=ExtResource("3_3msxu")]
 message = "Hello.
 I am a homosapien, I come from the planet Earth."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance18" parent="DialogueTrigger" index="10" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance18" parent="DialogueTrigger2" index="5" instance=ExtResource("3_3msxu")]
 message = "A lush planet similar to your own, orbiting a G-type main-sequence star."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance10" parent="DialogueTrigger" index="11" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance10" parent="DialogueTrigger2" index="6" instance=ExtResource("3_3msxu")]
 message = "I came to your world through a wormhole we discovered and stabilized."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance9" parent="DialogueTrigger" index="12" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance9" parent="DialogueTrigger2" index="7" instance=ExtResource("3_3msxu")]
 message = "Upon entering the portal to your universe, I was separated from my research team."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance11" parent="DialogueTrigger" index="13" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance11" parent="DialogueTrigger2" index="8" instance=ExtResource("3_3msxu")]
 message = "My Dimension-Stabilizing-Suit appears to have been damaged and I have been unable to establish contact with my crew or Earth."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance13" parent="DialogueTrigger" index="14" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance13" parent="DialogueTrigger2" index="9" instance=ExtResource("3_3msxu")]
 message = "We are a peaceful and curious species. We come seeking only scientific understanding and possibly first contact."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance14" parent="DialogueTrigger" index="15" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance14" parent="DialogueTrigger2" index="10" instance=ExtResource("3_3msxu")]
 message = "We wish to meet and share with another sentient lifeform, that we may both better understand our universes and realize we are not alone."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance15" parent="DialogueTrigger" index="16" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance15" parent="DialogueTrigger2" index="11" instance=ExtResource("3_3msxu")]
 message = "..."
 image = ExtResource("3_pjd6a")
 
-[node name="DialogueInstance16" parent="DialogueTrigger" index="17" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance16" parent="DialogueTrigger2" index="12" instance=ExtResource("3_3msxu")]
 message = "DSS:
 <Suit chirps in response>
 Delete last log upon establishing connection to HQ."
 image = ExtResource("3_pjd6a")
 sfx_clip = ExtResource("22_wlq57")
 
-[node name="DialogueInstance17" parent="DialogueTrigger" index="18" instance=ExtResource("3_3msxu")]
+[node name="DialogueInstance17" parent="DialogueTrigger2" index="13" instance=ExtResource("3_3msxu")]
 message = "I don't think Vincent would care much for me leaving a message like that."
 image = ExtResource("3_pjd6a")
 sfx_clip = ExtResource("21_7mn0x")
@@ -351,3 +368,4 @@ sfx_clip = ExtResource("21_7mn0x")
 [editable path="Gameplay/Entities/DialogueTrigger3"]
 [editable path="Gameplay/Entities/CollectableSample5"]
 [editable path="DialogueTrigger"]
+[editable path="DialogueTrigger2"]

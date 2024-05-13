@@ -58,7 +58,7 @@ layer_1/tile_data = PackedInt32Array(1376259, 131081, 5, 1310723, 131081, 5, 124
 position = Vector2(1149, 352)
 
 [node name="DialogueInstance" parent="Gameplay/Entities/LevelExit" index="1"]
-message = "Here we go again!"
+message = "... I really hope everyone is alright."
 
 [node name="CollectableSample2" parent="Gameplay/Entities" index="1" instance=ExtResource("5_dnl10")]
 position = Vector2(238, 590)
@@ -261,6 +261,10 @@ image = ExtResource("11_7op6o")
 
 [node name="DialogueInstance3" parent="Gameplay/Entities/DialogueTrigger7" index="4" instance=ExtResource("10_q44i5")]
 message = "Entry 63b: Still unable to Quantangulate my Dimension-Stabilizing-Suit."
+image = ExtResource("11_7op6o")
+
+[node name="DialogueInstance4" parent="Gameplay/Entities/DialogueTrigger7" index="5" instance=ExtResource("10_q44i5")]
+message = "More Portal data required."
 image = ExtResource("11_7op6o")
 
 [node name="Player" parent="Gameplay" index="4"]
