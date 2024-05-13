@@ -9,8 +9,6 @@ extends Node2D
 @onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/MainMenu
 @onready var level_select: ReferenceRect = $CanvasLayer/ColorRect/LevelSelect
 @onready var about_page: ReferenceRect = $CanvasLayer/ColorRect/AboutPage
-@onready var score_card: ReferenceRect = $CanvasLayer/ColorRect/ScoreCard
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,4 +46,3 @@ func _on_return_to_menu_pressed() -> void:
 	main_menu.visible = true
 	about_page.visible = false
 	level_select.visible = false
-	score_card.visible = false
