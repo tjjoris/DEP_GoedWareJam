@@ -148,7 +148,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_7a71g")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
-text = "06"
+text = "07"
 
 [node name="ReturnButton" parent="Panel" instance=ExtResource("3_kbf8o")]
 layout_mode = 2
@@ -158,9 +158,9 @@ offset_right = 170.0
 offset_bottom = 614.0
 
 [connection signal="pressed" from="Panel/GridContainer/Button1" to="." method="_on_button_pressed" binds= [1]]
-[connection signal="pressed" from="Panel/GridContainer/Button2" to="." method="_on_button_pressed" binds= [3]]
-[connection signal="pressed" from="Panel/GridContainer/Button3" to="." method="_on_button_pressed" binds= [5]]
-[connection signal="pressed" from="Panel/GridContainer/Button4" to="." method="_on_button_pressed" binds= [7]]
-[connection signal="pressed" from="Panel/GridContainer/Button5" to="." method="_on_button_pressed" binds= [9]]
-[connection signal="pressed" from="Panel/GridContainer/Button6" to="." method="_on_button_pressed" binds= [11]]
-[connection signal="pressed" from="Panel/GridContainer/Button7" to="." method="_on_button_pressed" binds= [12]]
+[connection signal="pressed" from="Panel/GridContainer/Button2" to="." method="_on_button_pressed" binds= [2]]
+[connection signal="pressed" from="Panel/GridContainer/Button3" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="Panel/GridContainer/Button4" to="." method="_on_button_pressed" binds= [6]]
+[connection signal="pressed" from="Panel/GridContainer/Button5" to="." method="_on_button_pressed" binds= [8]]
+[connection signal="pressed" from="Panel/GridContainer/Button6" to="." method="_on_button_pressed" binds= [9]]
+[connection signal="pressed" from="Panel/GridContainer/Button7" to="." method="_on_button_pressed" binds= [11]]
