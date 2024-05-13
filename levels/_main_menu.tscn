@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://br62lynib8mfk"]
+[gd_scene load_steps=17 format=3 uid="uid://br62lynib8mfk"]
 
 [ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_1pjjh"]
 [ext_resource type="Script" path="res://systems/main_menu.gd" id="1_rw70s"]
 [ext_resource type="Texture2D" uid="uid://dhg5oi5q5u0a0" path="res://levels/sprites/main_menu_bg.png" id="2_rndiv"]
 [ext_resource type="Texture2D" uid="uid://j1d623g72dst" path="res://levels/props/sprites/visual_silhuette.png" id="3_1v5yl"]
-[ext_resource type="PackedScene" path="res://levels/_level_select.tscn" id="4_qhk7f"]
-[ext_resource type="PackedScene" path="res://levels/_about_page.tscn" id="6_cmyou"]
+[ext_resource type="PackedScene" uid="uid://30khyxkab5i5" path="res://levels/_level_select.tscn" id="4_qhk7f"]
+[ext_resource type="PackedScene" uid="uid://c08tceqk5h8fp" path="res://levels/_about_page.tscn" id="6_cmyou"]
 [ext_resource type="Texture2D" uid="uid://c11gjvcaaoujy" path="res://systems/no_bg_logo.png" id="7_nigkp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkjci"]
@@ -24,6 +24,9 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpb16"]
+bg_color = Color(0.848791, 0.26427, 0.283462, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bya5"]
 bg_color = Color(0.930713, 0.58224, 0.22669, 1)
 border_width_left = 5
@@ -31,6 +34,9 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_droen"]
+bg_color = Color(0.901865, 0.409864, 0.305078, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bs2y"]
 bg_color = Color(0.619608, 0.486275, 0.878431, 1)
@@ -46,13 +52,8 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.619608, 0.486275, 0.878431, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdetb"]
-bg_color = Color(0.935717, 0.445717, 0.214784, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.619608, 0.486275, 0.878431, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g01wa"]
+bg_color = Color(0.848417, 0.553134, 0.286206, 1)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rw70s")
@@ -69,7 +70,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.454982, 0.349657, 0.371597, 1)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect"]
+[node name="BackgroundImage" type="TextureRect" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,14 +79,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rndiv")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/TextureRect"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect/BackgroundImage"]
 layout_mode = 0
 offset_right = 720.0
 offset_bottom = 405.0
 scale = Vector2(2, 2)
 texture = ExtResource("3_1v5yl")
 
-[node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
+[node name="MainMenu" type="ReferenceRect" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -99,7 +100,7 @@ offset_bottom = 375.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="CanvasLayer/ColorRect/ReferenceRect"]
+[node name="Panel" type="Panel" parent="CanvasLayer/ColorRect/MainMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,7 +109,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lkjci")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MainMenu/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -121,25 +122,27 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="Button" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ysjhc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mpb16")
 text = "PLAY"
 
-[node name="Button2" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_2bya5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_droen")
 text = "SELECT LEVEL"
 
-[node name="PanelContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+[node name="PanelContainer" type="MarginContainer" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 100
@@ -147,11 +150,11 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="BGM_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="BGM_text" type="Label" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -160,14 +163,14 @@ theme_override_font_sizes/font_size = 50
 text = "BGM VOLUME"
 horizontal_alignment = 1
 
-[node name="BGM_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="BGM_slider" type="HSlider" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_3bs2y")
 max_value = 1.0
 step = 0.05
 value = 0.8
 
-[node name="SFX_text" type="Label" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="SFX_text" type="Label" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -176,98 +179,54 @@ theme_override_font_sizes/font_size = 50
 text = "SFX VOLUME"
 horizontal_alignment = 1
 
-[node name="SFX_slider" type="HSlider" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="SFX_slider" type="HSlider" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_iejst")
 max_value = 1.0
 step = 0.05
 value = 0.8
 
-[node name="Button4" type="Button" parent="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer"]
+[node name="Button4" type="Button" parent="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1pjjh")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cxox")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g01wa")
 text = "ABOUT"
 
 [node name="LevelSelect" parent="CanvasLayer/ColorRect" instance=ExtResource("4_qhk7f")]
 visible = false
 layout_mode = 1
-
-[node name="Button4" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="3"]
-text = "04"
-
-[node name="Button7" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="6"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
-text = "07"
-
-[node name="Button8" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="7"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
-text = "08"
-
-[node name="Button9" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="8"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
-text = "09"
-
-[node name="Button10" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="9"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
-text = "10"
-
-[node name="Button11" type="Button" parent="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer" index="10"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_1pjjh")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdetb")
-text = "11"
+offset_left = -396.0
+offset_top = -225.0
+offset_right = 404.0
+offset_bottom = 375.0
 
 [node name="AboutPage" parent="CanvasLayer/ColorRect" instance=ExtResource("6_cmyou")]
 visible = false
 layout_mode = 1
+offset_left = -396.0
+offset_top = -225.0
+offset_right = 404.0
+offset_bottom = 375.0
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 223.0
+[node name="TitleCard" type="TextureRect" parent="CanvasLayer"]
+offset_left = 226.0
 offset_top = 44.0
-offset_right = 736.0
+offset_right = 739.0
 offset_bottom = 149.0
 scale = Vector2(2, 2)
 texture = ExtResource("7_nigkp")
 
-[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button2" to="." method="_on_level_select_pressed"]
-[connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/Button4" to="." method="_on_about_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/VBoxContainer2/back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button7" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button8" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button9" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button10" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/GridContainer/Button11" to="CanvasLayer/ColorRect/LevelSelect" method="_on_button_pressed" binds= [6]]
-[connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/Panel/VBoxContainer2/back" to="." method="_on_back_from_about_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/Button2" to="." method="_on_level_select_pressed"]
+[connection signal="value_changed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/Button4" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/ReturnButton" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/back" to="." method="_on_return_to_menu_pressed"]
 
 [editable path="CanvasLayer/ColorRect/LevelSelect"]
 [editable path="CanvasLayer/ColorRect/AboutPage"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn71vrug7q7w5"]
+
+[ext_resource type="Theme" uid="uid://vfahhh53f1qh" path="res://UI/UI_button.tres" id="1_1wxnt"]
+
+[node name="back" type="Button"]
+size_flags_vertical = 3
+theme = ExtResource("1_1wxnt")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "< Return"

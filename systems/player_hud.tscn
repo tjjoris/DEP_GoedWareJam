@@ -11,10 +11,11 @@
 unique_name_in_owner = true
 
 [node name="SamplesContainer" type="ReferenceRect" parent="."]
-offset_left = 1203.0
-offset_top = 35.0
-offset_right = 1403.0
-offset_bottom = 135.0
+visible = false
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 232.0
+offset_bottom = 132.0
 script = ExtResource("1_2g0dv")
 sample_collect = ExtResource("2_dmdkq")
 

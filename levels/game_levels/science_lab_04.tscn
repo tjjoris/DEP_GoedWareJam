@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://oamu0hycmqgd"]
+[gd_scene load_steps=15 format=3 uid="uid://oamu0hycmqgd"]
 
 [ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_ctirl"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_phfpu"]
+[ext_resource type="AudioStream" uid="uid://devrnt5q63p1y" path="res://audio/music/BGM_Discombobulated_0.wav" id="2_q8f0m"]
 [ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="3_ge828"]
 [ext_resource type="AudioStream" uid="uid://b158swmfm2ykb" path="res://audio/sfx/landing00.wav" id="4_71dai"]
 [ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="5_e8pxe"]
@@ -16,67 +17,76 @@
 
 [node name="_SCIENCE_LAB" instance=ExtResource("1_ctirl")]
 
+[node name="ForScience" parent="." index="0"]
+clip = ExtResource("2_q8f0m")
+
 [node name="DialogueInstance4" parent="DialogueSession" index="0" instance=ExtResource("2_phfpu")]
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("4_71dai")
 
 [node name="DialogueInstance5" parent="DialogueSession" index="1" instance=ExtResource("2_phfpu")]
-message = "I know Vincent won't let me do it my way."
+message = "I know Vincent will not let me do it my way."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
-[node name="DialogueInstance7" parent="DialogueSession" index="2" instance=ExtResource("2_phfpu")]
-message = "But she's been trapped for so long."
+[node name="DialogueInstance6" parent="DialogueSession" index="2" instance=ExtResource("2_phfpu")]
+message = "Gale is still on the other side.
+I know I can get to her."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
-[node name="DialogueInstance6" parent="DialogueSession" index="3" instance=ExtResource("2_phfpu")]
-message = "Gale is on the other side, I know I can get to her."
+[node name="DialogueInstance14" parent="DialogueSession" index="3" instance=ExtResource("2_phfpu")]
+message = "I have to."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
-[node name="DialogueInstance8" parent="DialogueSession" index="4" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance7" parent="DialogueSession" index="4" instance=ExtResource("2_phfpu")]
+message = "She has been trapped for so long."
+image = ExtResource("3_ge828")
+sfx_clip = ExtResource("5_e8pxe")
+
+[node name="DialogueInstance8" parent="DialogueSession" index="5" instance=ExtResource("2_phfpu")]
 message = "..."
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
-[node name="DialogueInstance9" parent="DialogueSession" index="5" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance9" parent="DialogueSession" index="6" instance=ExtResource("2_phfpu")]
 message = "... Sorry Vincent.
-Guess you'll have to fire me when I get back."
+Guess you will have to fire me when I get back!"
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("5_e8pxe")
 
-[node name="DialogueInstance10" parent="DialogueSession" index="6" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance10" parent="DialogueSession" index="7" instance=ExtResource("2_phfpu")]
 image = ExtResource("3_ge828")
 sfx_clip = ExtResource("7_y8v3n")
 
-[node name="DialogueInstance" parent="DialogueSession" index="7"]
+[node name="DialogueInstance" parent="DialogueSession" index="8"]
 message = ""
 image = ExtResource("6_qcbrl")
 sfx_clip = ExtResource("4_71dai")
 
-[node name="DialogueInstance11" parent="DialogueSession" index="8" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance11" parent="DialogueSession" index="9" instance=ExtResource("2_phfpu")]
 image = ExtResource("8_8oaky")
 sfx_clip = ExtResource("9_fpype")
 
-[node name="DialogueInstance3" parent="DialogueSession" index="9" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance3" parent="DialogueSession" index="10" instance=ExtResource("2_phfpu")]
 message = "Hey.
 Why is the portal activated?"
 image = ExtResource("8_8oaky")
 sfx_clip = ExtResource("9_4txax")
 
-[node name="DialogueInstance12" parent="DialogueSession" index="10" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance12" parent="DialogueSession" index="11" instance=ExtResource("2_phfpu")]
 message = "..."
 image = ExtResource("8_8oaky")
 sfx_clip = ExtResource("9_4txax")
 
-[node name="DialogueInstance13" parent="DialogueSession" index="11" instance=ExtResource("2_phfpu")]
+[node name="DialogueInstance13" parent="DialogueSession" index="12" instance=ExtResource("2_phfpu")]
 message = "...
-Where's Charlie...?"
+Where is Charlie...?"
 image = ExtResource("8_8oaky")
 sfx_clip = ExtResource("9_4txax")
 
-[node name="DialogueInstance2" parent="DialogueSession" index="12"]
+[node name="DialogueInstance2" parent="DialogueSession" index="13"]
 message = "<< TO BE CONTINUED >>"
 image = ExtResource("11_smf8t")
 sfx_clip = ExtResource("10_3muev")

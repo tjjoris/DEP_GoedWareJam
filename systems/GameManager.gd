@@ -7,6 +7,7 @@ signal collectable_value_changed(_current_level_collectables)
 
 static var is_shifted: bool = false
 var total_collectables: int = 0
+var max_total_collectables: int = 40
 static var player_can_move: bool = true
 static var player_is_dead: bool = false
 static var player_can_phase: bool = true

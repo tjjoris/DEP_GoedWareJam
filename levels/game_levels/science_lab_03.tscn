@@ -13,7 +13,7 @@
 [node name="_SCIENCE_LAB" instance=ExtResource("1_xih5m")]
 
 [node name="DialogueInstance" parent="DialogueSession" index="0"]
-message = "So you’re saying that’s why only she passed through the portal?"
+message = "So you are saying that is why only she passed through the portal?"
 
 [node name="DialogueInstance3" parent="DialogueSession" index="1" instance=ExtResource("2_1okbl")]
 message = "Her Dimension Stabilizing Suit malfunctioned?"
@@ -48,7 +48,7 @@ sfx_clip = ExtResource("8_uqh08")
 
 [node name="DialogueInstance11" parent="DialogueSession" index="7" instance=ExtResource("2_1okbl")]
 message = "That is too dangerous, Charlie.
-We can’t lose you too."
+We cannot lose you too."
 image = ExtResource("3_1ywoh")
 sfx_clip = ExtResource("4_6f55h")
 
@@ -57,14 +57,9 @@ message = "BUT!"
 image = ExtResource("6_0hp8l")
 sfx_clip = ExtResource("7_85dgw")
 
-[node name="DialogueInstance9" parent="DialogueSession" index="9" instance=ExtResource("2_1okbl")]
-message = "No."
-image = ExtResource("3_1ywoh")
-sfx_clip = ExtResource("4_6f55h")
-
-[node name="DialogueInstance10" parent="DialogueSession" index="10" instance=ExtResource("2_1okbl")]
+[node name="DialogueInstance12" parent="DialogueSession" index="9" instance=ExtResource("2_1okbl")]
 message = "No.
-We’ll find another way."
+We will find another way."
 image = ExtResource("3_1ywoh")
 sfx_clip = ExtResource("4_6f55h")
 

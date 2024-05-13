@@ -11,12 +11,12 @@
 [node name="_SCIENCE_LAB" instance=ExtResource("1_nvxl4")]
 
 [node name="DialogueInstance" parent="DialogueSession" index="0"]
-message = "We’ve already tried that a dozen times,
-we got nothing back.
+message = "We have already tried that a dozen times.
+We got nothing back.
 You know this."
 
 [node name="DialogueInstance2" parent="DialogueSession" index="1"]
-message = "I know, but maybe this time…"
+message = "I know, but maybe this time..."
 
 [node name="DialogueInstance9" parent="DialogueSession" index="2" instance=ExtResource("2_oabve")]
 message = "...
@@ -26,23 +26,23 @@ sfx_clip = ExtResource("4_2on40")
 
 [node name="DialogueInstance3" parent="DialogueSession" index="3" instance=ExtResource("2_oabve")]
 message = "...
-It’s been weeks since the incident."
+It has been weeks since the incident."
 image = ExtResource("3_jpfim")
 sfx_clip = ExtResource("4_2on40")
 
 [node name="DialogueInstance4" parent="DialogueSession" index="4" instance=ExtResource("2_oabve")]
-message = "Everything we’ve tried suggests that… well…"
+message = "Everything we have tried suggests that... well..."
 image = ExtResource("3_jpfim")
 sfx_clip = ExtResource("4_2on40")
 
 [node name="DialogueInstance5" parent="DialogueSession" index="5" instance=ExtResource("2_oabve")]
-message = "... That she just doesn't exist anymore?
+message = "... That she just does not exist anymore?
 Gale is trapped on the other side, just I know it!"
 image = ExtResource("5_3hi7g")
 sfx_clip = ExtResource("6_mhr7y")
 
 [node name="DialogueInstance6" parent="DialogueSession" index="6" instance=ExtResource("2_oabve")]
-message = "Listen, we all want nothing more than having Dr.Chazz back. But maybe we need to start thinking of the possibility that…"
+message = "Listen, we all want nothing more than having Dr.Chazz back. But maybe we need to start thinking of the possibility that..."
 image = ExtResource("3_jpfim")
 sfx_clip = ExtResource("4_2on40")
 
@@ -52,6 +52,11 @@ image = ExtResource("5_3hi7g")
 sfx_clip = ExtResource("6_mhr7y")
 
 [node name="DialogueInstance8" parent="DialogueSession" index="8" instance=ExtResource("2_oabve")]
+message = "... Okay."
+image = ExtResource("3_jpfim")
+sfx_clip = ExtResource("4_2on40")
+
+[node name="DialogueInstance10" parent="DialogueSession" index="9" instance=ExtResource("2_oabve")]
 message = "... Okay.
 Request approved.
 Start warming up the giga-generators."

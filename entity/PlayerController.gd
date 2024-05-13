@@ -18,7 +18,12 @@ func _physics_process(delta: float) -> void:
 	set_animation(direction)
 	movement_handler.handle_movement(self, direction, delta)
 	handle_jump()
+	var was_on_floor = is_on_floor()
 	move_and_slide()
+	if was_on_floor && !is_on_floor():
+		jump_handler.start_coyote_timer()
+	if is_on_floor_only() && not was_on_floor:
+		jump_handler.landed_on_ground()
 	
 func set_animation(direction: float):
 	if GameManager.player_is_dead:
@@ -38,10 +43,12 @@ func set_animation(direction: float):
 		
 
 func handle_jump():
-	if Input.is_action_just_pressed("jump") and GameManager.player_can_move:
+	if not GameManager.player_can_move:
+		return
+	if Input.is_action_just_pressed("jump") || Input.is_action_just_pressed("up"):
 		animated_sprite.play("jump")
 		jump_handler.handle_jump(self)
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") || Input.is_action_pressed("up"):
 		velocity.y -= jump_handler.HELD_JUMP_HEIGHT
 
 

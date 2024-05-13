@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://vfahhh53f1qh"]
+
+[ext_resource type="FontFile" uid="uid://cjf4ibtowb70s" path="res://Dialogue/fonts/MEGAMAN10.ttf" id="1_lu3kc"]
+[ext_resource type="StyleBox" uid="uid://b2sgm1rt4gl2o" path="res://UI/button_peach.tres" id="2_rdlcv"]
+[ext_resource type="StyleBox" uid="uid://b7c18yec56ox4" path="res://UI/button_orange.tres" id="3_ttgbl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77itj"]
+
+[resource]
+Button/font_sizes/font_size = 38
+Button/fonts/font = ExtResource("1_lu3kc")
+Button/styles/hover = ExtResource("2_rdlcv")
+Button/styles/normal = ExtResource("3_ttgbl")
+Button/styles/pressed = SubResource("StyleBoxFlat_77itj")

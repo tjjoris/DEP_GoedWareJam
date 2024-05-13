@@ -1,15 +1,14 @@
 extends Node2D
 
-@onready var bgm_slider: HSlider = $CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider
-@onready var sfx_slider: HSlider = $CanvasLayer/ColorRect/ReferenceRect/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider
+@onready var bgm_slider: HSlider = $CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider
+@onready var sfx_slider: HSlider = $CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider
 
 @onready var BGM_BUS_ID = AudioServer.get_bus_index("Music")
 @onready var SFX_BUS_ID = AudioServer.get_bus_index("SFX")
 
-@onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/ReferenceRect
+@onready var main_menu: ReferenceRect = $CanvasLayer/ColorRect/MainMenu
 @onready var level_select: ReferenceRect = $CanvasLayer/ColorRect/LevelSelect
 @onready var about_page: ReferenceRect = $CanvasLayer/ColorRect/AboutPage
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,16 +38,11 @@ func _on_level_select_pressed() -> void:
 	level_select.visible = true
 
 
-func _on_back_pressed() -> void:
-	main_menu.visible = true
-	level_select.visible = false
-
-
-func _on_back_from_about_pressed() -> void:
-	about_page.visible = false
-	main_menu.visible = true
-
-
 func _on_about_pressed() -> void:
 	about_page.visible = true
 	main_menu.visible = false
+	
+func _on_return_to_menu_pressed() -> void:
+	main_menu.visible = true
+	about_page.visible = false
+	level_select.visible = false
