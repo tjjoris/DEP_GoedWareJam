@@ -18,6 +18,7 @@ var levels = ["res://levels/_main_menu.tscn",
 "res://levels/game_levels/science_lab_03.tscn",
 "res://levels/game_levels/level_kay_02.tscn",
 "res://levels/game_levels/science_lab_04.tscn",
+"res://levels/_final_score.tscn",
 ]
 #"res://levels/game_levels/andrew_level_01.tscn",
 #"res://levels/game_levels/naomi_yan_level_01.tscn",
@@ -31,6 +32,7 @@ func _ready():
 
 
 func start_game():
+	GameManager.total_collectables = 0
 	load_scene(1)
 
 

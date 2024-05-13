@@ -225,8 +225,8 @@ texture = ExtResource("7_nigkp")
 [connection signal="value_changed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/BGM_slider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/PanelContainer/VBoxContainer/SFX_slider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/MainMenu/Panel/VBoxContainer/Button4" to="." method="_on_about_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/ReturnButton" to="." method="_on_back_from_level_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/back" to="." method="_on_back_from_about_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/LevelSelect/Panel/ReturnButton" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/AboutPage/back" to="." method="_on_return_to_menu_pressed"]
 
 [editable path="CanvasLayer/ColorRect/LevelSelect"]
 [editable path="CanvasLayer/ColorRect/AboutPage"]
