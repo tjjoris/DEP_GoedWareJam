@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Dialogue/dialogue_session.gd" id="1_shc4y"]
 [ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="3_23cba"]
 [ext_resource type="Texture2D" uid="uid://o2m5vk3ilup" path="res://Dialogue/portraits/portrait_Chazz_neutral.png" id="4_jvfkp"]
-[ext_resource type="PackedScene" path="res://levels/objects/LevelExit.tscn" id="4_vx6ui"]
+[ext_resource type="PackedScene" uid="uid://b71tnnwcj8huo" path="res://levels/objects/LevelExit.tscn" id="4_vx6ui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8evv4"]
 size = Vector2(32, 32)

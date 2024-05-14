@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4o3d6g8vi3xw"]
+[gd_scene load_steps=14 format=3 uid="uid://b4o3d6g8vi3xw"]
 
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="2_3ug4t"]
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_5s8g6"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="2_tl852"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="3_0sdug"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="3_7rlrf"]
+[ext_resource type="Script" path="res://levels/Systems.gd" id="4_6jxk8"]
 [ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_oijp3"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="7_5kwlo"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="7_x3klm"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="7_x75au"]
+[ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="8_2gvaj"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_7dj76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khtds"]
@@ -36,6 +38,7 @@ visible = false
 process_mode = 1
 
 [node name="Systems" type="Node2D" parent="Gameplay"]
+script = ExtResource("4_6jxk8")
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
@@ -55,6 +58,11 @@ texture_filter = 1
 color = Color(0.715373, 0.829394, 0.971375, 1)
 
 [node name="ParallaxBackground" parent="Gameplay/Systems" instance=ExtResource("2_tl852")]
+
+[node name="_BACKGROUNDONLY_" type="TileMap" parent="Gameplay/Systems"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+tile_set = ExtResource("8_2gvaj")
+format = 2
 
 [node name="BackgroundProps" type="Node2D" parent="Gameplay"]
 
@@ -94,5 +102,6 @@ scale = Vector2(1, 1)
 [connection signal="do_phase_shift" from="Gameplay/Player" to="Gameplay/Systems/PhaseShifter" method="_on_player_do_phase_shift"]
 
 [editable path="UI/DialogueCanvas"]
+[editable path="Gameplay/Systems/ParallaxBackground"]
 [editable path="Gameplay/Entities/DialogueTrigger"]
 [editable path="Gameplay/Entities/LevelExit"]

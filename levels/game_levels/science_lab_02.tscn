@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://7o60tx85w7vd"]
+
+[ext_resource type="PackedScene" uid="uid://cr2238mpamsdn" path="res://levels/_science_lab.tscn" id="1_k4667"]
+[ext_resource type="PackedScene" uid="uid://12maljdxnoer" path="res://Dialogue/dialogue_instance.tscn" id="2_poise"]
+[ext_resource type="Texture2D" uid="uid://bpeo03orf87d8" path="res://Dialogue/portraits/portrait_Charlie_neutral.png" id="3_bnslo"]
+[ext_resource type="AudioStream" uid="uid://bnjcuxl5r5b0m" path="res://audio/sfx/Chazz_up00.wav" id="4_ginbe"]
+[ext_resource type="Texture2D" uid="uid://dfq6kc3tj2jru" path="res://Dialogue/portraits/portrait_Vincent_neutral.png" id="5_71bf0"]
+[ext_resource type="AudioStream" uid="uid://b158swmfm2ykb" path="res://audio/sfx/landing00.wav" id="6_ssti2"]
+[ext_resource type="AudioStream" uid="uid://ydacuxdqkhqi" path="res://audio/sfx/Vince_down.wav" id="7_ifx53"]
+
+[node name="_SCIENCE_LAB" instance=ExtResource("1_k4667")]
+
+[node name="DialogueInstance3" parent="DialogueSession" index="0" instance=ExtResource("2_poise")]
+message = "VINCENT!!"
+image = ExtResource("3_bnslo")
+sfx_clip = ExtResource("4_ginbe")
+
+[node name="DialogueInstance4" parent="DialogueSession" index="1" instance=ExtResource("2_poise")]
+message = "VINCENT!!
+VINCE!
+I GOT A READING!!"
+image = ExtResource("3_bnslo")
+sfx_clip = ExtResource("4_ginbe")
+
+[node name="DialogueInstance" parent="DialogueSession" index="2"]
+message = "!!!"
+
+[node name="DialogueInstance5" parent="DialogueSession" index="3" instance=ExtResource("2_poise")]
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("6_ssti2")
+
+[node name="DialogueInstance6" parent="DialogueSession" index="4" instance=ExtResource("2_poise")]
+message = "Holy sh-"
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("7_ifx53")
+
+[node name="DialogueInstance7" parent="DialogueSession" index="5" instance=ExtResource("2_poise")]
+message = "SHE IS ALIVE!!"
+image = ExtResource("3_bnslo")
+sfx_clip = ExtResource("4_ginbe")
+
+[node name="DialogueInstance2" parent="DialogueSession" index="6"]
+message = "We picked up her suit signature for only a moment, but check out these vitals!"
+
+[node name="DialogueInstance8" parent="DialogueSession" index="7" instance=ExtResource("2_poise")]
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("6_ssti2")
+
+[node name="DialogueInstance9" parent="DialogueSession" index="8" instance=ExtResource("2_poise")]
+message = "Only Gale could survive for weeks in some alternate dimension..."
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("7_ifx53")
+
+[node name="DialogueInstance10" parent="DialogueSession" index="9" instance=ExtResource("2_poise")]
+message = "You heard them team."
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("7_ifx53")
+
+[node name="DialogueInstance11" parent="DialogueSession" index="10" instance=ExtResource("2_poise")]
+message = "Get everyone on deck right now!
+
+We have got our work cut out for us!!"
+image = ExtResource("5_71bf0")
+sfx_clip = ExtResource("7_ifx53")
+
+[editable path="DialogueSession"]
+[editable path="UI/DialogueCanvas"]

@@ -8,6 +8,7 @@ process_mode = 3
 script = ExtResource("1_raeae")
 
 [node name="BGM_Audio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("2_ee5xx")
 volume_db = -5.0
 autoplay = true

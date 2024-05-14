@@ -1,18 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://i2r4orsnsy7t"]
+[gd_scene load_steps=12 format=3 uid="uid://i2r4orsnsy7t"]
 
 [ext_resource type="PackedScene" uid="uid://dmssmeg6a877j" path="res://systems/player_hud.tscn" id="2_k3v4q"]
 [ext_resource type="PackedScene" uid="uid://m8ic7c6lj3pg" path="res://Dialogue/dialogue_canvas.tscn" id="3_732qd"]
 [ext_resource type="PackedScene" uid="uid://bj80dbx3uve3d" path="res://levels/_pause_menu.tscn" id="4_7sj82"]
 [ext_resource type="PackedScene" uid="uid://brrx4v4byhktl" path="res://systems/kill_floor.tscn" id="4_euu1s"]
+[ext_resource type="Script" path="res://levels/Systems.gd" id="4_p8uc0"]
 [ext_resource type="PackedScene" uid="uid://f1rjklxrty6o" path="res://systems/phase_shifter.tscn" id="5_ggd3f"]
 [ext_resource type="PackedScene" uid="uid://be1h7270jb3k7" path="res://levels/background/parallax_background.tscn" id="6_147f0"]
 [ext_resource type="TileSet" uid="uid://be4dcol4vab32" path="res://levels/tilemap/_level_blueprint.tres" id="7_k8t4a"]
+[ext_resource type="TileSet" uid="uid://dlqqx8856hny6" path="res://levels/tilemap/_background_only.tres" id="8_002ju"]
 [ext_resource type="PackedScene" uid="uid://6k566y5fttrg" path="res://Dialogue/dialogue_exit_object.tscn" id="8_rcc4d"]
 [ext_resource type="PackedScene" uid="uid://dk2uj6ba805pf" path="res://entity/player/player_basic.tscn" id="9_kcdxo"]
 
 [node name="_LEVEL_BLUEPRINT" type="Node2D"]
 process_mode = 3
 texture_filter = 1
+metadata/_edit_horizontal_guides_ = [0.0]
 
 [node name="UI" type="Node2D" parent="."]
 process_mode = 3
@@ -31,6 +34,7 @@ visible = false
 process_mode = 1
 
 [node name="Systems" type="Node2D" parent="Gameplay"]
+script = ExtResource("4_p8uc0")
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Gameplay/Systems"]
@@ -49,6 +53,11 @@ texture_filter = 1
 color = Color(0.715373, 0.829394, 0.971375, 1)
 
 [node name="ParallaxBackground" parent="Gameplay/Systems" instance=ExtResource("6_147f0")]
+
+[node name="_BACKGROUNDONLY_" type="TileMap" parent="Gameplay/Systems"]
+modulate = Color(0.589096, 0.589096, 0.589096, 1)
+tile_set = ExtResource("8_002ju")
+format = 2
 
 [node name="BackgroundProps" type="Node2D" parent="Gameplay"]
 
