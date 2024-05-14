@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cn6c0okxe2q3q"]
+[gd_scene load_steps=34 format=3 uid="uid://cn6c0okxe2q3q"]
 
 [ext_resource type="PackedScene" uid="uid://i2r4orsnsy7t" path="res://levels/_level_blank.tscn" id="1_eu01o"]
 [ext_resource type="PackedScene" uid="uid://ddvhyafvjlggv" path="res://Dialogue/dialogue_trigger.tscn" id="2_r5nj6"]
@@ -32,7 +32,6 @@
 [ext_resource type="PackedScene" uid="uid://b3dje383htens" path="res://levels/objects/spiketrap_shadow.tscn" id="29_cpql6"]
 [ext_resource type="PackedScene" uid="uid://b3y0wli0octn4" path="res://levels/objects/collectable_sample.tscn" id="30_khty4"]
 [ext_resource type="PackedScene" uid="uid://cbdvsocc0hrlx" path="res://levels/props/shadow_only/sh_rock_1.tscn" id="31_yb536"]
-[ext_resource type="PackedScene" uid="uid://bq0rv30ctl1ny" path="res://levels/objects/collectable_overworld.tscn" id="33_nq6kb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubdhr"]
 resource_local_to_scene = true
@@ -224,9 +223,6 @@ position = Vector2(1103, 484)
 
 [node name="sh_log_4" parent="Gameplay/ForegroundProps" index="31" instance=ExtResource("25_nvpmh")]
 position = Vector2(700, 292)
-
-[node name="collectable_overworld" parent="." index="2" instance=ExtResource("33_nq6kb")]
-position = Vector2(1262, 441)
 
 [editable path="UI/DialogueCanvas"]
 [editable path="Gameplay/Entities/LevelExit"]
